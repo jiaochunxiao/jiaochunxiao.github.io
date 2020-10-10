@@ -131,36 +131,6 @@
       </tags>
   </entry>
   <entry>
-    <title>linux常用命令学习(六) -- rmdir</title>
-    <url>/2016/04/17/20160417/</url>
-    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
-<a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-p</td>
-<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
-</tr>
-<tr>
-<td>-v</td>
-<td align="center">–verbose, 详细显示进行的步骤。</td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux常用命令学习(五) -- rm</title>
     <url>/2016/04/16/20160416/</url>
     <content><![CDATA[<h2 id="第五条linux命令-rm"><a href="#第五条linux命令-rm" class="headerlink" title="第五条linux命令: rm"></a>第五条linux命令: rm</h2><p>今天要学的是一个危险的命令 – rm 。Linux rm 命令用于删除文件和目录， 可以删除一个目录中的一个或多个文件或目录。也可以将某个目录及其目录内的所有文件及子目录删除。对于链接文件，只删除链接，而原有文件不变。</p>
@@ -196,6 +166,36 @@
 <tr>
 <td>- -version</td>
 <td align="center"></td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux常用命令学习(六) -- rmdir</title>
+    <url>/2016/04/17/20160417/</url>
+    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p</td>
+<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
+</tr>
+<tr>
+<td>-v</td>
+<td align="center">–verbose, 详细显示进行的步骤。</td>
 </tr>
 </tbody></table>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
@@ -371,6 +371,48 @@
       </tags>
   </entry>
   <entry>
+    <title>ES6-let&amp;const</title>
+    <url>/2016/06/30/ES6-let-const/</url>
+    <content><![CDATA[<h2 id="let-amp-const"><a href="#let-amp-const" class="headerlink" title="let&amp;const"></a>let&amp;const</h2><p>let和const命令是ES6中新增的用来声明变量的命令。</p>
+<h3 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h3><p>let用法与 var 类似，但是 let 声明的变量只在它所在的代码块有效。ES6 let命令实际上为 Javascript 新增了块级作用域。ES5提供了全局作用域和函数作用域，没有块级作用域。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">a;<span class="comment">//1</span></span><br><span class="line">b;<span class="comment">//undefined,调用报错，只在定义时代码块内有效。</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> name=<span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br></pre></td></tr></table></figure>
+<p>当有了块级作用域后：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">let</span> name = <span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es6</span></span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<blockquote>
+<ul>
+<li>let声明的变量不存在变量提升。所以使用let变量前，必须先声明，否则会报错。*</li>
+</ul>
+</blockquote>
+<p>暂时性死区：ES6明确规定，如果区块中存在let和const声明的变量，从一开始就形成了封闭作用域。在变量声明之前调用这下变量会报错。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	tmp = <span class="string">&#x27;123&#x27;</span>;<span class="comment">//Uncaught ReferenceError: tmp is not defined(…)</span></span><br><span class="line">	<span class="keyword">let</span> tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>不允许重复声明：let 不允许在相同作用域内，重复声明同一变量。*</li>
+</ul>
+<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>const声明一个只读的常量，一旦常量声明，就不能改变。如果尝试修改const变量值，就会报错。同时，const一旦声明变量，就必须立即进行初始化，只声明不赋值，同样会报错。<br>const变量不存在变量提升。与let类似，const变量只在声明所在块级作用域有效，存在暂时性死区，不能重复声明。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="number">1</span>;</span><br><span class="line">m = <span class="number">2</span>;<span class="comment">//Assignment to constant variable.</span></span><br><span class="line"><span class="keyword">const</span> n;<span class="comment">//Missing initializer in const declaration</span></span><br></pre></td></tr></table></figure>
+<p>Tips:</p>
+<blockquote>
+<p>当引用第三方库时声明的变量，用const来声明，可避免重命名导致的bug<br>const 命令声明的常量，也不能提升，同样存在暂时性死区，只能在声明的位置后使用。</p>
+</blockquote>
+<hr>
+<p>2017-11-10 补充：</p>
+<h3 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h3><p> const 实际上保证的，并不是变量的值不改动，而是变量指向的那个内存地址不得改动。对于简单类型的数据（数值，字符串，布尔值），值就保存在变量指向的那个内存地址，因为等同于常量。但对于复合类型的数据（主要是数组和对象），变量指向的那个内存地址，保存的就是一个指针，const只能保证这个指针是固定，至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;</span><br><span class="line"></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop</span><br><span class="line"></span><br><span class="line">foo = &#123;&#125;; <span class="comment">//TypeError, &quot;foo&quot; is read-only</span></span><br></pre></td></tr></table></figure>
+<p>上述代码中，常量foo储存一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把foo指向另一个地址，但对象本上是可变的，所以依然可以为其添加新属性。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [];</span><br><span class="line">a.push(<span class="string">&#x27;hello&#x27;</span>);<span class="comment">//可执行</span></span><br><span class="line">a.length = <span class="number">0</span>;<span class="comment">//可执行</span></span><br><span class="line">a = [<span class="string">&#x27;world&#x27;</span>];<span class="comment">//Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，常量a是个数组，数组本身是可写的，但是如果将另一个数组赋值给a, 就会报错。</p>
+<p>如果想冻结对象，使用Object.freeze方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="built_in">Object</span>.freeze(&#123;&#125;)</span><br><span class="line"><span class="comment">//常规模式下，下面一行不起作用</span></span><br><span class="line"><span class="comment">//严格模式下，该行会报错</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(十) -- nl</title>
     <url>/2016/05/24/20160524/</url>
     <content><![CDATA[<p> linux关于文件行号显示，cat / nl 命令均可以实现，但nl 可以将行号做比较多的显示设计，包括位数与是否自动补齐 0 等等的功能。<a id="more"></a></p>
@@ -414,48 +456,6 @@
       </categories>
       <tags>
         <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ES6-let&amp;const</title>
-    <url>/2016/06/30/ES6-let-const/</url>
-    <content><![CDATA[<h2 id="let-amp-const"><a href="#let-amp-const" class="headerlink" title="let&amp;const"></a>let&amp;const</h2><p>let和const命令是ES6中新增的用来声明变量的命令。</p>
-<h3 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h3><p>let用法与 var 类似，但是 let 声明的变量只在它所在的代码块有效。ES6 let命令实际上为 Javascript 新增了块级作用域。ES5提供了全局作用域和函数作用域，没有块级作用域。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">a;<span class="comment">//1</span></span><br><span class="line">b;<span class="comment">//undefined,调用报错，只在定义时代码块内有效。</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> name=<span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br></pre></td></tr></table></figure>
-<p>当有了块级作用域后：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">let</span> name = <span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es6</span></span><br></pre></td></tr></table></figure>
-<p>注意：</p>
-<blockquote>
-<ul>
-<li>let声明的变量不存在变量提升。所以使用let变量前，必须先声明，否则会报错。*</li>
-</ul>
-</blockquote>
-<p>暂时性死区：ES6明确规定，如果区块中存在let和const声明的变量，从一开始就形成了封闭作用域。在变量声明之前调用这下变量会报错。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	tmp = <span class="string">&#x27;123&#x27;</span>;<span class="comment">//Uncaught ReferenceError: tmp is not defined(…)</span></span><br><span class="line">	<span class="keyword">let</span> tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>不允许重复声明：let 不允许在相同作用域内，重复声明同一变量。*</li>
-</ul>
-<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>const声明一个只读的常量，一旦常量声明，就不能改变。如果尝试修改const变量值，就会报错。同时，const一旦声明变量，就必须立即进行初始化，只声明不赋值，同样会报错。<br>const变量不存在变量提升。与let类似，const变量只在声明所在块级作用域有效，存在暂时性死区，不能重复声明。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="number">1</span>;</span><br><span class="line">m = <span class="number">2</span>;<span class="comment">//Assignment to constant variable.</span></span><br><span class="line"><span class="keyword">const</span> n;<span class="comment">//Missing initializer in const declaration</span></span><br></pre></td></tr></table></figure>
-<p>Tips:</p>
-<blockquote>
-<p>当引用第三方库时声明的变量，用const来声明，可避免重命名导致的bug<br>const 命令声明的常量，也不能提升，同样存在暂时性死区，只能在声明的位置后使用。</p>
-</blockquote>
-<hr>
-<p>2017-11-10 补充：</p>
-<h3 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h3><p> const 实际上保证的，并不是变量的值不改动，而是变量指向的那个内存地址不得改动。对于简单类型的数据（数值，字符串，布尔值），值就保存在变量指向的那个内存地址，因为等同于常量。但对于复合类型的数据（主要是数组和对象），变量指向的那个内存地址，保存的就是一个指针，const只能保证这个指针是固定，至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
- <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;</span><br><span class="line"></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop</span><br><span class="line"></span><br><span class="line">foo = &#123;&#125;; <span class="comment">//TypeError, &quot;foo&quot; is read-only</span></span><br></pre></td></tr></table></figure>
-<p>上述代码中，常量foo储存一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把foo指向另一个地址，但对象本上是可变的，所以依然可以为其添加新属性。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [];</span><br><span class="line">a.push(<span class="string">&#x27;hello&#x27;</span>);<span class="comment">//可执行</span></span><br><span class="line">a.length = <span class="number">0</span>;<span class="comment">//可执行</span></span><br><span class="line">a = [<span class="string">&#x27;world&#x27;</span>];<span class="comment">//Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
-<p>上面代码中，常量a是个数组，数组本身是可写的，但是如果将另一个数组赋值给a, 就会报错。</p>
-<p>如果想冻结对象，使用Object.freeze方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="built_in">Object</span>.freeze(&#123;&#125;)</span><br><span class="line"><span class="comment">//常规模式下，下面一行不起作用</span></span><br><span class="line"><span class="comment">//严格模式下，该行会报错</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -515,6 +515,58 @@
       <tags>
         <tag>js</tag>
         <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用HEXO搭建github个人网站</title>
+    <url>/2015/11/25/HEXO/</url>
+    <content><![CDATA[<p>HEXO,是一款基于Node.js的轻量的静态博客框架，利用它可以在github上快速构建个人的静态博客。下面就将我自己的构建博客的过程分享给大家。<a id="more"></a></p>
+<h2 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1 安装环境"></a>1 安装环境</h2><h3 id="1-1-安装node-js"><a href="#1-1-安装node-js" class="headerlink" title="1.1 安装node.js"></a>1.1 安装node.js</h3><p>由于HEXO是基于node.js的静态框架，我们首先要安装node环境。在<a href="http://nodejs.org/">node.js</a>官网进行下载安装.</p>
+<h3 id="1-2-安装git及申请github账号"><a href="#1-2-安装git及申请github账号" class="headerlink" title="1.2 安装git及申请github账号"></a>1.2 安装git及申请github账号</h3><p>关于git的安装以及github账号的创建，可自行百度或者在官网的指引下操作，此处省略。</p>
+<h3 id="1-3安装HEXO"><a href="#1-3安装HEXO" class="headerlink" title="1.3安装HEXO"></a>1.3安装HEXO</h3><p>接下来利用npm安装HEXO</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-建立本地博客目录"><a href="#1-4-建立本地博客目录" class="headerlink" title="1.4 建立本地博客目录"></a>1.4 建立本地博客目录</h3><p>安装好HEXO后，建立一个文件夹。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;fileName&gt;</span><br></pre></td></tr></table></figure>
+<p>生成的目录结构，及各目录文件作用：</p>
+<blockquote>
+<p>scaffolds 脚手架，也就是一个工具模板<br>scripts 写文件的js，扩展hexo的功能<br>source 存放博客正文内容<br>source/_drafts 草稿箱<br>source/_posts 文件箱<br>themes 存放皮肤的目录<br>themes/landscape 默认的皮肤<br>_config.yml 全局的配置文件<br>db.json 静态常量</p>
+</blockquote>
+<p>然后进入到该文件夹中，执行下面操作：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>生成静态页面（hexo\public\目录）：执行下面命令后，会在本地生成一个public目录。该目录下生成的文件，即为之后上传到github上并用于发布的静态文件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>本地发布：执行下面命令后，会在启动本地服务，访问localhost:4000，即可看到博客的页面。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置Github"><a href="#2-配置Github" class="headerlink" title="2 配置Github"></a>2 配置Github</h2><p>如何将静态博客利用github进行部署呢？下面来看下操作步骤。</p>
+<h3 id="2-1-在Github上建立个人Repository"><a href="#2-1-在Github上建立个人Repository" class="headerlink" title="2.1 在Github上建立个人Repository"></a>2.1 在Github上建立个人Repository</h3><p>建立reponsity过程可参考<a href="https://pages.github.com/">Github Pages</a>.</p>
+<h3 id="2-2-配置-config-yml文件"><a href="#2-2-配置-config-yml文件" class="headerlink" title="2.2 配置_config.yml文件"></a>2.2 配置_config.yml文件</h3><p>在_config.yml文件末尾，配置如下内容。其中，reposity对应的url为上一步在Github上建立的reposity地址。</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/username/reposityname.github.io.git">https://github.com/username/reposityname.github.io.git</a><br>  branch: master</p>
+</blockquote>
+<p>  配置完成后，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>因为我建立的reposity名字为cqu2008，所以我就直接在浏览器中访问  <a href="http://jiaochunxiao.github.io/">http://jiaochunxiao.github.io/</a></p>
+<h2 id="3-建站过程中的一些问题"><a href="#3-建站过程中的一些问题" class="headerlink" title="3 建站过程中的一些问题"></a>3 建站过程中的一些问题</h2><h3 id="3-1-本地发布失败"><a href="#3-1-本地发布失败" class="headerlink" title="3.1 本地发布失败"></a>3.1 本地发布失败</h3><p>本地发布，执行 hexo server 失败。解决方案： 执行如下命令。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+<p>执行完此命令后，再执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>即可看到博客的效果。</p>
+<h3 id="3-2-Github部署失败"><a href="#3-2-Github部署失败" class="headerlink" title="3.2 Github部署失败"></a>3.2 Github部署失败</h3><p>执行下面命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>会出现： Deployer not found: git<br>此时执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>此时再去执行，hexo deploy ,就可以成功部署了。</p>
+<h3 id="3-3-部署步骤"><a href="#3-3-部署步骤" class="headerlink" title="3.3 部署步骤"></a>3.3 部署步骤</h3><p>配置后_config.yml后，通用的三条部署命令（好比是大象装冰箱，一共分三步）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -591,178 +643,6 @@
       <tags>
         <tag>js</tag>
         <tag>ES6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用HEXO搭建github个人网站</title>
-    <url>/2015/11/25/HEXO/</url>
-    <content><![CDATA[<p>HEXO,是一款基于Node.js的轻量的静态博客框架，利用它可以在github上快速构建个人的静态博客。下面就将我自己的构建博客的过程分享给大家。<a id="more"></a></p>
-<h2 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1 安装环境"></a>1 安装环境</h2><h3 id="1-1-安装node-js"><a href="#1-1-安装node-js" class="headerlink" title="1.1 安装node.js"></a>1.1 安装node.js</h3><p>由于HEXO是基于node.js的静态框架，我们首先要安装node环境。在<a href="http://nodejs.org/">node.js</a>官网进行下载安装.</p>
-<h3 id="1-2-安装git及申请github账号"><a href="#1-2-安装git及申请github账号" class="headerlink" title="1.2 安装git及申请github账号"></a>1.2 安装git及申请github账号</h3><p>关于git的安装以及github账号的创建，可自行百度或者在官网的指引下操作，此处省略。</p>
-<h3 id="1-3安装HEXO"><a href="#1-3安装HEXO" class="headerlink" title="1.3安装HEXO"></a>1.3安装HEXO</h3><p>接下来利用npm安装HEXO</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
-<h3 id="1-4-建立本地博客目录"><a href="#1-4-建立本地博客目录" class="headerlink" title="1.4 建立本地博客目录"></a>1.4 建立本地博客目录</h3><p>安装好HEXO后，建立一个文件夹。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;fileName&gt;</span><br></pre></td></tr></table></figure>
-<p>生成的目录结构，及各目录文件作用：</p>
-<blockquote>
-<p>scaffolds 脚手架，也就是一个工具模板<br>scripts 写文件的js，扩展hexo的功能<br>source 存放博客正文内容<br>source/_drafts 草稿箱<br>source/_posts 文件箱<br>themes 存放皮肤的目录<br>themes/landscape 默认的皮肤<br>_config.yml 全局的配置文件<br>db.json 静态常量</p>
-</blockquote>
-<p>然后进入到该文件夹中，执行下面操作：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>生成静态页面（hexo\public\目录）：执行下面命令后，会在本地生成一个public目录。该目录下生成的文件，即为之后上传到github上并用于发布的静态文件。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>本地发布：执行下面命令后，会在启动本地服务，访问localhost:4000，即可看到博客的页面。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-配置Github"><a href="#2-配置Github" class="headerlink" title="2 配置Github"></a>2 配置Github</h2><p>如何将静态博客利用github进行部署呢？下面来看下操作步骤。</p>
-<h3 id="2-1-在Github上建立个人Repository"><a href="#2-1-在Github上建立个人Repository" class="headerlink" title="2.1 在Github上建立个人Repository"></a>2.1 在Github上建立个人Repository</h3><p>建立reponsity过程可参考<a href="https://pages.github.com/">Github Pages</a>.</p>
-<h3 id="2-2-配置-config-yml文件"><a href="#2-2-配置-config-yml文件" class="headerlink" title="2.2 配置_config.yml文件"></a>2.2 配置_config.yml文件</h3><p>在_config.yml文件末尾，配置如下内容。其中，reposity对应的url为上一步在Github上建立的reposity地址。</p>
-<blockquote>
-<p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/username/reposityname.github.io.git">https://github.com/username/reposityname.github.io.git</a><br>  branch: master</p>
-</blockquote>
-<p>  配置完成后，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>因为我建立的reposity名字为cqu2008，所以我就直接在浏览器中访问  <a href="http://jiaochunxiao.github.io/">http://jiaochunxiao.github.io/</a></p>
-<h2 id="3-建站过程中的一些问题"><a href="#3-建站过程中的一些问题" class="headerlink" title="3 建站过程中的一些问题"></a>3 建站过程中的一些问题</h2><h3 id="3-1-本地发布失败"><a href="#3-1-本地发布失败" class="headerlink" title="3.1 本地发布失败"></a>3.1 本地发布失败</h3><p>本地发布，执行 hexo server 失败。解决方案： 执行如下命令。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
-<p>执行完此命令后，再执行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>即可看到博客的效果。</p>
-<h3 id="3-2-Github部署失败"><a href="#3-2-Github部署失败" class="headerlink" title="3.2 Github部署失败"></a>3.2 Github部署失败</h3><p>执行下面命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>会出现： Deployer not found: git<br>此时执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>此时再去执行，hexo deploy ,就可以成功部署了。</p>
-<h3 id="3-3-部署步骤"><a href="#3-3-部署步骤" class="headerlink" title="3.3 部署步骤"></a>3.3 部署步骤</h3><p>配置后_config.yml后，通用的三条部署命令（好比是大象装冰箱，一共分三步）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript高级程序设计笔记(10)-DOM</title>
-    <url>/2016/11/11/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-10/</url>
-    <content><![CDATA[<p>DOM(文档对象模型)是针对HTML和XML文档的一个API。<a id="more"></a></p>
-<h2 id="节点层次"><a href="#节点层次" class="headerlink" title="节点层次"></a>节点层次</h2><h3 id="节点关系及操作节点"><a href="#节点关系及操作节点" class="headerlink" title="节点关系及操作节点"></a>节点关系及操作节点</h3><img src='http://7xprrp.com1.z0.glb.clouddn.com/js/dom-nodes.png' alt='' />
-
-<p>1、 appendChild(): 用于向childNode列表末尾添加一个节点。<br>2、 insertBefore(): 接收两个参数，要插入的节点名称和作为按照的节点。插入节点后，被插入的节点会变成参照节点的前一个同胞节点，同时被方法返回。如果参照节点是null，则insertBefore()与appendChild()执行相同的操作。<br>3、 replaceChild(): 接收两个参数，要插入的节点和要替换的节点。要替换的节点将由这个方法返回并从文档树中删除，同时由要插入的节点占据其位置。<br>4、 removeChild(): 接收一个参数，即要删除的节点。被移除的节点将成为方法的返回值。<br>5、 cloneNode(): 接收一个布尔值参数，表示是否执行深复制。</p>
-<h3 id="Document类型"><a href="#Document类型" class="headerlink" title="Document类型"></a>Document类型</h3><p>Javascript中通过Document类型表示文档。在浏览器中document对象是HTMLDocument(继承自Document类型)的一个实例，表示整个HTML页面。document对象是window对象的一个属性，因为可以将其作为全局对象来访问。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.nodeType;<span class="comment">//9</span></span><br><span class="line"><span class="built_in">document</span>.nodeValue;<span class="comment">//null</span></span><br><span class="line"><span class="built_in">document</span>.nodeName;<span class="comment">//&#x27;#document&#x27;</span></span><br><span class="line"><span class="built_in">document</span>.parentNode;<span class="comment">// null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">document</span>.documentElement;</span><br><span class="line">alert(html == <span class="built_in">document</span>.firstChld);<span class="comment">//true</span></span><br><span class="line">alert(html == <span class="built_in">document</span>.childNodes[<span class="number">0</span>]);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-<p>document的body属性直接指向<body>元素。</p>
-<p>document.doctype取得对&lt;!DOCTYPE&gt;的引用。浏览器支持有限！</p>
-<p>document.title，取得文档标题</p>
-<p>document.URL，取得完整url</p>
-<p>document.domain，取得域名，可以设置，但有安全方面限制，并非可以设置任何值。</p>
-<p>document.referrer,取得来源页面url</p>
-<h4 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h4><p>document.getElementById/document.getElementsByClassName/document.getElementsByName/document.getElementsByTageName/document.getElementsByTagnameNS</p>
-<h4 id="HTML元素属性"><a href="#HTML元素属性" class="headerlink" title="HTML元素属性"></a>HTML元素属性</h4><p>1、 id，元素在文档中的唯一标识符<br>2、 title，有关元素的附加说明信息<br>3、 lang，元素内容的语言代码，很少使用<br>4、 dir，语言的防线，值为’ltr’(左至右)或’rtl’，很少使用<br>5、 className，元素的class特性对应</p>
-<p>取得特性：</p>
-<p>getAttribute()/setAttribute()/removeAttribute()</p>
-<p>Element类型是attributes属性的唯一一个DOM节点类型，attributes属性中包含一个NamedNodeMap，与NodeList类似，也是一个动态集合。元素的每一个特性都由一个Attr节点表示，每个节点都保存在NamedNodeMap对象中，NamedNodeMap对象拥有下列方法：<br>1、 getNamedItem(name): 返回nodeName属性等于name的节点<br>2、 removeNameItem(name): 从列表中移除nodeName属性等于name的节点<br>3、 setNamedItem(node): 向列表中添加节点，以节点的nodeName属性为索引<br>4、 item(pos): 返回位于数字pos位置处的节点<br>attributes属性中包含一系列节点，每个节点的nodeName就是特性的名称，而节点的nodeValue就是特性的值。要取得元素的id特性</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;ntp-contents&#x27;</span>).attributes.getNamedItem(<span class="string">&#x27;id&#x27;</span>).nodeValue;<span class="comment">//ntp-contents</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;ntp-contents&#x27;</span>).attributes[<span class="string">&#x27;id&#x27;</span>].nodeValue;<span class="comment">//ntp-contents</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//也可以通过此方法设置新的属性值</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;ntp-contents&#x27;</span>).attributes[<span class="string">&#x27;id&#x27;</span>].nodeValue = <span class="string">&#x27;newId&#x27;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>removeNamedItem()方法与removeAttribute()方法的效果相同：直接删除具有给定名称的特性。两者唯一区别资源，removeNamedItem()返回表示被删除特性的Attr节点。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> oldAttr = element.attributes.removeNamedItem(<span class="string">&#x27;id&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>setNamedItem()是个很不常用的方法，通过这个方法可以为元素添加一个新特性，为此需要为它传入一个特性节点。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">element.attributes.setNamedItem(newAttr);</span><br></pre></td></tr></table></figure>
-<p><em>上述attributes的方法不够方便，一般使用getAttribute()/setAttribute()/removeAttribute()。</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outputAttributes</span>(<span class="params">element</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> pairs = <span class="keyword">new</span> <span class="built_in">Array</span>(),</span><br><span class="line">		attrName,</span><br><span class="line">		attrValue,</span><br><span class="line">		i,</span><br><span class="line">		len = element.attributes.length;</span><br><span class="line">	<span class="keyword">for</span>( i = <span class="number">0</span>; i &lt; len; i++)&#123;</span><br><span class="line">		attrName = element.attributes[i].nodeName;</span><br><span class="line">		attrVaule = element.attributes[i].nodeValue;</span><br><span class="line">		<span class="keyword">if</span>(element.attributes[i].specified)&#123; </span><br><span class="line">			<span class="comment">//针对IE7及之前版本做兼容，确保即使在IE7及更早版本中，也会只返回指定的特性</span></span><br><span class="line">			paris.push(attrName + <span class="string">&#x27;=\&#x27;&#x27;</span> + attrValue + <span class="string">&#x27;=\&#x27;&#x27;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h4><p>document.createElement();</p>
-<h3 id="Text类型"><a href="#Text类型" class="headerlink" title="Text类型"></a>Text类型</h3><h4 id="创建文本节点"><a href="#创建文本节点" class="headerlink" title="创建文本节点"></a>创建文本节点</h4><p>document.createTextNode()</p>
-<h4 id="规范化文本节点"><a href="#规范化文本节点" class="headerlink" title="规范化文本节点"></a>规范化文本节点</h4><p>normalize():如果在一个包含两个或多个文本节点的父元素上调用normalize()方法，则会将所有文本节点合并成一个节点，结果节点的nodeValue等于将合并前每个文本节点的nodeValue值拼接起来的值。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">element.className = <span class="string">&#x27;message&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> textNode = <span class="built_in">document</span>.createTextNode(<span class="string">&#x27;hello world!&#x27;</span>);</span><br><span class="line">element.appendChild(textNdoe);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> textNode1 = <span class="built_in">document</span>.createTextNode(<span class="string">&#x27;html&#x27;</span>);</span><br><span class="line">element.appendChild(textNode1);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(element);</span><br><span class="line"></span><br><span class="line">alert(element.childNodes.length);<span class="comment">//2</span></span><br><span class="line"></span><br><span class="line">element.normalize();</span><br><span class="line"></span><br><span class="line">alert(element.childNodes.length);<span class="comment">//1</span></span><br><span class="line">alert(element.firstChild.nodeValue);<span class="comment">// hello world!html</span></span><br></pre></td></tr></table></figure>
-
-<p>splitText(): 作用与normalize()相反，这个方法会将一个文本节点分成两个文本节点，即按照指定的位置分割nodeValue值。原文本节点将包含开始到指定位置之前的内容，新文本节点包含剩下的文本。该方法返回一个新的文本节点，该节点与原节点的parentNode相同。</p>
-<pre><code class="javascript">var element = document.createElement(&#39;div&#39;);
-element.className = &#39;message&#39;;
-
-var textNode = document.createTextNode(&#39;hello world!&#39;);
-element.appendChild(textNdoe);
-
-document.body.appendChild(element);
-
-var newNdoe = element.firstChild.splitText(5);
-
-alert(element.firstChilde.nodeValue);//&#39;hello&#39;
-alert(newNode.nodeValue);//&#39; world&#39;
-alert(element.childNodes.length);//2</code></pre>
-<h3 id="Comment类型"><a href="#Comment类型" class="headerlink" title="Comment类型"></a>Comment类型</h3><h2 id="DOM操作技术"><a href="#DOM操作技术" class="headerlink" title="DOM操作技术"></a>DOM操作技术</h2><p>NodeList、NamedNodeMap和HTMLCollection，这三个集合都是动态的，每当文档结构发生变化时，它们都会更新。NodeList对象都是在访问DOM文档时实时运行的查询。</p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript高级程序设计笔记(11)-DOM扩展</title>
-    <url>/2016/11/15/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-11/</url>
-    <content><![CDATA[<h2 id="选择符API"><a href="#选择符API" class="headerlink" title="选择符API"></a>选择符API</h2><h3 id="querySelector-方法"><a href="#querySelector-方法" class="headerlink" title="querySelector()方法"></a>querySelector()方法</h3><p>querySelector()方法接收一个css选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回null。<a id="more"></a></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//取得body元素</span></span><br><span class="line"><span class="keyword">var</span> body = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;body&#x27;</span>);</span><br><span class="line"><span class="comment">//取得ID为&#x27;myDiv&#x27;的元素</span></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#myDiv&#x27;</span>);</span><br><span class="line"><span class="comment">//取得类为&#x27;selected&#x27;的第一个元素</span></span><br><span class="line"><span class="keyword">var</span> selected = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.selected&#x27;</span>);</span><br><span class="line"><span class="comment">//取得类为&#x27;button&#x27;的第一个图像元素</span></span><br><span class="line"><span class="keyword">var</span> img = <span class="built_in">document</span>.body.querySelector(<span class="string">&#x27;img.button&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="querySelectorAll"><a href="#querySelectorAll" class="headerlink" title="querySelectorAll()"></a>querySelectorAll()</h3><p>querySelectorAll()方法接收的参数与querySelector()方法一样，返回一个NodeList的实例。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> strongs = <span class="built_in">document</span>.querySelctorAll(<span class="string">&#x27;p strong&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> i, len, strong;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>, len = strongs.length; i &lt; len; i++)&#123;</span><br><span class="line">	strong = strongs[i];<span class="comment">//或者strongs.item(i)</span></span><br><span class="line">	strong.className = <span class="string">&#x27;important&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="matchesSelector-方法"><a href="#matchesSelector-方法" class="headerlink" title="matchesSelector()方法"></a>matchesSelector()方法</h3><h2 id="元素遍历"><a href="#元素遍历" class="headerlink" title="元素遍历"></a>元素遍历</h2><h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><h3 id="与类相关补充"><a href="#与类相关补充" class="headerlink" title="与类相关补充"></a>与类相关补充</h3><h4 id="getElementsByClassName"><a href="#getElementsByClassName" class="headerlink" title="getElementsByClassName()"></a>getElementsByClassName()</h4><h4 id="classList属性"><a href="#classList属性" class="headerlink" title="classList属性"></a>classList属性</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> classList = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>).classList;</span><br><span class="line"></span><br><span class="line">classList.remove(<span class="string">&#x27;user&#x27;</span>);</span><br><span class="line">classList.add(<span class="string">&#x27;current&#x27;</span>);</span><br><span class="line">classList.toggle(<span class="string">&#x27;user&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(classList.contains(<span class="string">&#x27;bd&#x27;</span>)&amp;&amp;classList.contains(<span class="string">&#x27;disabled&#x27;</span>))&#123;</span><br><span class="line">	<span class="comment">//执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="焦点管理"><a href="#焦点管理" class="headerlink" title="焦点管理"></a>焦点管理</h3><p>HTML5辅助管理DOM焦点：document.activeElement</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> button = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myButton&#x27;</span>);</span><br><span class="line">button.focus();</span><br><span class="line">alert(<span class="built_in">document</span>.activeElement === button);</span><br></pre></td></tr></table></figure>
-<h3 id="HTMLDocument的变化"><a href="#HTMLDocument的变化" class="headerlink" title="HTMLDocument的变化"></a>HTMLDocument的变化</h3><h4 id="readyState属性"><a href="#readyState属性" class="headerlink" title="readyState属性"></a>readyState属性</h4><p>HTML5标准：Document的readyState属性有两个值：</p>
-<p>1、 loading:正在加载文档<br>2、 complete:已经加载完文档</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.readyState == <span class="string">&#x27;complete&#x27;</span>)&#123;</span><br><span class="line">	<span class="comment">//执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="兼容模式"><a href="#兼容模式" class="headerlink" title="兼容模式"></a>兼容模式</h4><p>HTML5标准： document.compatMode，标准模式下该值等于’CSS1Compat’，混杂模式下，该值等于’BackCompat’。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.compatMode == <span class="string">&#x27;CSS1Compat&#x27;</span>)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Standard mode&#x27;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Quirks mode&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="head属性"><a href="#head属性" class="headerlink" title="head属性"></a>head属性</h4><p>HTML5标准：document.head</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> head = <span class="built_in">document</span>.head||<span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;head&#x27;</span>)[<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
-
-<h4 id="字符集属性"><a href="#字符集属性" class="headerlink" title="字符集属性"></a>字符集属性</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(<span class="built_in">document</span>.charset);</span><br><span class="line"><span class="built_in">document</span>.charset = <span class="string">&#x27;UTF-8&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.charset!=<span class="built_in">document</span>.defaultCharset)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Custom character set being used&#x27;</span>);</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<h4 id="自定义数据属性"><a href="#自定义数据属性" class="headerlink" title="自定义数据属性"></a>自定义数据属性</h4><blockquote>
-<p>HTML5规定可以为元素添加非标准的属性，但要添加前缀 data-，目的是为元素提供与渲染无关的信息，或者提供语义信息。</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;myDiv&#x27;</span> <span class="attr">data-appId</span>=<span class="string">&#x27;2107&#x27;</span> <span class="attr">data-myname</span>=<span class="string">&#x27;hnwc&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>添加自定义属性后，通过元素的dataset属性来访问自定义属性的值。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="comment">//取得自定义属性值</span></span><br><span class="line"><span class="keyword">var</span> appId = div.dataset.appId;</span><br><span class="line"><span class="keyword">var</span> myName = div.dataset.myname;</span><br><span class="line"><span class="comment">//设置值</span></span><br><span class="line">div.dataset.appId = <span class="number">2014</span>;</span><br><span class="line">div.dataset.myname = <span class="string">&#x27;cq&#x27;</span>;</span><br><span class="line"><span class="comment">//判断</span></span><br><span class="line"><span class="keyword">if</span>(div.dataset.myname)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;hello &#x27;</span> + div.dataset.myname);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="插入标记"><a href="#插入标记" class="headerlink" title="插入标记"></a>插入标记</h4><p>1、 innerHTML<br>在取模式下，innerHTML属性返回与调用元素的所有子节点对应的HTML标记。<br>在写模式下，innerHTML会根据指定值创建新的DOM树，然后用这个DOM树完全替换调用元素下原先的所有子节点。</p>
-<blockquote>
-<p>不支持innerHTML的元素有： col、colgroup、frameset、head、html、style、table、tbody、thead、tfoot、tr。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> text = <span class="string">&quot;&lt;a href=\&quot;#\&quot; onclick=\&quot;alert(&#x27;hi&#x27;)\&quot;&gt;&lt;/a&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> sanitized = <span class="built_in">window</span>.toStaticHTML(text); <span class="comment">//only IE8</span></span><br><span class="line">alert(sanitized);</span><br></pre></td></tr></table></figure>
-
-<p>2、 outerHTML属性<br>在读模式下，outerHTML返回调用它的元素及所有子节点的HTML标签。<br>在写模式下，outerHTML会根据指定的HTML字符串创建新的DOM子树，然后用这个DOM子树完全替换调用元素。</p>
-<p>3、 insertAdjacentHTML()方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//作为前一个同辈元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;beforebegin&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为第一个子元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;afterbegin&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为最后一个子元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;beforeend&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为后一个同辈元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;afterend&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<p>4、 内存与性能问题</p>
-<h4 id="scrollIntoView-方法"><a href="#scrollIntoView-方法" class="headerlink" title="scrollIntoView()方法"></a>scrollIntoView()方法</h4><p>scrollIntoView()可以在所有HTML元素上调用，通过滚动浏览器窗口或某个容器，调用元素就可以出现在视口中。如果给这个方法传入true作为参数，或者不传入任何参数，那么窗口滚动之后会让调用元素的顶部与视口顶部尽可能平齐。如果传入false作为参数，调用元素会尽可能全部出现在视口中，不过顶部不一定平齐。</p>
-<h3 id="专有扩展"><a href="#专有扩展" class="headerlink" title="专有扩展"></a>专有扩展</h3><h4 id="文档模式"><a href="#文档模式" class="headerlink" title="文档模式"></a>文档模式</h4><h4 id="children属性"><a href="#children属性" class="headerlink" title="children属性"></a>children属性</h4><h4 id="contains"><a href="#contains" class="headerlink" title="contains"></a>contains</h4><h4 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h4><p>innerText</p>
-<p>outerText</p>
-<h4 id="滚动"><a href="#滚动" class="headerlink" title="滚动"></a>滚动</h4>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript高级程序设计笔记(12)-DOM2和DOM3</title>
-    <url>/2016/11/20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-12/</url>
-    <content><![CDATA[<h4 id="计算的样式"><a href="#计算的样式" class="headerlink" title="计算的样式"></a>计算的样式</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = <span class="built_in">document</span>.defaultView.getComputedStyle(myDiv, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE不支持getComputedStyle()方法，在IE中每个具有style属性的元素还要一个currentStyle属性。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = myDiv.currentStyle;</span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -978,6 +858,126 @@ alert(element.childNodes.length);//2</code></pre>
 <h3 id="键盘与文本事件"><a href="#键盘与文本事件" class="headerlink" title="键盘与文本事件"></a>键盘与文本事件</h3><p>3个键盘事件：<br>1、 keydown: 用户按下键盘上的任意键时触发，而且如果按住不放的话，会重复触发此事件<br>2、 keypress: 用户按下键盘上的字符键时触发，而且如果按住不放的话，会重复触发此事件<br>3、 keyup: 当用户释放键盘上的键时触发</p>
 <p>文本事件：textInput</p>
 ]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript高级程序设计笔记(12)-DOM2和DOM3</title>
+    <url>/2016/11/20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-12/</url>
+    <content><![CDATA[<h4 id="计算的样式"><a href="#计算的样式" class="headerlink" title="计算的样式"></a>计算的样式</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = <span class="built_in">document</span>.defaultView.getComputedStyle(myDiv, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE不支持getComputedStyle()方法，在IE中每个具有style属性的元素还要一个currentStyle属性。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = myDiv.currentStyle;</span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript高级程序设计笔记(10)-DOM</title>
+    <url>/2016/11/11/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-10/</url>
+    <content><![CDATA[<p>DOM(文档对象模型)是针对HTML和XML文档的一个API。<a id="more"></a></p>
+<h2 id="节点层次"><a href="#节点层次" class="headerlink" title="节点层次"></a>节点层次</h2><h3 id="节点关系及操作节点"><a href="#节点关系及操作节点" class="headerlink" title="节点关系及操作节点"></a>节点关系及操作节点</h3><img src='http://7xprrp.com1.z0.glb.clouddn.com/js/dom-nodes.png' alt='' />
+
+<p>1、 appendChild(): 用于向childNode列表末尾添加一个节点。<br>2、 insertBefore(): 接收两个参数，要插入的节点名称和作为按照的节点。插入节点后，被插入的节点会变成参照节点的前一个同胞节点，同时被方法返回。如果参照节点是null，则insertBefore()与appendChild()执行相同的操作。<br>3、 replaceChild(): 接收两个参数，要插入的节点和要替换的节点。要替换的节点将由这个方法返回并从文档树中删除，同时由要插入的节点占据其位置。<br>4、 removeChild(): 接收一个参数，即要删除的节点。被移除的节点将成为方法的返回值。<br>5、 cloneNode(): 接收一个布尔值参数，表示是否执行深复制。</p>
+<h3 id="Document类型"><a href="#Document类型" class="headerlink" title="Document类型"></a>Document类型</h3><p>Javascript中通过Document类型表示文档。在浏览器中document对象是HTMLDocument(继承自Document类型)的一个实例，表示整个HTML页面。document对象是window对象的一个属性，因为可以将其作为全局对象来访问。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.nodeType;<span class="comment">//9</span></span><br><span class="line"><span class="built_in">document</span>.nodeValue;<span class="comment">//null</span></span><br><span class="line"><span class="built_in">document</span>.nodeName;<span class="comment">//&#x27;#document&#x27;</span></span><br><span class="line"><span class="built_in">document</span>.parentNode;<span class="comment">// null</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> html = <span class="built_in">document</span>.documentElement;</span><br><span class="line">alert(html == <span class="built_in">document</span>.firstChld);<span class="comment">//true</span></span><br><span class="line">alert(html == <span class="built_in">document</span>.childNodes[<span class="number">0</span>]);<span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<p>document的body属性直接指向<body>元素。</p>
+<p>document.doctype取得对&lt;!DOCTYPE&gt;的引用。浏览器支持有限！</p>
+<p>document.title，取得文档标题</p>
+<p>document.URL，取得完整url</p>
+<p>document.domain，取得域名，可以设置，但有安全方面限制，并非可以设置任何值。</p>
+<p>document.referrer,取得来源页面url</p>
+<h4 id="查找元素"><a href="#查找元素" class="headerlink" title="查找元素"></a>查找元素</h4><p>document.getElementById/document.getElementsByClassName/document.getElementsByName/document.getElementsByTageName/document.getElementsByTagnameNS</p>
+<h4 id="HTML元素属性"><a href="#HTML元素属性" class="headerlink" title="HTML元素属性"></a>HTML元素属性</h4><p>1、 id，元素在文档中的唯一标识符<br>2、 title，有关元素的附加说明信息<br>3、 lang，元素内容的语言代码，很少使用<br>4、 dir，语言的防线，值为’ltr’(左至右)或’rtl’，很少使用<br>5、 className，元素的class特性对应</p>
+<p>取得特性：</p>
+<p>getAttribute()/setAttribute()/removeAttribute()</p>
+<p>Element类型是attributes属性的唯一一个DOM节点类型，attributes属性中包含一个NamedNodeMap，与NodeList类似，也是一个动态集合。元素的每一个特性都由一个Attr节点表示，每个节点都保存在NamedNodeMap对象中，NamedNodeMap对象拥有下列方法：<br>1、 getNamedItem(name): 返回nodeName属性等于name的节点<br>2、 removeNameItem(name): 从列表中移除nodeName属性等于name的节点<br>3、 setNamedItem(node): 向列表中添加节点，以节点的nodeName属性为索引<br>4、 item(pos): 返回位于数字pos位置处的节点<br>attributes属性中包含一系列节点，每个节点的nodeName就是特性的名称，而节点的nodeValue就是特性的值。要取得元素的id特性</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;ntp-contents&#x27;</span>).attributes.getNamedItem(<span class="string">&#x27;id&#x27;</span>).nodeValue;<span class="comment">//ntp-contents</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;ntp-contents&#x27;</span>).attributes[<span class="string">&#x27;id&#x27;</span>].nodeValue;<span class="comment">//ntp-contents</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//也可以通过此方法设置新的属性值</span></span><br><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">&#x27;ntp-contents&#x27;</span>).attributes[<span class="string">&#x27;id&#x27;</span>].nodeValue = <span class="string">&#x27;newId&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>removeNamedItem()方法与removeAttribute()方法的效果相同：直接删除具有给定名称的特性。两者唯一区别资源，removeNamedItem()返回表示被删除特性的Attr节点。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> oldAttr = element.attributes.removeNamedItem(<span class="string">&#x27;id&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>setNamedItem()是个很不常用的方法，通过这个方法可以为元素添加一个新特性，为此需要为它传入一个特性节点。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">element.attributes.setNamedItem(newAttr);</span><br></pre></td></tr></table></figure>
+<p><em>上述attributes的方法不够方便，一般使用getAttribute()/setAttribute()/removeAttribute()。</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outputAttributes</span>(<span class="params">element</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> pairs = <span class="keyword">new</span> <span class="built_in">Array</span>(),</span><br><span class="line">		attrName,</span><br><span class="line">		attrValue,</span><br><span class="line">		i,</span><br><span class="line">		len = element.attributes.length;</span><br><span class="line">	<span class="keyword">for</span>( i = <span class="number">0</span>; i &lt; len; i++)&#123;</span><br><span class="line">		attrName = element.attributes[i].nodeName;</span><br><span class="line">		attrVaule = element.attributes[i].nodeValue;</span><br><span class="line">		<span class="keyword">if</span>(element.attributes[i].specified)&#123; </span><br><span class="line">			<span class="comment">//针对IE7及之前版本做兼容，确保即使在IE7及更早版本中，也会只返回指定的特性</span></span><br><span class="line">			paris.push(attrName + <span class="string">&#x27;=\&#x27;&#x27;</span> + attrValue + <span class="string">&#x27;=\&#x27;&#x27;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="创建元素"><a href="#创建元素" class="headerlink" title="创建元素"></a>创建元素</h4><p>document.createElement();</p>
+<h3 id="Text类型"><a href="#Text类型" class="headerlink" title="Text类型"></a>Text类型</h3><h4 id="创建文本节点"><a href="#创建文本节点" class="headerlink" title="创建文本节点"></a>创建文本节点</h4><p>document.createTextNode()</p>
+<h4 id="规范化文本节点"><a href="#规范化文本节点" class="headerlink" title="规范化文本节点"></a>规范化文本节点</h4><p>normalize():如果在一个包含两个或多个文本节点的父元素上调用normalize()方法，则会将所有文本节点合并成一个节点，结果节点的nodeValue等于将合并前每个文本节点的nodeValue值拼接起来的值。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">&#x27;div&#x27;</span>);</span><br><span class="line">element.className = <span class="string">&#x27;message&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> textNode = <span class="built_in">document</span>.createTextNode(<span class="string">&#x27;hello world!&#x27;</span>);</span><br><span class="line">element.appendChild(textNdoe);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> textNode1 = <span class="built_in">document</span>.createTextNode(<span class="string">&#x27;html&#x27;</span>);</span><br><span class="line">element.appendChild(textNode1);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(element);</span><br><span class="line"></span><br><span class="line">alert(element.childNodes.length);<span class="comment">//2</span></span><br><span class="line"></span><br><span class="line">element.normalize();</span><br><span class="line"></span><br><span class="line">alert(element.childNodes.length);<span class="comment">//1</span></span><br><span class="line">alert(element.firstChild.nodeValue);<span class="comment">// hello world!html</span></span><br></pre></td></tr></table></figure>
+
+<p>splitText(): 作用与normalize()相反，这个方法会将一个文本节点分成两个文本节点，即按照指定的位置分割nodeValue值。原文本节点将包含开始到指定位置之前的内容，新文本节点包含剩下的文本。该方法返回一个新的文本节点，该节点与原节点的parentNode相同。</p>
+<pre><code class="javascript">var element = document.createElement(&#39;div&#39;);
+element.className = &#39;message&#39;;
+
+var textNode = document.createTextNode(&#39;hello world!&#39;);
+element.appendChild(textNdoe);
+
+document.body.appendChild(element);
+
+var newNdoe = element.firstChild.splitText(5);
+
+alert(element.firstChilde.nodeValue);//&#39;hello&#39;
+alert(newNode.nodeValue);//&#39; world&#39;
+alert(element.childNodes.length);//2</code></pre>
+<h3 id="Comment类型"><a href="#Comment类型" class="headerlink" title="Comment类型"></a>Comment类型</h3><h2 id="DOM操作技术"><a href="#DOM操作技术" class="headerlink" title="DOM操作技术"></a>DOM操作技术</h2><p>NodeList、NamedNodeMap和HTMLCollection，这三个集合都是动态的，每当文档结构发生变化时，它们都会更新。NodeList对象都是在访问DOM文档时实时运行的查询。</p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript高级程序设计笔记(11)-DOM扩展</title>
+    <url>/2016/11/15/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-11/</url>
+    <content><![CDATA[<h2 id="选择符API"><a href="#选择符API" class="headerlink" title="选择符API"></a>选择符API</h2><h3 id="querySelector-方法"><a href="#querySelector-方法" class="headerlink" title="querySelector()方法"></a>querySelector()方法</h3><p>querySelector()方法接收一个css选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回null。<a id="more"></a></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//取得body元素</span></span><br><span class="line"><span class="keyword">var</span> body = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;body&#x27;</span>);</span><br><span class="line"><span class="comment">//取得ID为&#x27;myDiv&#x27;的元素</span></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#myDiv&#x27;</span>);</span><br><span class="line"><span class="comment">//取得类为&#x27;selected&#x27;的第一个元素</span></span><br><span class="line"><span class="keyword">var</span> selected = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.selected&#x27;</span>);</span><br><span class="line"><span class="comment">//取得类为&#x27;button&#x27;的第一个图像元素</span></span><br><span class="line"><span class="keyword">var</span> img = <span class="built_in">document</span>.body.querySelector(<span class="string">&#x27;img.button&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="querySelectorAll"><a href="#querySelectorAll" class="headerlink" title="querySelectorAll()"></a>querySelectorAll()</h3><p>querySelectorAll()方法接收的参数与querySelector()方法一样，返回一个NodeList的实例。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> strongs = <span class="built_in">document</span>.querySelctorAll(<span class="string">&#x27;p strong&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> i, len, strong;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>, len = strongs.length; i &lt; len; i++)&#123;</span><br><span class="line">	strong = strongs[i];<span class="comment">//或者strongs.item(i)</span></span><br><span class="line">	strong.className = <span class="string">&#x27;important&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="matchesSelector-方法"><a href="#matchesSelector-方法" class="headerlink" title="matchesSelector()方法"></a>matchesSelector()方法</h3><h2 id="元素遍历"><a href="#元素遍历" class="headerlink" title="元素遍历"></a>元素遍历</h2><h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><h3 id="与类相关补充"><a href="#与类相关补充" class="headerlink" title="与类相关补充"></a>与类相关补充</h3><h4 id="getElementsByClassName"><a href="#getElementsByClassName" class="headerlink" title="getElementsByClassName()"></a>getElementsByClassName()</h4><h4 id="classList属性"><a href="#classList属性" class="headerlink" title="classList属性"></a>classList属性</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> classList = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>).classList;</span><br><span class="line"></span><br><span class="line">classList.remove(<span class="string">&#x27;user&#x27;</span>);</span><br><span class="line">classList.add(<span class="string">&#x27;current&#x27;</span>);</span><br><span class="line">classList.toggle(<span class="string">&#x27;user&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(classList.contains(<span class="string">&#x27;bd&#x27;</span>)&amp;&amp;classList.contains(<span class="string">&#x27;disabled&#x27;</span>))&#123;</span><br><span class="line">	<span class="comment">//执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="焦点管理"><a href="#焦点管理" class="headerlink" title="焦点管理"></a>焦点管理</h3><p>HTML5辅助管理DOM焦点：document.activeElement</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> button = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myButton&#x27;</span>);</span><br><span class="line">button.focus();</span><br><span class="line">alert(<span class="built_in">document</span>.activeElement === button);</span><br></pre></td></tr></table></figure>
+<h3 id="HTMLDocument的变化"><a href="#HTMLDocument的变化" class="headerlink" title="HTMLDocument的变化"></a>HTMLDocument的变化</h3><h4 id="readyState属性"><a href="#readyState属性" class="headerlink" title="readyState属性"></a>readyState属性</h4><p>HTML5标准：Document的readyState属性有两个值：</p>
+<p>1、 loading:正在加载文档<br>2、 complete:已经加载完文档</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.readyState == <span class="string">&#x27;complete&#x27;</span>)&#123;</span><br><span class="line">	<span class="comment">//执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="兼容模式"><a href="#兼容模式" class="headerlink" title="兼容模式"></a>兼容模式</h4><p>HTML5标准： document.compatMode，标准模式下该值等于’CSS1Compat’，混杂模式下，该值等于’BackCompat’。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.compatMode == <span class="string">&#x27;CSS1Compat&#x27;</span>)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Standard mode&#x27;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Quirks mode&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="head属性"><a href="#head属性" class="headerlink" title="head属性"></a>head属性</h4><p>HTML5标准：document.head</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> head = <span class="built_in">document</span>.head||<span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;head&#x27;</span>)[<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+
+<h4 id="字符集属性"><a href="#字符集属性" class="headerlink" title="字符集属性"></a>字符集属性</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(<span class="built_in">document</span>.charset);</span><br><span class="line"><span class="built_in">document</span>.charset = <span class="string">&#x27;UTF-8&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.charset!=<span class="built_in">document</span>.defaultCharset)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Custom character set being used&#x27;</span>);</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h4 id="自定义数据属性"><a href="#自定义数据属性" class="headerlink" title="自定义数据属性"></a>自定义数据属性</h4><blockquote>
+<p>HTML5规定可以为元素添加非标准的属性，但要添加前缀 data-，目的是为元素提供与渲染无关的信息，或者提供语义信息。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;myDiv&#x27;</span> <span class="attr">data-appId</span>=<span class="string">&#x27;2107&#x27;</span> <span class="attr">data-myname</span>=<span class="string">&#x27;hnwc&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>添加自定义属性后，通过元素的dataset属性来访问自定义属性的值。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="comment">//取得自定义属性值</span></span><br><span class="line"><span class="keyword">var</span> appId = div.dataset.appId;</span><br><span class="line"><span class="keyword">var</span> myName = div.dataset.myname;</span><br><span class="line"><span class="comment">//设置值</span></span><br><span class="line">div.dataset.appId = <span class="number">2014</span>;</span><br><span class="line">div.dataset.myname = <span class="string">&#x27;cq&#x27;</span>;</span><br><span class="line"><span class="comment">//判断</span></span><br><span class="line"><span class="keyword">if</span>(div.dataset.myname)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;hello &#x27;</span> + div.dataset.myname);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="插入标记"><a href="#插入标记" class="headerlink" title="插入标记"></a>插入标记</h4><p>1、 innerHTML<br>在取模式下，innerHTML属性返回与调用元素的所有子节点对应的HTML标记。<br>在写模式下，innerHTML会根据指定值创建新的DOM树，然后用这个DOM树完全替换调用元素下原先的所有子节点。</p>
+<blockquote>
+<p>不支持innerHTML的元素有： col、colgroup、frameset、head、html、style、table、tbody、thead、tfoot、tr。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> text = <span class="string">&quot;&lt;a href=\&quot;#\&quot; onclick=\&quot;alert(&#x27;hi&#x27;)\&quot;&gt;&lt;/a&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> sanitized = <span class="built_in">window</span>.toStaticHTML(text); <span class="comment">//only IE8</span></span><br><span class="line">alert(sanitized);</span><br></pre></td></tr></table></figure>
+
+<p>2、 outerHTML属性<br>在读模式下，outerHTML返回调用它的元素及所有子节点的HTML标签。<br>在写模式下，outerHTML会根据指定的HTML字符串创建新的DOM子树，然后用这个DOM子树完全替换调用元素。</p>
+<p>3、 insertAdjacentHTML()方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//作为前一个同辈元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;beforebegin&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为第一个子元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;afterbegin&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为最后一个子元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;beforeend&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为后一个同辈元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;afterend&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>4、 内存与性能问题</p>
+<h4 id="scrollIntoView-方法"><a href="#scrollIntoView-方法" class="headerlink" title="scrollIntoView()方法"></a>scrollIntoView()方法</h4><p>scrollIntoView()可以在所有HTML元素上调用，通过滚动浏览器窗口或某个容器，调用元素就可以出现在视口中。如果给这个方法传入true作为参数，或者不传入任何参数，那么窗口滚动之后会让调用元素的顶部与视口顶部尽可能平齐。如果传入false作为参数，调用元素会尽可能全部出现在视口中，不过顶部不一定平齐。</p>
+<h3 id="专有扩展"><a href="#专有扩展" class="headerlink" title="专有扩展"></a>专有扩展</h3><h4 id="文档模式"><a href="#文档模式" class="headerlink" title="文档模式"></a>文档模式</h4><h4 id="children属性"><a href="#children属性" class="headerlink" title="children属性"></a>children属性</h4><h4 id="contains"><a href="#contains" class="headerlink" title="contains"></a>contains</h4><h4 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h4><p>innerText</p>
+<p>outerText</p>
+<h4 id="滚动"><a href="#滚动" class="headerlink" title="滚动"></a>滚动</h4>]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -2702,11 +2702,6 @@ Visit http://127.0.0.1:3003/?port=5858 to start debugging.
       </tags>
   </entry>
   <entry>
-    <title>Vue源码阅读笔记</title>
-    <url>/2019/12/26/Vue%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>egg.js接收前端文件处理</title>
     <url>/2019/03/22/egg-js%E6%8E%A5%E6%94%B6%E5%89%8D%E7%AB%AF%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/</url>
     <content><![CDATA[
@@ -3014,6 +3009,30 @@ Visit http://127.0.0.1:3003/?port=5858 to start debugging.
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2015/11/25/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(一)--ls</title>
     <url>/2016/04/12/linux/</url>
     <content><![CDATA[<h2 id="linux命令格式"><a href="#linux命令格式" class="headerlink" title="linux命令格式"></a>linux命令格式</h2><p>命令 [选项] [参数]</p>
@@ -3309,6 +3328,7 @@ Visit http://127.0.0.1:3003/?port=5858 to start debugging.
     <title>关于webpack的一些点</title>
     <url>/2019/03/06/%E5%85%B3%E4%BA%8Ewebpack%E7%9A%84%E4%B8%80%E4%BA%9B%E7%82%B9/</url>
     <content><![CDATA[
+
 <a id="more"></a>
 
 <p>记录webpack的一些基本概念及相关优化。</p>
