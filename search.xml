@@ -27,6 +27,55 @@
       </tags>
   </entry>
   <entry>
+    <title>linux常用命令学习(二) -- cd</title>
+    <url>/2016/04/13/20160413/</url>
+    <content><![CDATA[<h2 id="第二条linux命令-cd"><a href="#第二条linux命令-cd" class="headerlink" title="第二条linux命令: cd"></a>第二条linux命令: cd</h2><p>相信大家对 cd 这个命令，应该是再熟悉不过的了， cd 命令可以说是linux中最基本的命令了。下面就介绍下关于 cd 命令的相关知识。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>cd [目录名]</p>
+<h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>切换当前目录到指定目录（dirName）</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>进入系统根目录 cd /<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment">#  cd /</span></span><br><span class="line">[root@kvm45072 /]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
+<li>目录回退 cd .. 或者 cd ../<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 /]<span class="comment"># cd root</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd ..</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
+<li>进入当前系统主目录 cd </li>
+</ul>
+<p>系统当前主目录和系统的根目录是两个不同的概念。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>返回进入此目录之前所在的目录 cd -<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd -</span></span><br><span class="line">/root/<span class="built_in">test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
+<li>把上个命令的参数作为cd参数使用 cd !$<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd -</span></span><br><span class="line">/root</span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd !$</span></span><br><span class="line"><span class="built_in">cd</span> -</span><br><span class="line">/root/<span class="built_in">test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux常用命令学习(四) -- pwd</title>
+    <url>/2016/04/15/20160415/</url>
+    <content><![CDATA[<h2 id="第四条linux命令-pwd"><a href="#第四条linux命令-pwd" class="headerlink" title="第四条linux命令: pwd"></a>第四条linux命令: pwd</h2><p>已经熟悉了 cd , ls , mkdir 命令，如果我们想知道当前所在目录的路径是怎样，怎么办呢？linux用 pwd 命令来查看，当前目录的完整路径。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>pwd [选项]</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><p>一般情况下, pwd 命令不带任何参数。对于目录是链接时，使用 pwd -P 显示出实际路径。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>pwd <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># mkdir -p parent/child/</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd  parent/child/</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># pwd</span></span><br><span class="line">/root/parent/child</span><br><span class="line">[root@kvm45072 child]<span class="comment"># ^C</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(三) -- mkdir</title>
     <url>/2016/04/14/20160414/</url>
     <content><![CDATA[<h2 id="第三条linux命令-mkdir"><a href="#第三条linux命令-mkdir" class="headerlink" title="第三条linux命令: mkdir"></a>第三条linux命令: mkdir</h2><p>当我们进入到某个文档目录下，如何快速的创建新的目录呢，linux中通过 mkdir 命令可以快速的实现创建目录的操作。</p>
@@ -82,47 +131,28 @@
       </tags>
   </entry>
   <entry>
-    <title>linux常用命令学习(四) -- pwd</title>
-    <url>/2016/04/15/20160415/</url>
-    <content><![CDATA[<h2 id="第四条linux命令-pwd"><a href="#第四条linux命令-pwd" class="headerlink" title="第四条linux命令: pwd"></a>第四条linux命令: pwd</h2><p>已经熟悉了 cd , ls , mkdir 命令，如果我们想知道当前所在目录的路径是怎样，怎么办呢？linux用 pwd 命令来查看，当前目录的完整路径。</p>
+    <title>linux常用命令学习(六) -- rmdir</title>
+    <url>/2016/04/17/20160417/</url>
+    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
 <a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>pwd [选项]</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><p>一般情况下, pwd 命令不带任何参数。对于目录是链接时，使用 pwd -P 显示出实际路径。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>pwd <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># mkdir -p parent/child/</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd  parent/child/</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># pwd</span></span><br><span class="line">/root/parent/child</span><br><span class="line">[root@kvm45072 child]<span class="comment"># ^C</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux常用命令学习(二) -- cd</title>
-    <url>/2016/04/13/20160413/</url>
-    <content><![CDATA[<h2 id="第二条linux命令-cd"><a href="#第二条linux命令-cd" class="headerlink" title="第二条linux命令: cd"></a>第二条linux命令: cd</h2><p>相信大家对 cd 这个命令，应该是再熟悉不过的了， cd 命令可以说是linux中最基本的命令了。下面就介绍下关于 cd 命令的相关知识。</p>
-<a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>cd [目录名]</p>
-<h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>切换当前目录到指定目录（dirName）</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>进入系统根目录 cd /<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment">#  cd /</span></span><br><span class="line">[root@kvm45072 /]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
-<li>目录回退 cd .. 或者 cd ../<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 /]<span class="comment"># cd root</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd ..</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
-<li>进入当前系统主目录 cd </li>
-</ul>
-<p>系统当前主目录和系统的根目录是两个不同的概念。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>返回进入此目录之前所在的目录 cd -<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd -</span></span><br><span class="line">/root/<span class="built_in">test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
-<li>把上个命令的参数作为cd参数使用 cd !$<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd -</span></span><br><span class="line">/root</span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd !$</span></span><br><span class="line"><span class="built_in">cd</span> -</span><br><span class="line">/root/<span class="built_in">test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-]]></content>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p</td>
+<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
+</tr>
+<tr>
+<td>-v</td>
+<td align="center">–verbose, 详细显示进行的步骤。</td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -166,36 +196,6 @@
 <tr>
 <td>- -version</td>
 <td align="center"></td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux常用命令学习(六) -- rmdir</title>
-    <url>/2016/04/17/20160417/</url>
-    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
-<a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-p</td>
-<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
-</tr>
-<tr>
-<td>-v</td>
-<td align="center">–verbose, 详细显示进行的步骤。</td>
 </tr>
 </tbody></table>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
@@ -371,6 +371,48 @@
       </tags>
   </entry>
   <entry>
+    <title>ES6-let&amp;const</title>
+    <url>/2016/06/30/ES6-let-const/</url>
+    <content><![CDATA[<h2 id="let-amp-const"><a href="#let-amp-const" class="headerlink" title="let&amp;const"></a>let&amp;const</h2><p>let和const命令是ES6中新增的用来声明变量的命令。</p>
+<h3 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h3><p>let用法与 var 类似，但是 let 声明的变量只在它所在的代码块有效。ES6 let命令实际上为 Javascript 新增了块级作用域。ES5提供了全局作用域和函数作用域，没有块级作用域。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">a;<span class="comment">//1</span></span><br><span class="line">b;<span class="comment">//undefined,调用报错，只在定义时代码块内有效。</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> name=<span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br></pre></td></tr></table></figure>
+<p>当有了块级作用域后：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">let</span> name = <span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es6</span></span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<blockquote>
+<ul>
+<li>let声明的变量不存在变量提升。所以使用let变量前，必须先声明，否则会报错。*</li>
+</ul>
+</blockquote>
+<p>暂时性死区：ES6明确规定，如果区块中存在let和const声明的变量，从一开始就形成了封闭作用域。在变量声明之前调用这下变量会报错。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	tmp = <span class="string">&#x27;123&#x27;</span>;<span class="comment">//Uncaught ReferenceError: tmp is not defined(…)</span></span><br><span class="line">	<span class="keyword">let</span> tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>不允许重复声明：let 不允许在相同作用域内，重复声明同一变量。*</li>
+</ul>
+<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>const声明一个只读的常量，一旦常量声明，就不能改变。如果尝试修改const变量值，就会报错。同时，const一旦声明变量，就必须立即进行初始化，只声明不赋值，同样会报错。<br>const变量不存在变量提升。与let类似，const变量只在声明所在块级作用域有效，存在暂时性死区，不能重复声明。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="number">1</span>;</span><br><span class="line">m = <span class="number">2</span>;<span class="comment">//Assignment to constant variable.</span></span><br><span class="line"><span class="keyword">const</span> n;<span class="comment">//Missing initializer in const declaration</span></span><br></pre></td></tr></table></figure>
+<p>Tips:</p>
+<blockquote>
+<p>当引用第三方库时声明的变量，用const来声明，可避免重命名导致的bug<br>const 命令声明的常量，也不能提升，同样存在暂时性死区，只能在声明的位置后使用。</p>
+</blockquote>
+<hr>
+<p>2017-11-10 补充：</p>
+<h3 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h3><p> const 实际上保证的，并不是变量的值不改动，而是变量指向的那个内存地址不得改动。对于简单类型的数据（数值，字符串，布尔值），值就保存在变量指向的那个内存地址，因为等同于常量。但对于复合类型的数据（主要是数组和对象），变量指向的那个内存地址，保存的就是一个指针，const只能保证这个指针是固定，至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;</span><br><span class="line"></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop</span><br><span class="line"></span><br><span class="line">foo = &#123;&#125;; <span class="comment">//TypeError, &quot;foo&quot; is read-only</span></span><br></pre></td></tr></table></figure>
+<p>上述代码中，常量foo储存一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把foo指向另一个地址，但对象本上是可变的，所以依然可以为其添加新属性。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [];</span><br><span class="line">a.push(<span class="string">&#x27;hello&#x27;</span>);<span class="comment">//可执行</span></span><br><span class="line">a.length = <span class="number">0</span>;<span class="comment">//可执行</span></span><br><span class="line">a = [<span class="string">&#x27;world&#x27;</span>];<span class="comment">//Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，常量a是个数组，数组本身是可写的，但是如果将另一个数组赋值给a, 就会报错。</p>
+<p>如果想冻结对象，使用Object.freeze方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="built_in">Object</span>.freeze(&#123;&#125;)</span><br><span class="line"><span class="comment">//常规模式下，下面一行不起作用</span></span><br><span class="line"><span class="comment">//严格模式下，该行会报错</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(十) -- nl</title>
     <url>/2016/05/24/20160524/</url>
     <content><![CDATA[<p> linux关于文件行号显示，cat / nl 命令均可以实现，但nl 可以将行号做比较多的显示设计，包括位数与是否自动补齐 0 等等的功能。<a id="more"></a></p>
@@ -414,48 +456,6 @@
       </categories>
       <tags>
         <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ES6-let&amp;const</title>
-    <url>/2016/06/30/ES6-let-const/</url>
-    <content><![CDATA[<h2 id="let-amp-const"><a href="#let-amp-const" class="headerlink" title="let&amp;const"></a>let&amp;const</h2><p>let和const命令是ES6中新增的用来声明变量的命令。</p>
-<h3 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h3><p>let用法与 var 类似，但是 let 声明的变量只在它所在的代码块有效。ES6 let命令实际上为 Javascript 新增了块级作用域。ES5提供了全局作用域和函数作用域，没有块级作用域。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">a;<span class="comment">//1</span></span><br><span class="line">b;<span class="comment">//undefined,调用报错，只在定义时代码块内有效。</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> name=<span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br></pre></td></tr></table></figure>
-<p>当有了块级作用域后：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">let</span> name = <span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es6</span></span><br></pre></td></tr></table></figure>
-<p>注意：</p>
-<blockquote>
-<ul>
-<li>let声明的变量不存在变量提升。所以使用let变量前，必须先声明，否则会报错。*</li>
-</ul>
-</blockquote>
-<p>暂时性死区：ES6明确规定，如果区块中存在let和const声明的变量，从一开始就形成了封闭作用域。在变量声明之前调用这下变量会报错。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	tmp = <span class="string">&#x27;123&#x27;</span>;<span class="comment">//Uncaught ReferenceError: tmp is not defined(…)</span></span><br><span class="line">	<span class="keyword">let</span> tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>不允许重复声明：let 不允许在相同作用域内，重复声明同一变量。*</li>
-</ul>
-<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>const声明一个只读的常量，一旦常量声明，就不能改变。如果尝试修改const变量值，就会报错。同时，const一旦声明变量，就必须立即进行初始化，只声明不赋值，同样会报错。<br>const变量不存在变量提升。与let类似，const变量只在声明所在块级作用域有效，存在暂时性死区，不能重复声明。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="number">1</span>;</span><br><span class="line">m = <span class="number">2</span>;<span class="comment">//Assignment to constant variable.</span></span><br><span class="line"><span class="keyword">const</span> n;<span class="comment">//Missing initializer in const declaration</span></span><br></pre></td></tr></table></figure>
-<p>Tips:</p>
-<blockquote>
-<p>当引用第三方库时声明的变量，用const来声明，可避免重命名导致的bug<br>const 命令声明的常量，也不能提升，同样存在暂时性死区，只能在声明的位置后使用。</p>
-</blockquote>
-<hr>
-<p>2017-11-10 补充：</p>
-<h3 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h3><p> const 实际上保证的，并不是变量的值不改动，而是变量指向的那个内存地址不得改动。对于简单类型的数据（数值，字符串，布尔值），值就保存在变量指向的那个内存地址，因为等同于常量。但对于复合类型的数据（主要是数组和对象），变量指向的那个内存地址，保存的就是一个指针，const只能保证这个指针是固定，至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
- <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;</span><br><span class="line"></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop</span><br><span class="line"></span><br><span class="line">foo = &#123;&#125;; <span class="comment">//TypeError, &quot;foo&quot; is read-only</span></span><br></pre></td></tr></table></figure>
-<p>上述代码中，常量foo储存一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把foo指向另一个地址，但对象本上是可变的，所以依然可以为其添加新属性。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [];</span><br><span class="line">a.push(<span class="string">&#x27;hello&#x27;</span>);<span class="comment">//可执行</span></span><br><span class="line">a.length = <span class="number">0</span>;<span class="comment">//可执行</span></span><br><span class="line">a = [<span class="string">&#x27;world&#x27;</span>];<span class="comment">//Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
-<p>上面代码中，常量a是个数组，数组本身是可写的，但是如果将另一个数组赋值给a, 就会报错。</p>
-<p>如果想冻结对象，使用Object.freeze方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="built_in">Object</span>.freeze(&#123;&#125;)</span><br><span class="line"><span class="comment">//常规模式下，下面一行不起作用</span></span><br><span class="line"><span class="comment">//严格模式下，该行会报错</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -515,6 +515,58 @@
       <tags>
         <tag>js</tag>
         <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用HEXO搭建github个人网站</title>
+    <url>/2015/11/25/HEXO/</url>
+    <content><![CDATA[<p>HEXO,是一款基于Node.js的轻量的静态博客框架，利用它可以在github上快速构建个人的静态博客。下面就将我自己的构建博客的过程分享给大家。<a id="more"></a></p>
+<h2 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1 安装环境"></a>1 安装环境</h2><h3 id="1-1-安装node-js"><a href="#1-1-安装node-js" class="headerlink" title="1.1 安装node.js"></a>1.1 安装node.js</h3><p>由于HEXO是基于node.js的静态框架，我们首先要安装node环境。在<a href="http://nodejs.org/">node.js</a>官网进行下载安装.</p>
+<h3 id="1-2-安装git及申请github账号"><a href="#1-2-安装git及申请github账号" class="headerlink" title="1.2 安装git及申请github账号"></a>1.2 安装git及申请github账号</h3><p>关于git的安装以及github账号的创建，可自行百度或者在官网的指引下操作，此处省略。</p>
+<h3 id="1-3安装HEXO"><a href="#1-3安装HEXO" class="headerlink" title="1.3安装HEXO"></a>1.3安装HEXO</h3><p>接下来利用npm安装HEXO</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-建立本地博客目录"><a href="#1-4-建立本地博客目录" class="headerlink" title="1.4 建立本地博客目录"></a>1.4 建立本地博客目录</h3><p>安装好HEXO后，建立一个文件夹。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;fileName&gt;</span><br></pre></td></tr></table></figure>
+<p>生成的目录结构，及各目录文件作用：</p>
+<blockquote>
+<p>scaffolds 脚手架，也就是一个工具模板<br>scripts 写文件的js，扩展hexo的功能<br>source 存放博客正文内容<br>source/_drafts 草稿箱<br>source/_posts 文件箱<br>themes 存放皮肤的目录<br>themes/landscape 默认的皮肤<br>_config.yml 全局的配置文件<br>db.json 静态常量</p>
+</blockquote>
+<p>然后进入到该文件夹中，执行下面操作：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>生成静态页面（hexo\public\目录）：执行下面命令后，会在本地生成一个public目录。该目录下生成的文件，即为之后上传到github上并用于发布的静态文件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>本地发布：执行下面命令后，会在启动本地服务，访问localhost:4000，即可看到博客的页面。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置Github"><a href="#2-配置Github" class="headerlink" title="2 配置Github"></a>2 配置Github</h2><p>如何将静态博客利用github进行部署呢？下面来看下操作步骤。</p>
+<h3 id="2-1-在Github上建立个人Repository"><a href="#2-1-在Github上建立个人Repository" class="headerlink" title="2.1 在Github上建立个人Repository"></a>2.1 在Github上建立个人Repository</h3><p>建立reponsity过程可参考<a href="https://pages.github.com/">Github Pages</a>.</p>
+<h3 id="2-2-配置-config-yml文件"><a href="#2-2-配置-config-yml文件" class="headerlink" title="2.2 配置_config.yml文件"></a>2.2 配置_config.yml文件</h3><p>在_config.yml文件末尾，配置如下内容。其中，reposity对应的url为上一步在Github上建立的reposity地址。</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/username/reposityname.github.io.git">https://github.com/username/reposityname.github.io.git</a><br>  branch: master</p>
+</blockquote>
+<p>  配置完成后，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>因为我建立的reposity名字为cqu2008，所以我就直接在浏览器中访问  <a href="http://jiaochunxiao.github.io/">http://jiaochunxiao.github.io/</a></p>
+<h2 id="3-建站过程中的一些问题"><a href="#3-建站过程中的一些问题" class="headerlink" title="3 建站过程中的一些问题"></a>3 建站过程中的一些问题</h2><h3 id="3-1-本地发布失败"><a href="#3-1-本地发布失败" class="headerlink" title="3.1 本地发布失败"></a>3.1 本地发布失败</h3><p>本地发布，执行 hexo server 失败。解决方案： 执行如下命令。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+<p>执行完此命令后，再执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>即可看到博客的效果。</p>
+<h3 id="3-2-Github部署失败"><a href="#3-2-Github部署失败" class="headerlink" title="3.2 Github部署失败"></a>3.2 Github部署失败</h3><p>执行下面命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>会出现： Deployer not found: git<br>此时执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>此时再去执行，hexo deploy ,就可以成功部署了。</p>
+<h3 id="3-3-部署步骤"><a href="#3-3-部署步骤" class="headerlink" title="3.3 部署步骤"></a>3.3 部署步骤</h3><p>配置后_config.yml后，通用的三条部署命令（好比是大象装冰箱，一共分三步）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -591,58 +643,6 @@
       <tags>
         <tag>js</tag>
         <tag>ES6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用HEXO搭建github个人网站</title>
-    <url>/2015/11/25/HEXO/</url>
-    <content><![CDATA[<p>HEXO,是一款基于Node.js的轻量的静态博客框架，利用它可以在github上快速构建个人的静态博客。下面就将我自己的构建博客的过程分享给大家。<a id="more"></a></p>
-<h2 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1 安装环境"></a>1 安装环境</h2><h3 id="1-1-安装node-js"><a href="#1-1-安装node-js" class="headerlink" title="1.1 安装node.js"></a>1.1 安装node.js</h3><p>由于HEXO是基于node.js的静态框架，我们首先要安装node环境。在<a href="http://nodejs.org/">node.js</a>官网进行下载安装.</p>
-<h3 id="1-2-安装git及申请github账号"><a href="#1-2-安装git及申请github账号" class="headerlink" title="1.2 安装git及申请github账号"></a>1.2 安装git及申请github账号</h3><p>关于git的安装以及github账号的创建，可自行百度或者在官网的指引下操作，此处省略。</p>
-<h3 id="1-3安装HEXO"><a href="#1-3安装HEXO" class="headerlink" title="1.3安装HEXO"></a>1.3安装HEXO</h3><p>接下来利用npm安装HEXO</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
-<h3 id="1-4-建立本地博客目录"><a href="#1-4-建立本地博客目录" class="headerlink" title="1.4 建立本地博客目录"></a>1.4 建立本地博客目录</h3><p>安装好HEXO后，建立一个文件夹。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;fileName&gt;</span><br></pre></td></tr></table></figure>
-<p>生成的目录结构，及各目录文件作用：</p>
-<blockquote>
-<p>scaffolds 脚手架，也就是一个工具模板<br>scripts 写文件的js，扩展hexo的功能<br>source 存放博客正文内容<br>source/_drafts 草稿箱<br>source/_posts 文件箱<br>themes 存放皮肤的目录<br>themes/landscape 默认的皮肤<br>_config.yml 全局的配置文件<br>db.json 静态常量</p>
-</blockquote>
-<p>然后进入到该文件夹中，执行下面操作：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>生成静态页面（hexo\public\目录）：执行下面命令后，会在本地生成一个public目录。该目录下生成的文件，即为之后上传到github上并用于发布的静态文件。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>本地发布：执行下面命令后，会在启动本地服务，访问localhost:4000，即可看到博客的页面。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-配置Github"><a href="#2-配置Github" class="headerlink" title="2 配置Github"></a>2 配置Github</h2><p>如何将静态博客利用github进行部署呢？下面来看下操作步骤。</p>
-<h3 id="2-1-在Github上建立个人Repository"><a href="#2-1-在Github上建立个人Repository" class="headerlink" title="2.1 在Github上建立个人Repository"></a>2.1 在Github上建立个人Repository</h3><p>建立reponsity过程可参考<a href="https://pages.github.com/">Github Pages</a>.</p>
-<h3 id="2-2-配置-config-yml文件"><a href="#2-2-配置-config-yml文件" class="headerlink" title="2.2 配置_config.yml文件"></a>2.2 配置_config.yml文件</h3><p>在_config.yml文件末尾，配置如下内容。其中，reposity对应的url为上一步在Github上建立的reposity地址。</p>
-<blockquote>
-<p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/username/reposityname.github.io.git">https://github.com/username/reposityname.github.io.git</a><br>  branch: master</p>
-</blockquote>
-<p>  配置完成后，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>因为我建立的reposity名字为cqu2008，所以我就直接在浏览器中访问  <a href="http://jiaochunxiao.github.io/">http://jiaochunxiao.github.io/</a></p>
-<h2 id="3-建站过程中的一些问题"><a href="#3-建站过程中的一些问题" class="headerlink" title="3 建站过程中的一些问题"></a>3 建站过程中的一些问题</h2><h3 id="3-1-本地发布失败"><a href="#3-1-本地发布失败" class="headerlink" title="3.1 本地发布失败"></a>3.1 本地发布失败</h3><p>本地发布，执行 hexo server 失败。解决方案： 执行如下命令。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
-<p>执行完此命令后，再执行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>即可看到博客的效果。</p>
-<h3 id="3-2-Github部署失败"><a href="#3-2-Github部署失败" class="headerlink" title="3.2 Github部署失败"></a>3.2 Github部署失败</h3><p>执行下面命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>会出现： Deployer not found: git<br>此时执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>此时再去执行，hexo deploy ,就可以成功部署了。</p>
-<h3 id="3-3-部署步骤"><a href="#3-3-部署步骤" class="headerlink" title="3.3 部署步骤"></a>3.3 部署步骤</h3><p>配置后_config.yml后，通用的三条部署命令（好比是大象装冰箱，一共分三步）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1175,6 +1175,45 @@ cookie的读取、写入和删除。</li>
       </tags>
   </entry>
   <entry>
+    <title>JavaScript高级程序设计笔记(6)-引用类型之单体内置对象</title>
+    <url>/2016/11/07/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-6/</url>
+    <content><![CDATA[<p>由ECMAScript实现提供的，不依赖宿主环境的对象，这些对象在ECMAScript程序执行之前就已经存在了。比如： Object、Array、String，还有两个单体内置对象：Global和Math。<a id="more"></a></p>
+<h2 id="Global对象"><a href="#Global对象" class="headerlink" title="Global对象"></a>Global对象</h2><p>1、 encodeURI():主要用于整个URI，而encodeURIComponent()主要用于URI中的某一段进行编码。两者主要区别在于：encodeURI()方法不会对本身属于URI的特殊字符进行编码，比如：冒号、正斜杠、问号和井号；而encodeURIComponent则会对它发现的任何非标准字符进行编码。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;https://www.zhihu.com/topic#Web 开发&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">encodeURI</span>(s));<span class="comment">//&#x27;https://www.zhihu.com/topic#Web%20%E5%BC%80%E5%8F%91&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">encodeURIComponent</span>(s));<span class="comment">//&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web%20%E5%BC%80%E5%8F%91&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>与encodeURI()和encodeURICompoent()方法对应的，有decodeURI()和decodeURIComponent()方法。decodeURI()方法只能对使用encodeURI()方法替换的字符进行解码。同样，decodeURIComponent()方法能够解码encodeURIComponent()方法编码的所有字符，即他可以解码任何特殊字符。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> uri = <span class="string">&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web%20%E5%BC%80%E5%8F%91&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">decodeURI</span>(uri));<span class="comment">//&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web 开发&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">decodeURIComponent</span>(uri));<span class="string">&#x27;https://www.zhihu.com/topic#Web 开发&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>2、eval()方法</p>
+<p>eval()方法，大概是ECMAScript语言中最强大的一个方法。通过eval()执行的代码被认为是包含该次调用的执行环境的一部分。因此被执行的代码具有与该环境相同的作用域链。因此eval()方法可以调用包含在环境中的变量。</p>
+<p>严格模式下，在外部访问不到eval()中创建的任何变量或函数。</p>
+<p>3、 Global对象的属性</p>
+<p>4、 window对象</p>
+<p>在web中，全局对象作为window的一部分加以实现。因此全局作用域中所有声明的属性和方法，都成了window对象的属性。</p>
+<p>另一种取得Global对象的方法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">global</span> = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">&#125;();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h2><p>1、 Math对象的属性</p>
+<p>Math.E/Math.LN10/Math.PI等。</p>
+<p>2、 min()和max()方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max(<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>);</span><br><span class="line"><span class="keyword">var</span> min = <span class="built_in">Math</span>.min(<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+<p>要获得数组中的最大/最小值可以使用apply()方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vaules = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, values);</span><br></pre></td></tr></table></figure>
+
+<p>3、 舍入方法</p>
+<p>Math.ceil(): 上舍入，即数值向上舍入为最接近的整数。<br>Math.floor(): 下舍入<br>Math.round(): 执行标准输入</p>
+<p>4、 random()方法： 返回大于0小于1的一个随机数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//返回一个1到10之间的数值</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">10</span> + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回一个2到10之间的数值</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()* <span class="number">9</span> + <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//指定范围</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectFrom</span>(<span class="params">lowerValue, upperValue</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> choices = upperValue - lowerValue + <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * choices + lowerValue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>5、 其他方法</p>
+<p>Math.abs(num)/Math.exp(num)/Math.log(num)/Math.pow(num, power)等等</p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript高级程序设计笔记(18)-新兴API</title>
     <url>/2016/12/17/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-18/</url>
     <content><![CDATA[<h2 id="Page-Visibility-API"><a href="#Page-Visibility-API" class="headerlink" title="Page Visibility API"></a>Page Visibility API</h2><ul>
@@ -1234,45 +1273,6 @@ cookie的读取、写入和删除。</li>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">worker.terminate();</span><br></pre></td></tr></table></figure>
 
 <h3 id="Worker的全局作用域"><a href="#Worker的全局作用域" class="headerlink" title="Worker的全局作用域"></a>Worker的全局作用域</h3><p>Web Worker所执行的Javascript代码完全在另一个作用域中，与当前网页中的代码不共享作用域。</p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript高级程序设计笔记(6)-引用类型之单体内置对象</title>
-    <url>/2016/11/07/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-6/</url>
-    <content><![CDATA[<p>由ECMAScript实现提供的，不依赖宿主环境的对象，这些对象在ECMAScript程序执行之前就已经存在了。比如： Object、Array、String，还有两个单体内置对象：Global和Math。<a id="more"></a></p>
-<h2 id="Global对象"><a href="#Global对象" class="headerlink" title="Global对象"></a>Global对象</h2><p>1、 encodeURI():主要用于整个URI，而encodeURIComponent()主要用于URI中的某一段进行编码。两者主要区别在于：encodeURI()方法不会对本身属于URI的特殊字符进行编码，比如：冒号、正斜杠、问号和井号；而encodeURIComponent则会对它发现的任何非标准字符进行编码。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;https://www.zhihu.com/topic#Web 开发&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">encodeURI</span>(s));<span class="comment">//&#x27;https://www.zhihu.com/topic#Web%20%E5%BC%80%E5%8F%91&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">encodeURIComponent</span>(s));<span class="comment">//&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web%20%E5%BC%80%E5%8F%91&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>与encodeURI()和encodeURICompoent()方法对应的，有decodeURI()和decodeURIComponent()方法。decodeURI()方法只能对使用encodeURI()方法替换的字符进行解码。同样，decodeURIComponent()方法能够解码encodeURIComponent()方法编码的所有字符，即他可以解码任何特殊字符。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> uri = <span class="string">&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web%20%E5%BC%80%E5%8F%91&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">decodeURI</span>(uri));<span class="comment">//&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web 开发&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">decodeURIComponent</span>(uri));<span class="string">&#x27;https://www.zhihu.com/topic#Web 开发&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>2、eval()方法</p>
-<p>eval()方法，大概是ECMAScript语言中最强大的一个方法。通过eval()执行的代码被认为是包含该次调用的执行环境的一部分。因此被执行的代码具有与该环境相同的作用域链。因此eval()方法可以调用包含在环境中的变量。</p>
-<p>严格模式下，在外部访问不到eval()中创建的任何变量或函数。</p>
-<p>3、 Global对象的属性</p>
-<p>4、 window对象</p>
-<p>在web中，全局对象作为window的一部分加以实现。因此全局作用域中所有声明的属性和方法，都成了window对象的属性。</p>
-<p>另一种取得Global对象的方法：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">global</span> = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">&#125;();</span><br></pre></td></tr></table></figure>
-
-<h2 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h2><p>1、 Math对象的属性</p>
-<p>Math.E/Math.LN10/Math.PI等。</p>
-<p>2、 min()和max()方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max(<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>);</span><br><span class="line"><span class="keyword">var</span> min = <span class="built_in">Math</span>.min(<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>);</span><br></pre></td></tr></table></figure>
-<p>要获得数组中的最大/最小值可以使用apply()方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vaules = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, values);</span><br></pre></td></tr></table></figure>
-
-<p>3、 舍入方法</p>
-<p>Math.ceil(): 上舍入，即数值向上舍入为最接近的整数。<br>Math.floor(): 下舍入<br>Math.round(): 执行标准输入</p>
-<p>4、 random()方法： 返回大于0小于1的一个随机数</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//返回一个1到10之间的数值</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">10</span> + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回一个2到10之间的数值</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()* <span class="number">9</span> + <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//指定范围</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectFrom</span>(<span class="params">lowerValue, upperValue</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> choices = upperValue - lowerValue + <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * choices + lowerValue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>5、 其他方法</p>
-<p>Math.abs(num)/Math.exp(num)/Math.log(num)/Math.pow(num, power)等等</p>
 ]]></content>
       <categories>
         <category>js</category>
@@ -1514,6 +1514,52 @@ cookie的读取、写入和删除。</li>
       </tags>
   </entry>
   <entry>
+    <title>JavaScript高级程序设计笔记（2）</title>
+    <url>/2016/07/01/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89/</url>
+    <content><![CDATA[<h1 id="变量、作用域及内存问题"><a href="#变量、作用域及内存问题" class="headerlink" title="变量、作用域及内存问题"></a>变量、作用域及内存问题</h1><h2 id="基本类型与引用类型的值"><a href="#基本类型与引用类型的值" class="headerlink" title="基本类型与引用类型的值"></a>基本类型与引用类型的值</h2><blockquote>
+<p>基本类型值是简单的数据段，基本类型是按值访问的，可以操作保存在变量中的实际的值。</p>
+</blockquote>
+<blockquote>
+<p>引用变量值可能有多个值构成的对象，引用类型的值是保存在内存中的对象，Javascript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间。在操作对象时，实际上是在操作对象的的引用而不是实际对象。为此，引用类型的值是按引用访问的。</p>
+</blockquote>
+<a id="more"></a>
+
+<h2 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h2><p>ECMAScript中所有函数的参数都是按值传递的。即把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。基本类型值得传递如同基本类型变量的复制一样，而引用类型值得传递，则如同引用类型变量的复制一样。注意：访问变量有按值和按引用两种方式，而参数只能按值传递。</p>
+<p>基本类型：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addTen</span>(<span class="params">num</span>)</span>&#123;</span><br><span class="line">	num += <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> count = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> result = addTen(count);</span><br><span class="line"><span class="built_in">console</span>.log(count); <span class="comment">//10，没有变化，按值传递</span></span><br><span class="line"><span class="built_in">console</span>.log(result);<span class="comment">//20</span></span><br></pre></td></tr></table></figure>
+
+<p>引用类型：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	obj.name = <span class="string">&#x27;js&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">setName(person);</span><br><span class="line"><span class="built_in">console</span>.log(person.name);<span class="comment">//js</span></span><br></pre></td></tr></table></figure>
+
+<p>另一个例子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	obj.name = <span class="string">&#x27;js&#x27;</span>;</span><br><span class="line">	obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">	obj.name = <span class="string">&#x27;node&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">setName(person);</span><br><span class="line"><span class="built_in">console</span>.log(person.name);<span class="comment">//js</span></span><br></pre></td></tr></table></figure>
+<p>引用类型的第二个例子和第一个例子的不同之处：在setName（）函数中添加了两行代码：一行代码为obj重新定义了一个对象，另一行代码为该对象定义了一个带有不同值的name属性。在把person传递给setName()后，其name属性被设置成了js,然后又将一个新的对象赋给变量obj，同时将name属性设置成node。如果person是按引用传递的，那么person就会自动被修改为指向其name属性值为node的对象。但是，当我们访问person.name时，其值仍然是js。这说明，即使在函数内部修改了参数的值，但原始引用仍然保持不变。实际上，挡在函数内部重写obj时，这个变量的引用就是一个局部对象。而局部对象，在函数执行完毕后立即被销毁。</p>
+<h2 id="检测类型"><a href="#检测类型" class="headerlink" title="检测类型"></a>检测类型</h2><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><p>要检测一个变量是否是基本数据类型，typeof操作符是一个最佳的工具：确定一个变量是字符串、数值、布尔值还是undefined。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;122222&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> c = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> d;</span><br><span class="line"><span class="keyword">var</span> e = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);<span class="comment">//string</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);<span class="comment">//boolean</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> c);<span class="comment">//number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> d);<span class="comment">//undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> e);<span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> f);<span class="comment">//object</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><p>如果变量值是一个对象或者null值，则typeof操作符会返回上述例子最后的object。在检测引用类型的值时，typeof操作符的用处不大。当我们想知道某个对象是什么类型的对象，ECMASCript提供了instanceof操作符：</p>
+<p><strong>result = varibale instanceof constructor</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">//变量person是Object吗？</span></span><br><span class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> <span class="built_in">Array</span>);<span class="comment">//变量person是Array吗？</span></span><br></pre></td></tr></table></figure>
+<h2 id="执行环境及作用域"><a href="#执行环境及作用域" class="headerlink" title="执行环境及作用域"></a>执行环境及作用域</h2><h3 id="执行环境"><a href="#执行环境" class="headerlink" title="执行环境"></a>执行环境</h3><p>执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个执行环境都有一个与之关联的变量对象（variable object），环境中定义的所有变量和函数都保存在这个对象中。</p>
+<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>当代码在一个环境中执行时，会创建变量对象的一个作用域链。作用域链的用途，是保证当前执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终都是当前执的代码所在环境的变量对象。如果这个环境是函数，则将其活动对象（activation object)作为变量对象。<br>标识符解析是沿着作用域链一级一级地搜索标示符的过程。搜索过程始终从作用域链的前端开始，然后逐级向后回溯，直至找到标识符为止（如果找不到标识符，通常会导致错误发生）。</p>
+<p>内部环境可以通过作用域链访问所有的外部环境，但外部环境不能访问内部环境中的任何变量和函数。</p>
+<h4 id="延长作用域链"><a href="#延长作用域链" class="headerlink" title="延长作用域链"></a>延长作用域链</h4><ul>
+<li>try-catch语句的catch块</li>
+<li>with语句 </li>
+</ul>
+<h2 id="垃圾收集"><a href="#垃圾收集" class="headerlink" title="垃圾收集"></a>垃圾收集</h2><ul>
+<li>标记清除</li>
+<li>引用计数</li>
+</ul>
+<h2 id="管理内存"><a href="#管理内存" class="headerlink" title="管理内存"></a>管理内存</h2>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript高级程序设计笔记（1）</title>
     <url>/2016/06/02/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89/</url>
     <content><![CDATA[<h2 id="script-type"><a href="#script-type" class="headerlink" title="script type"></a>script type</h2><p>向HTML页面插入Javascript标签，主要通过 script 标签。script标签中的type属性， 用来表示编写代码使用的脚本语言的内容类型（MIME）。 text/script 和 text/ecmascript 都已经不推荐使用， 但我们一般还是用 text/script。<a id="more"></a><br>实际上，服务器在传送 Javascript 时，使用的MIME类型通常是 application/x-javascript。 但在 type 中设置这个值可能导致脚本被忽略。 在非IE浏览器下还可以使用 application/javascript 和 application/ecmascript。 从约定俗称和浏览器兼容性考虑， 目前 type 属性值还是text/javascript。该属性非必须，如果没有指定，默认为 text/javascript。</p>
@@ -1609,52 +1655,6 @@ cookie的读取、写入和删除。</li>
 
 
 ]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript高级程序设计笔记（2）</title>
-    <url>/2016/07/01/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0%EF%BC%882%EF%BC%89/</url>
-    <content><![CDATA[<h1 id="变量、作用域及内存问题"><a href="#变量、作用域及内存问题" class="headerlink" title="变量、作用域及内存问题"></a>变量、作用域及内存问题</h1><h2 id="基本类型与引用类型的值"><a href="#基本类型与引用类型的值" class="headerlink" title="基本类型与引用类型的值"></a>基本类型与引用类型的值</h2><blockquote>
-<p>基本类型值是简单的数据段，基本类型是按值访问的，可以操作保存在变量中的实际的值。</p>
-</blockquote>
-<blockquote>
-<p>引用变量值可能有多个值构成的对象，引用类型的值是保存在内存中的对象，Javascript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间。在操作对象时，实际上是在操作对象的的引用而不是实际对象。为此，引用类型的值是按引用访问的。</p>
-</blockquote>
-<a id="more"></a>
-
-<h2 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h2><p>ECMAScript中所有函数的参数都是按值传递的。即把函数外部的值复制给函数内部的参数，就和把值从一个变量复制到另一个变量一样。基本类型值得传递如同基本类型变量的复制一样，而引用类型值得传递，则如同引用类型变量的复制一样。注意：访问变量有按值和按引用两种方式，而参数只能按值传递。</p>
-<p>基本类型：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">addTen</span>(<span class="params">num</span>)</span>&#123;</span><br><span class="line">	num += <span class="number">10</span>;</span><br><span class="line">	<span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> count = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">var</span> result = addTen(count);</span><br><span class="line"><span class="built_in">console</span>.log(count); <span class="comment">//10，没有变化，按值传递</span></span><br><span class="line"><span class="built_in">console</span>.log(result);<span class="comment">//20</span></span><br></pre></td></tr></table></figure>
-
-<p>引用类型：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	obj.name = <span class="string">&#x27;js&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">setName(person);</span><br><span class="line"><span class="built_in">console</span>.log(person.name);<span class="comment">//js</span></span><br></pre></td></tr></table></figure>
-
-<p>另一个例子：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">	obj.name = <span class="string">&#x27;js&#x27;</span>;</span><br><span class="line">	obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">	obj.name = <span class="string">&#x27;node&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">setName(person);</span><br><span class="line"><span class="built_in">console</span>.log(person.name);<span class="comment">//js</span></span><br></pre></td></tr></table></figure>
-<p>引用类型的第二个例子和第一个例子的不同之处：在setName（）函数中添加了两行代码：一行代码为obj重新定义了一个对象，另一行代码为该对象定义了一个带有不同值的name属性。在把person传递给setName()后，其name属性被设置成了js,然后又将一个新的对象赋给变量obj，同时将name属性设置成node。如果person是按引用传递的，那么person就会自动被修改为指向其name属性值为node的对象。但是，当我们访问person.name时，其值仍然是js。这说明，即使在函数内部修改了参数的值，但原始引用仍然保持不变。实际上，挡在函数内部重写obj时，这个变量的引用就是一个局部对象。而局部对象，在函数执行完毕后立即被销毁。</p>
-<h2 id="检测类型"><a href="#检测类型" class="headerlink" title="检测类型"></a>检测类型</h2><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><p>要检测一个变量是否是基本数据类型，typeof操作符是一个最佳的工具：确定一个变量是字符串、数值、布尔值还是undefined。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">&#x27;122222&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="literal">true</span>;</span><br><span class="line"><span class="keyword">var</span> c = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> d;</span><br><span class="line"><span class="keyword">var</span> e = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a);<span class="comment">//string</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> b);<span class="comment">//boolean</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> c);<span class="comment">//number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> d);<span class="comment">//undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> e);<span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> f);<span class="comment">//object</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><p>如果变量值是一个对象或者null值，则typeof操作符会返回上述例子最后的object。在检测引用类型的值时，typeof操作符的用处不大。当我们想知道某个对象是什么类型的对象，ECMASCript提供了instanceof操作符：</p>
-<p><strong>result = varibale instanceof constructor</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">//变量person是Object吗？</span></span><br><span class="line"><span class="built_in">console</span>.log(person <span class="keyword">instanceof</span> <span class="built_in">Array</span>);<span class="comment">//变量person是Array吗？</span></span><br></pre></td></tr></table></figure>
-<h2 id="执行环境及作用域"><a href="#执行环境及作用域" class="headerlink" title="执行环境及作用域"></a>执行环境及作用域</h2><h3 id="执行环境"><a href="#执行环境" class="headerlink" title="执行环境"></a>执行环境</h3><p>执行环境定义了变量或函数有权访问的其他数据，决定了它们各自的行为。每个执行环境都有一个与之关联的变量对象（variable object），环境中定义的所有变量和函数都保存在这个对象中。</p>
-<h3 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h3><p>当代码在一个环境中执行时，会创建变量对象的一个作用域链。作用域链的用途，是保证当前执行环境有权访问的所有变量和函数的有序访问。作用域链的前端，始终都是当前执的代码所在环境的变量对象。如果这个环境是函数，则将其活动对象（activation object)作为变量对象。<br>标识符解析是沿着作用域链一级一级地搜索标示符的过程。搜索过程始终从作用域链的前端开始，然后逐级向后回溯，直至找到标识符为止（如果找不到标识符，通常会导致错误发生）。</p>
-<p>内部环境可以通过作用域链访问所有的外部环境，但外部环境不能访问内部环境中的任何变量和函数。</p>
-<h4 id="延长作用域链"><a href="#延长作用域链" class="headerlink" title="延长作用域链"></a>延长作用域链</h4><ul>
-<li>try-catch语句的catch块</li>
-<li>with语句 </li>
-</ul>
-<h2 id="垃圾收集"><a href="#垃圾收集" class="headerlink" title="垃圾收集"></a>垃圾收集</h2><ul>
-<li>标记清除</li>
-<li>引用计数</li>
-</ul>
-<h2 id="管理内存"><a href="#管理内存" class="headerlink" title="管理内存"></a>管理内存</h2>]]></content>
       <categories>
         <category>js</category>
       </categories>
