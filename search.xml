@@ -177,36 +177,6 @@
       </tags>
   </entry>
   <entry>
-    <title>linux常用命令学习(六) -- rmdir</title>
-    <url>/2016/04/17/20160417/</url>
-    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
-<a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-p</td>
-<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
-</tr>
-<tr>
-<td>-v</td>
-<td align="center">–verbose, 详细显示进行的步骤。</td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux常用命令学习(七) -- mv</title>
     <url>/2016/04/18/20160418/</url>
     <content><![CDATA[<p>今天来学习的是 linux中常用命令之一的– mv。mv命令是move的缩写，用于移动文件或者文件重命名。这里先提前说一下与 cp 命令不同，mv 命令是完全将源文件移动到指定目录， cp 命令只是复制文件内容从一个目录到另一个目录。</p>
@@ -305,6 +275,36 @@
       </tags>
   </entry>
   <entry>
+    <title>linux常用命令学习(六) -- rmdir</title>
+    <url>/2016/04/17/20160417/</url>
+    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p</td>
+<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
+</tr>
+<tr>
+<td>-v</td>
+<td align="center">–verbose, 详细显示进行的步骤。</td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(九) -- cat</title>
     <url>/2016/04/20/20160420/</url>
     <content><![CDATA[<p>cat，全称为concatenate files and print on the standard output，主要作用为：查看文件内容，也可以给文件追加内容到结尾。 <a id="more"></a></p>
@@ -371,48 +371,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ES6-let&amp;const</title>
-    <url>/2016/06/30/ES6-let-const/</url>
-    <content><![CDATA[<h2 id="let-amp-const"><a href="#let-amp-const" class="headerlink" title="let&amp;const"></a>let&amp;const</h2><p>let和const命令是ES6中新增的用来声明变量的命令。</p>
-<h3 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h3><p>let用法与 var 类似，但是 let 声明的变量只在它所在的代码块有效。ES6 let命令实际上为 Javascript 新增了块级作用域。ES5提供了全局作用域和函数作用域，没有块级作用域。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">a;<span class="comment">//1</span></span><br><span class="line">b;<span class="comment">//undefined,调用报错，只在定义时代码块内有效。</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> name=<span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br></pre></td></tr></table></figure>
-<p>当有了块级作用域后：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">let</span> name = <span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es6</span></span><br></pre></td></tr></table></figure>
-<p>注意：</p>
-<blockquote>
-<ul>
-<li>let声明的变量不存在变量提升。所以使用let变量前，必须先声明，否则会报错。*</li>
-</ul>
-</blockquote>
-<p>暂时性死区：ES6明确规定，如果区块中存在let和const声明的变量，从一开始就形成了封闭作用域。在变量声明之前调用这下变量会报错。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	tmp = <span class="string">&#x27;123&#x27;</span>;<span class="comment">//Uncaught ReferenceError: tmp is not defined(…)</span></span><br><span class="line">	<span class="keyword">let</span> tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>不允许重复声明：let 不允许在相同作用域内，重复声明同一变量。*</li>
-</ul>
-<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>const声明一个只读的常量，一旦常量声明，就不能改变。如果尝试修改const变量值，就会报错。同时，const一旦声明变量，就必须立即进行初始化，只声明不赋值，同样会报错。<br>const变量不存在变量提升。与let类似，const变量只在声明所在块级作用域有效，存在暂时性死区，不能重复声明。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="number">1</span>;</span><br><span class="line">m = <span class="number">2</span>;<span class="comment">//Assignment to constant variable.</span></span><br><span class="line"><span class="keyword">const</span> n;<span class="comment">//Missing initializer in const declaration</span></span><br></pre></td></tr></table></figure>
-<p>Tips:</p>
-<blockquote>
-<p>当引用第三方库时声明的变量，用const来声明，可避免重命名导致的bug<br>const 命令声明的常量，也不能提升，同样存在暂时性死区，只能在声明的位置后使用。</p>
-</blockquote>
-<hr>
-<p>2017-11-10 补充：</p>
-<h3 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h3><p> const 实际上保证的，并不是变量的值不改动，而是变量指向的那个内存地址不得改动。对于简单类型的数据（数值，字符串，布尔值），值就保存在变量指向的那个内存地址，因为等同于常量。但对于复合类型的数据（主要是数组和对象），变量指向的那个内存地址，保存的就是一个指针，const只能保证这个指针是固定，至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
- <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;</span><br><span class="line"></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop</span><br><span class="line"></span><br><span class="line">foo = &#123;&#125;; <span class="comment">//TypeError, &quot;foo&quot; is read-only</span></span><br></pre></td></tr></table></figure>
-<p>上述代码中，常量foo储存一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把foo指向另一个地址，但对象本上是可变的，所以依然可以为其添加新属性。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [];</span><br><span class="line">a.push(<span class="string">&#x27;hello&#x27;</span>);<span class="comment">//可执行</span></span><br><span class="line">a.length = <span class="number">0</span>;<span class="comment">//可执行</span></span><br><span class="line">a = [<span class="string">&#x27;world&#x27;</span>];<span class="comment">//Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
-<p>上面代码中，常量a是个数组，数组本身是可写的，但是如果将另一个数组赋值给a, 就会报错。</p>
-<p>如果想冻结对象，使用Object.freeze方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="built_in">Object</span>.freeze(&#123;&#125;)</span><br><span class="line"><span class="comment">//常规模式下，下面一行不起作用</span></span><br><span class="line"><span class="comment">//严格模式下，该行会报错</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>ES6</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux常用命令学习(十) -- nl</title>
     <url>/2016/05/24/20160524/</url>
     <content><![CDATA[<p> linux关于文件行号显示，cat / nl 命令均可以实现，但nl 可以将行号做比较多的显示设计，包括位数与是否自动补齐 0 等等的功能。<a id="more"></a></p>
@@ -456,6 +414,48 @@
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ES6-let&amp;const</title>
+    <url>/2016/06/30/ES6-let-const/</url>
+    <content><![CDATA[<h2 id="let-amp-const"><a href="#let-amp-const" class="headerlink" title="let&amp;const"></a>let&amp;const</h2><p>let和const命令是ES6中新增的用来声明变量的命令。</p>
+<h3 id="let命令"><a href="#let命令" class="headerlink" title="let命令"></a>let命令</h3><p>let用法与 var 类似，但是 let 声明的变量只在它所在的代码块有效。ES6 let命令实际上为 Javascript 新增了块级作用域。ES5提供了全局作用域和函数作用域，没有块级作用域。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">	<span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">let</span> b = <span class="number">2</span>;</span><br><span class="line">&#125;</span><br><span class="line">a;<span class="comment">//1</span></span><br><span class="line">b;<span class="comment">//undefined,调用报错，只在定义时代码块内有效。</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> name=<span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br></pre></td></tr></table></figure>
+<p>当有了块级作用域后：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> name = <span class="string">&#x27;es6&#x27;</span>;</span><br><span class="line"><span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	<span class="keyword">let</span> name = <span class="string">&#x27;es5&#x27;</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(name);<span class="comment">//es5</span></span><br><span class="line">	<span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(name);<span class="comment">//es6</span></span><br></pre></td></tr></table></figure>
+<p>注意：</p>
+<blockquote>
+<ul>
+<li>let声明的变量不存在变量提升。所以使用let变量前，必须先声明，否则会报错。*</li>
+</ul>
+</blockquote>
+<p>暂时性死区：ES6明确规定，如果区块中存在let和const声明的变量，从一开始就形成了封闭作用域。在变量声明之前调用这下变量会报错。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tmp = <span class="number">123</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">	tmp = <span class="string">&#x27;123&#x27;</span>;<span class="comment">//Uncaught ReferenceError: tmp is not defined(…)</span></span><br><span class="line">	<span class="keyword">let</span> tmp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>不允许重复声明：let 不允许在相同作用域内，重复声明同一变量。*</li>
+</ul>
+<h3 id="const"><a href="#const" class="headerlink" title="const"></a>const</h3><p>const声明一个只读的常量，一旦常量声明，就不能改变。如果尝试修改const变量值，就会报错。同时，const一旦声明变量，就必须立即进行初始化，只声明不赋值，同样会报错。<br>const变量不存在变量提升。与let类似，const变量只在声明所在块级作用域有效，存在暂时性死区，不能重复声明。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="number">1</span>;</span><br><span class="line">m = <span class="number">2</span>;<span class="comment">//Assignment to constant variable.</span></span><br><span class="line"><span class="keyword">const</span> n;<span class="comment">//Missing initializer in const declaration</span></span><br></pre></td></tr></table></figure>
+<p>Tips:</p>
+<blockquote>
+<p>当引用第三方库时声明的变量，用const来声明，可避免重命名导致的bug<br>const 命令声明的常量，也不能提升，同样存在暂时性死区，只能在声明的位置后使用。</p>
+</blockquote>
+<hr>
+<p>2017-11-10 补充：</p>
+<h3 id="本质"><a href="#本质" class="headerlink" title="本质"></a>本质</h3><p> const 实际上保证的，并不是变量的值不改动，而是变量指向的那个内存地址不得改动。对于简单类型的数据（数值，字符串，布尔值），值就保存在变量指向的那个内存地址，因为等同于常量。但对于复合类型的数据（主要是数组和对象），变量指向的那个内存地址，保存的就是一个指针，const只能保证这个指针是固定，至于它指向的数据结构是不是可变的，就完全不能控制了。</p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = &#123;&#125;</span><br><span class="line"></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br><span class="line">foo.prop</span><br><span class="line"></span><br><span class="line">foo = &#123;&#125;; <span class="comment">//TypeError, &quot;foo&quot; is read-only</span></span><br></pre></td></tr></table></figure>
+<p>上述代码中，常量foo储存一个地址，这个地址指向一个对象。不可变的只是这个地址，即不能把foo指向另一个地址，但对象本上是可变的，所以依然可以为其添加新属性。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [];</span><br><span class="line">a.push(<span class="string">&#x27;hello&#x27;</span>);<span class="comment">//可执行</span></span><br><span class="line">a.length = <span class="number">0</span>;<span class="comment">//可执行</span></span><br><span class="line">a = [<span class="string">&#x27;world&#x27;</span>];<span class="comment">//Uncaught TypeError: Assignment to constant variable.</span></span><br></pre></td></tr></table></figure>
+<p>上面代码中，常量a是个数组，数组本身是可写的，但是如果将另一个数组赋值给a, 就会报错。</p>
+<p>如果想冻结对象，使用Object.freeze方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> foo = <span class="built_in">Object</span>.freeze(&#123;&#125;)</span><br><span class="line"><span class="comment">//常规模式下，下面一行不起作用</span></span><br><span class="line"><span class="comment">//严格模式下，该行会报错</span></span><br><span class="line">foo.prop = <span class="number">123</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>ES6</tag>
       </tags>
   </entry>
   <entry>
@@ -594,6 +594,58 @@
       </tags>
   </entry>
   <entry>
+    <title>使用HEXO搭建github个人网站</title>
+    <url>/2015/11/25/HEXO/</url>
+    <content><![CDATA[<p>HEXO,是一款基于Node.js的轻量的静态博客框架，利用它可以在github上快速构建个人的静态博客。下面就将我自己的构建博客的过程分享给大家。<a id="more"></a></p>
+<h2 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1 安装环境"></a>1 安装环境</h2><h3 id="1-1-安装node-js"><a href="#1-1-安装node-js" class="headerlink" title="1.1 安装node.js"></a>1.1 安装node.js</h3><p>由于HEXO是基于node.js的静态框架，我们首先要安装node环境。在<a href="http://nodejs.org/">node.js</a>官网进行下载安装.</p>
+<h3 id="1-2-安装git及申请github账号"><a href="#1-2-安装git及申请github账号" class="headerlink" title="1.2 安装git及申请github账号"></a>1.2 安装git及申请github账号</h3><p>关于git的安装以及github账号的创建，可自行百度或者在官网的指引下操作，此处省略。</p>
+<h3 id="1-3安装HEXO"><a href="#1-3安装HEXO" class="headerlink" title="1.3安装HEXO"></a>1.3安装HEXO</h3><p>接下来利用npm安装HEXO</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h3 id="1-4-建立本地博客目录"><a href="#1-4-建立本地博客目录" class="headerlink" title="1.4 建立本地博客目录"></a>1.4 建立本地博客目录</h3><p>安装好HEXO后，建立一个文件夹。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;fileName&gt;</span><br></pre></td></tr></table></figure>
+<p>生成的目录结构，及各目录文件作用：</p>
+<blockquote>
+<p>scaffolds 脚手架，也就是一个工具模板<br>scripts 写文件的js，扩展hexo的功能<br>source 存放博客正文内容<br>source/_drafts 草稿箱<br>source/_posts 文件箱<br>themes 存放皮肤的目录<br>themes/landscape 默认的皮肤<br>_config.yml 全局的配置文件<br>db.json 静态常量</p>
+</blockquote>
+<p>然后进入到该文件夹中，执行下面操作：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>生成静态页面（hexo\public\目录）：执行下面命令后，会在本地生成一个public目录。该目录下生成的文件，即为之后上传到github上并用于发布的静态文件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>本地发布：执行下面命令后，会在启动本地服务，访问localhost:4000，即可看到博客的页面。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-配置Github"><a href="#2-配置Github" class="headerlink" title="2 配置Github"></a>2 配置Github</h2><p>如何将静态博客利用github进行部署呢？下面来看下操作步骤。</p>
+<h3 id="2-1-在Github上建立个人Repository"><a href="#2-1-在Github上建立个人Repository" class="headerlink" title="2.1 在Github上建立个人Repository"></a>2.1 在Github上建立个人Repository</h3><p>建立reponsity过程可参考<a href="https://pages.github.com/">Github Pages</a>.</p>
+<h3 id="2-2-配置-config-yml文件"><a href="#2-2-配置-config-yml文件" class="headerlink" title="2.2 配置_config.yml文件"></a>2.2 配置_config.yml文件</h3><p>在_config.yml文件末尾，配置如下内容。其中，reposity对应的url为上一步在Github上建立的reposity地址。</p>
+<blockquote>
+<p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/username/reposityname.github.io.git">https://github.com/username/reposityname.github.io.git</a><br>  branch: master</p>
+</blockquote>
+<p>  配置完成后，执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>因为我建立的reposity名字为cqu2008，所以我就直接在浏览器中访问  <a href="http://jiaochunxiao.github.io/">http://jiaochunxiao.github.io/</a></p>
+<h2 id="3-建站过程中的一些问题"><a href="#3-建站过程中的一些问题" class="headerlink" title="3 建站过程中的一些问题"></a>3 建站过程中的一些问题</h2><h3 id="3-1-本地发布失败"><a href="#3-1-本地发布失败" class="headerlink" title="3.1 本地发布失败"></a>3.1 本地发布失败</h3><p>本地发布，执行 hexo server 失败。解决方案： 执行如下命令。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
+<p>执行完此命令后，再执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>即可看到博客的效果。</p>
+<h3 id="3-2-Github部署失败"><a href="#3-2-Github部署失败" class="headerlink" title="3.2 Github部署失败"></a>3.2 Github部署失败</h3><p>执行下面命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>会出现： Deployer not found: git<br>此时执行如下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>此时再去执行，hexo deploy ,就可以成功部署了。</p>
+<h3 id="3-3-部署步骤"><a href="#3-3-部署步骤" class="headerlink" title="3.3 部署步骤"></a>3.3 部署步骤</h3><p>配置后_config.yml后，通用的三条部署命令（好比是大象装冰箱，一共分三步）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript高级程序设计笔记(10)-DOM</title>
     <url>/2016/11/11/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-10/</url>
     <content><![CDATA[<p>DOM(文档对象模型)是针对HTML和XML文档的一个API。<a id="more"></a></p>
@@ -648,58 +700,6 @@ alert(element.childNodes.length);//2</code></pre>
       </categories>
       <tags>
         <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用HEXO搭建github个人网站</title>
-    <url>/2015/11/25/HEXO/</url>
-    <content><![CDATA[<p>HEXO,是一款基于Node.js的轻量的静态博客框架，利用它可以在github上快速构建个人的静态博客。下面就将我自己的构建博客的过程分享给大家。<a id="more"></a></p>
-<h2 id="1-安装环境"><a href="#1-安装环境" class="headerlink" title="1 安装环境"></a>1 安装环境</h2><h3 id="1-1-安装node-js"><a href="#1-1-安装node-js" class="headerlink" title="1.1 安装node.js"></a>1.1 安装node.js</h3><p>由于HEXO是基于node.js的静态框架，我们首先要安装node环境。在<a href="http://nodejs.org/">node.js</a>官网进行下载安装.</p>
-<h3 id="1-2-安装git及申请github账号"><a href="#1-2-安装git及申请github账号" class="headerlink" title="1.2 安装git及申请github账号"></a>1.2 安装git及申请github账号</h3><p>关于git的安装以及github账号的创建，可自行百度或者在官网的指引下操作，此处省略。</p>
-<h3 id="1-3安装HEXO"><a href="#1-3安装HEXO" class="headerlink" title="1.3安装HEXO"></a>1.3安装HEXO</h3><p>接下来利用npm安装HEXO</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo</span><br></pre></td></tr></table></figure>
-<h3 id="1-4-建立本地博客目录"><a href="#1-4-建立本地博客目录" class="headerlink" title="1.4 建立本地博客目录"></a>1.4 建立本地博客目录</h3><p>安装好HEXO后，建立一个文件夹。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;fileName&gt;</span><br></pre></td></tr></table></figure>
-<p>生成的目录结构，及各目录文件作用：</p>
-<blockquote>
-<p>scaffolds 脚手架，也就是一个工具模板<br>scripts 写文件的js，扩展hexo的功能<br>source 存放博客正文内容<br>source/_drafts 草稿箱<br>source/_posts 文件箱<br>themes 存放皮肤的目录<br>themes/landscape 默认的皮肤<br>_config.yml 全局的配置文件<br>db.json 静态常量</p>
-</blockquote>
-<p>然后进入到该文件夹中，执行下面操作：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-<p>生成静态页面（hexo\public\目录）：执行下面命令后，会在本地生成一个public目录。该目录下生成的文件，即为之后上传到github上并用于发布的静态文件。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>本地发布：执行下面命令后，会在启动本地服务，访问localhost:4000，即可看到博客的页面。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-配置Github"><a href="#2-配置Github" class="headerlink" title="2 配置Github"></a>2 配置Github</h2><p>如何将静态博客利用github进行部署呢？下面来看下操作步骤。</p>
-<h3 id="2-1-在Github上建立个人Repository"><a href="#2-1-在Github上建立个人Repository" class="headerlink" title="2.1 在Github上建立个人Repository"></a>2.1 在Github上建立个人Repository</h3><p>建立reponsity过程可参考<a href="https://pages.github.com/">Github Pages</a>.</p>
-<h3 id="2-2-配置-config-yml文件"><a href="#2-2-配置-config-yml文件" class="headerlink" title="2.2 配置_config.yml文件"></a>2.2 配置_config.yml文件</h3><p>在_config.yml文件末尾，配置如下内容。其中，reposity对应的url为上一步在Github上建立的reposity地址。</p>
-<blockquote>
-<p>deploy:<br>  type: git<br>  repository: <a href="https://github.com/username/reposityname.github.io.git">https://github.com/username/reposityname.github.io.git</a><br>  branch: master</p>
-</blockquote>
-<p>  配置完成后，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>因为我建立的reposity名字为cqu2008，所以我就直接在浏览器中访问  <a href="http://jiaochunxiao.github.io/">http://jiaochunxiao.github.io/</a></p>
-<h2 id="3-建站过程中的一些问题"><a href="#3-建站过程中的一些问题" class="headerlink" title="3 建站过程中的一些问题"></a>3 建站过程中的一些问题</h2><h3 id="3-1-本地发布失败"><a href="#3-1-本地发布失败" class="headerlink" title="3.1 本地发布失败"></a>3.1 本地发布失败</h3><p>本地发布，执行 hexo server 失败。解决方案： 执行如下命令。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
-<p>执行完此命令后，再执行</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>即可看到博客的效果。</p>
-<h3 id="3-2-Github部署失败"><a href="#3-2-Github部署失败" class="headerlink" title="3.2 Github部署失败"></a>3.2 Github部署失败</h3><p>执行下面命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>会出现： Deployer not found: git<br>此时执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>此时再去执行，hexo deploy ,就可以成功部署了。</p>
-<h3 id="3-3-部署步骤"><a href="#3-3-部署步骤" class="headerlink" title="3.3 部署步骤"></a>3.3 部署步骤</h3><p>配置后_config.yml后，通用的三条部署命令（好比是大象装冰箱，一共分三步）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<h3 id="3-4-常用命令"><a href="#3-4-常用命令" class="headerlink" title="3.4 常用命令"></a>3.4 常用命令</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#将.deploy目录部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version  <span class="comment">#查看Hexo的版本</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -1022,6 +1022,45 @@ alert(element.childNodes.length);//2</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>JavaScript高级程序设计笔记(16)-高级技巧</title>
+    <url>/2016/12/11/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-16/</url>
+    <content><![CDATA[<h2 id="高级函数"><a href="#高级函数" class="headerlink" title="高级函数"></a>高级函数</h2><h3 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curry</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>, <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> innerArgs = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">		<span class="keyword">var</span> finalArgs = args.concat(innerArgs);</span><br><span class="line">		<span class="keyword">return</span> fn.apply(<span class="literal">null</span>, finalArgs);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> curriedAdd = curry(add, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(curriedAdd(<span class="number">3</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> curriedAdd1 = curry(add, <span class="number">5</span>, <span class="number">13</span>);</span><br><span class="line"><span class="built_in">console</span>.log(curriedAdd1());</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>利用函数柯里化，可以构造出更为复杂的bind()函数。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params">fn, context</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> innerArgs = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">		<span class="keyword">var</span> finalArgs = args.concat(innerArgs);</span><br><span class="line">		<span class="keyword">return</span> fn.apply(context, finalArgs);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="防篡改对象"><a href="#防篡改对象" class="headerlink" title="防篡改对象"></a>防篡改对象</h2><h3 id="不可扩展对象"><a href="#不可扩展对象" class="headerlink" title="不可扩展对象"></a>不可扩展对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">&#x27;2107&#x27;</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.preventExtensions(person);</span><br><span class="line"></span><br><span class="line">person.age = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.age);<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
+<p>调用Object.preverExtensions()方法后，就不能给person对象添加新属性和方法了，对于已有属性和方法，仍然可以修改和删除。另外使用Object.isExtensible()方法可以确定对象是否可以扩展。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">&#x27;2107&#x27;</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.isExtensible(person));<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.preventExtensions(person);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.isExtensible(person));<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="密封对象"><a href="#密封对象" class="headerlink" title="密封对象"></a>密封对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">&#x27;2107&#x27;</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.seal(person);</span><br><span class="line"></span><br><span class="line">person.age = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.age);<span class="comment">//undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> person.name;</span><br><span class="line"><span class="built_in">console</span>.log(person.name);<span class="comment">//2107</span></span><br></pre></td></tr></table></figure>
+
+<p>Object.isSealed()方法可以确定对象是否被密封了。</p>
+<h3 id="冻结对象"><a href="#冻结对象" class="headerlink" title="冻结对象"></a>冻结对象</h3><p>最严格的防止篡改级别是冻结对象。冻结的对象既不可扩展，又是密封的。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;<span class="attr">name</span>: <span class="string">&#x27;2107&#x27;</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.freeze(person);</span><br><span class="line"></span><br><span class="line">person.age = <span class="number">29</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.age);<span class="comment">//undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> person.name;</span><br><span class="line"><span class="built_in">console</span>.log(person.name);<span class="comment">// 2107</span></span><br><span class="line"></span><br><span class="line">person.name = <span class="string">&#x27;1901&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.name);<span class="comment">// 2107</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="高级定时器"><a href="#高级定时器" class="headerlink" title="高级定时器"></a>高级定时器</h2><h3 id="重复定时器"><a href="#重复定时器" class="headerlink" title="重复定时器"></a>重复定时器</h3><p>setInterval()定时器有两个问题：<br>1、 某些间隔会跳过；<br>2、 多个定时器代码执行之间的间隔可能会比预期的小。<br>为了避免setInterval()重复定时器的缺点，可以使用链式setTimeout()调用。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setTimeout(function()&#123;</span><br><span class="line">	&#x2F;&#x2F;事件处理程序</span><br><span class="line">	setTimeout(arguments.callee, 1000);</span><br><span class="line">&#125;, 1000)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Yielding-Processes"><a href="#Yielding-Processes" class="headerlink" title="Yielding Processes"></a>Yielding Processes</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">chunk</span>(<span class="params">array, process, context</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> item  = array.shift();</span><br><span class="line">		prcoess.call(context, item);</span><br><span class="line">		<span class="keyword">if</span>(array.length &gt; <span class="number">1</span>)&#123;</span><br><span class="line">			setTimout(argumenets.callee, <span class="number">100</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;, <span class="number">100</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="函数节流"><a href="#函数节流" class="headerlink" title="函数节流"></a>函数节流</h3><p>第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码。当第二次调用该函数时，清除前一次的定时器，并设置另一个。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> processor = &#123;</span><br><span class="line">	timeoutId: <span class="literal">null</span>,</span><br><span class="line">	preformProcessing: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="comment">//实际执行代码</span></span><br><span class="line">	&#125;,</span><br><span class="line">	process: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">clearTimeout</span>(<span class="built_in">this</span>.timeoutId);</span><br><span class="line">		<span class="keyword">var</span> that = <span class="built_in">this</span>;</span><br><span class="line">		<span class="built_in">this</span>.timoutId = <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			that.performProcessing();</span><br><span class="line">		&#125;, <span class="number">1000</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">processor.process();</span><br></pre></td></tr></table></figure>
+<p>简化：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">method, context</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">clearTimeout</span>(method.tId);</span><br><span class="line">	method.tId = setTimout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		method.call(context);</span><br><span class="line">	&#125;, <span class="number">100</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对于onresize:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">resizeDiv</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDIv&#x27;</span>);</span><br><span class="line">	div.style.height = div.offsetWidth + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onresize = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	throttle(resizeDiv);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">EventTarget</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">this</span>.handlers = &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">EventTarget.prototype = &#123;</span><br><span class="line">	<span class="keyword">constructor</span>: EventTarget,</span><br><span class="line">	addHandler: function(type, handler)&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">this</span>.handlers[type] == <span class="string">&#x27;undefined&#x27;</span>)&#123;</span><br><span class="line">			<span class="built_in">this</span>.handlers[type] = [];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">this</span>.handlers[type].push(handler);</span><br><span class="line">	&#125;,</span><br><span class="line">	fire: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!event.target)&#123;</span><br><span class="line">			event.target = <span class="built_in">this</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">this</span>.handlers[event.type] <span class="keyword">instanceof</span> <span class="built_in">Array</span>)&#123;</span><br><span class="line">			<span class="keyword">var</span> handlers = <span class="built_in">this</span>.handlers[event.type];</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, len = handlers.length; i &lt; len; i++)&#123;</span><br><span class="line">				handlers[i](event);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	removeHandler: <span class="function"><span class="keyword">function</span>(<span class="params">type, handler</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">this</span>.handlers[type] <span class="keyword">instanceof</span> <span class="built_in">Array</span>)&#123;</span><br><span class="line">			<span class="keyword">var</span> handlers = <span class="built_in">this</span>.handlers[type];</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, len = handlers.length; i &lt; len; i++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(handlers[i] === handler)&#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			handlers.splice[i, <span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handlerMessage</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;Message received: &#x27;</span> + event.message);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建一个新对象</span></span><br><span class="line"><span class="keyword">var</span> target = <span class="keyword">new</span> EventTarget();</span><br><span class="line"><span class="comment">//添加一个事件处理程序</span></span><br><span class="line">target.addHandler(<span class="string">&#x27;message&#x27;</span>, handlerMessage);</span><br><span class="line"><span class="comment">//触发事件</span></span><br><span class="line">target.fire(&#123;<span class="attr">type</span>:<span class="string">&#x27;message&#x27;</span>, <span class="attr">message</span>:<span class="string">&#x27;hello world!&#x27;</span>&#125;);</span><br><span class="line"><span class="comment">//删除事件处理程序</span></span><br><span class="line">target.removeHandler(<span class="string">&#x27;message&#x27;</span>, handlerMessage);</span><br><span class="line"><span class="comment">//再次触发，无响应</span></span><br><span class="line">target.fire(&#123;<span class="attr">type</span>:<span class="string">&#x27;message&#x27;</span>, <span class="attr">message</span>: <span class="string">&#x27;hello world&#x27;</span>&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript高级程序设计笔记(15)-Ajax与Comet</title>
     <url>/2016/12/04/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-15/</url>
     <content><![CDATA[<h3 id="XHR用法"><a href="#XHR用法" class="headerlink" title="XHR用法"></a>XHR用法</h3><p>检测XHR对象的readyState属性，该属性表示请求/响应过程的当前活动阶段。属性可取值如下：</p>
@@ -1096,45 +1135,6 @@ alert(element.childNodes.length);//2</code></pre>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> socket = <span class="keyword">new</span> WebSocket(<span class="string">&#x27;ws://www.example.com/server.php&#x27;</span>);</span><br><span class="line">socket.send(<span class="string">&#x27;Hello world&#x27;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> message = &#123;</span><br><span class="line">	time: <span class="keyword">new</span> <span class="built_in">Date</span>(),</span><br><span class="line">	text: <span class="string">&#x27;Hello world&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line">socket.send(<span class="built_in">JSON</span>.stringify(message));</span><br><span class="line"></span><br><span class="line"><span class="comment">//当服务器向客户端发送消息时，WebSocket对象就会触发message事件。</span></span><br><span class="line">socket.onmessage = <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> data = event.data;</span><br><span class="line">	<span class="comment">//处理数据</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>3、 其它事件</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> socket = <span class="keyword">new</span> WebSocket(<span class="string">&#x27;ws://www.example.com/server.php&#x27;</span>);</span><br><span class="line">socket.onopen = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">&#x27;connection established!&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">socket.onerror = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">&#x27;connection error&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line">socket.onclose = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	alert(<span class="string">&#x27;connection closed&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript高级程序设计笔记(16)-高级技巧</title>
-    <url>/2016/12/11/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-16/</url>
-    <content><![CDATA[<h2 id="高级函数"><a href="#高级函数" class="headerlink" title="高级函数"></a>高级函数</h2><h3 id="函数柯里化"><a href="#函数柯里化" class="headerlink" title="函数柯里化"></a>函数柯里化</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">curry</span>(<span class="params">fn</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>, <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> innerArgs = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">		<span class="keyword">var</span> finalArgs = args.concat(innerArgs);</span><br><span class="line">		<span class="keyword">return</span> fn.apply(<span class="literal">null</span>, finalArgs);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">num1, num2</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> curriedAdd = curry(add, <span class="number">5</span>);</span><br><span class="line"><span class="built_in">console</span>.log(curriedAdd(<span class="number">3</span>));</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> curriedAdd1 = curry(add, <span class="number">5</span>, <span class="number">13</span>);</span><br><span class="line"><span class="built_in">console</span>.log(curriedAdd1());</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>利用函数柯里化，可以构造出更为复杂的bind()函数。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bind</span>(<span class="params">fn, context</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> args = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>, <span class="number">2</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> innerArgs = <span class="built_in">Array</span>.prototype.slice.call(<span class="built_in">arguments</span>);</span><br><span class="line">		<span class="keyword">var</span> finalArgs = args.concat(innerArgs);</span><br><span class="line">		<span class="keyword">return</span> fn.apply(context, finalArgs);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="防篡改对象"><a href="#防篡改对象" class="headerlink" title="防篡改对象"></a>防篡改对象</h2><h3 id="不可扩展对象"><a href="#不可扩展对象" class="headerlink" title="不可扩展对象"></a>不可扩展对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">&#x27;2107&#x27;</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.preventExtensions(person);</span><br><span class="line"></span><br><span class="line">person.age = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.age);<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
-<p>调用Object.preverExtensions()方法后，就不能给person对象添加新属性和方法了，对于已有属性和方法，仍然可以修改和删除。另外使用Object.isExtensible()方法可以确定对象是否可以扩展。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">&#x27;2107&#x27;</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.isExtensible(person));<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.preventExtensions(person);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.isExtensible(person));<span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="密封对象"><a href="#密封对象" class="headerlink" title="密封对象"></a>密封对象</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">&#x27;2107&#x27;</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.seal(person);</span><br><span class="line"></span><br><span class="line">person.age = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.age);<span class="comment">//undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> person.name;</span><br><span class="line"><span class="built_in">console</span>.log(person.name);<span class="comment">//2107</span></span><br></pre></td></tr></table></figure>
-
-<p>Object.isSealed()方法可以确定对象是否被密封了。</p>
-<h3 id="冻结对象"><a href="#冻结对象" class="headerlink" title="冻结对象"></a>冻结对象</h3><p>最严格的防止篡改级别是冻结对象。冻结的对象既不可扩展，又是密封的。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> person = &#123;<span class="attr">name</span>: <span class="string">&#x27;2107&#x27;</span>&#125;;</span><br><span class="line"><span class="built_in">Object</span>.freeze(person);</span><br><span class="line"></span><br><span class="line">person.age = <span class="number">29</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.age);<span class="comment">//undefined</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> person.name;</span><br><span class="line"><span class="built_in">console</span>.log(person.name);<span class="comment">// 2107</span></span><br><span class="line"></span><br><span class="line">person.name = <span class="string">&#x27;1901&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(person.name);<span class="comment">// 2107</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="高级定时器"><a href="#高级定时器" class="headerlink" title="高级定时器"></a>高级定时器</h2><h3 id="重复定时器"><a href="#重复定时器" class="headerlink" title="重复定时器"></a>重复定时器</h3><p>setInterval()定时器有两个问题：<br>1、 某些间隔会跳过；<br>2、 多个定时器代码执行之间的间隔可能会比预期的小。<br>为了避免setInterval()重复定时器的缺点，可以使用链式setTimeout()调用。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">setTimeout(function()&#123;</span><br><span class="line">	&#x2F;&#x2F;事件处理程序</span><br><span class="line">	setTimeout(arguments.callee, 1000);</span><br><span class="line">&#125;, 1000)</span><br></pre></td></tr></table></figure>
-
-<h3 id="Yielding-Processes"><a href="#Yielding-Processes" class="headerlink" title="Yielding Processes"></a>Yielding Processes</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">chunk</span>(<span class="params">array, process, context</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">var</span> item  = array.shift();</span><br><span class="line">		prcoess.call(context, item);</span><br><span class="line">		<span class="keyword">if</span>(array.length &gt; <span class="number">1</span>)&#123;</span><br><span class="line">			setTimout(argumenets.callee, <span class="number">100</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;, <span class="number">100</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="函数节流"><a href="#函数节流" class="headerlink" title="函数节流"></a>函数节流</h3><p>第一次调用函数，创建一个定时器，在指定的时间间隔之后运行代码。当第二次调用该函数时，清除前一次的定时器，并设置另一个。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> processor = &#123;</span><br><span class="line">	timeoutId: <span class="literal">null</span>,</span><br><span class="line">	preformProcessing: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="comment">//实际执行代码</span></span><br><span class="line">	&#125;,</span><br><span class="line">	process: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">clearTimeout</span>(<span class="built_in">this</span>.timeoutId);</span><br><span class="line">		<span class="keyword">var</span> that = <span class="built_in">this</span>;</span><br><span class="line">		<span class="built_in">this</span>.timoutId = <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">			that.performProcessing();</span><br><span class="line">		&#125;, <span class="number">1000</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">processor.process();</span><br></pre></td></tr></table></figure>
-<p>简化：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">throttle</span>(<span class="params">method, context</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">clearTimeout</span>(method.tId);</span><br><span class="line">	method.tId = setTimout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		method.call(context);</span><br><span class="line">	&#125;, <span class="number">100</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对于onresize:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">resizeDiv</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDIv&#x27;</span>);</span><br><span class="line">	div.style.height = div.offsetWidth + <span class="string">&#x27;px&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onresize = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	throttle(resizeDiv);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">EventTarget</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="built_in">this</span>.handlers = &#123;&#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">EventTarget.prototype = &#123;</span><br><span class="line">	<span class="keyword">constructor</span>: EventTarget,</span><br><span class="line">	addHandler: function(type, handler)&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="keyword">typeof</span> <span class="built_in">this</span>.handlers[type] == <span class="string">&#x27;undefined&#x27;</span>)&#123;</span><br><span class="line">			<span class="built_in">this</span>.handlers[type] = [];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">this</span>.handlers[type].push(handler);</span><br><span class="line">	&#125;,</span><br><span class="line">	fire: <span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(!event.target)&#123;</span><br><span class="line">			event.target = <span class="built_in">this</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">this</span>.handlers[event.type] <span class="keyword">instanceof</span> <span class="built_in">Array</span>)&#123;</span><br><span class="line">			<span class="keyword">var</span> handlers = <span class="built_in">this</span>.handlers[event.type];</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, len = handlers.length; i &lt; len; i++)&#123;</span><br><span class="line">				handlers[i](event);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;,</span><br><span class="line">	removeHandler: <span class="function"><span class="keyword">function</span>(<span class="params">type, handler</span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">this</span>.handlers[type] <span class="keyword">instanceof</span> <span class="built_in">Array</span>)&#123;</span><br><span class="line">			<span class="keyword">var</span> handlers = <span class="built_in">this</span>.handlers[type];</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, len = handlers.length; i &lt; len; i++)&#123;</span><br><span class="line">				<span class="keyword">if</span>(handlers[i] === handler)&#123;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			handlers.splice[i, <span class="number">1</span>];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">handlerMessage</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">&#x27;Message received: &#x27;</span> + event.message);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//创建一个新对象</span></span><br><span class="line"><span class="keyword">var</span> target = <span class="keyword">new</span> EventTarget();</span><br><span class="line"><span class="comment">//添加一个事件处理程序</span></span><br><span class="line">target.addHandler(<span class="string">&#x27;message&#x27;</span>, handlerMessage);</span><br><span class="line"><span class="comment">//触发事件</span></span><br><span class="line">target.fire(&#123;<span class="attr">type</span>:<span class="string">&#x27;message&#x27;</span>, <span class="attr">message</span>:<span class="string">&#x27;hello world!&#x27;</span>&#125;);</span><br><span class="line"><span class="comment">//删除事件处理程序</span></span><br><span class="line">target.removeHandler(<span class="string">&#x27;message&#x27;</span>, handlerMessage);</span><br><span class="line"><span class="comment">//再次触发，无响应</span></span><br><span class="line">target.fire(&#123;<span class="attr">type</span>:<span class="string">&#x27;message&#x27;</span>, <span class="attr">message</span>: <span class="string">&#x27;hello world&#x27;</span>&#125;);</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>js</category>
@@ -3588,6 +3588,37 @@ Visit http://127.0.0.1:3003/?port=5858 to start debugging.
       </categories>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在keynote中插入高亮代码</title>
+    <url>/2020/10/14/%E5%9C%A8keynote%E4%B8%AD%E6%8F%92%E5%85%A5%E9%AB%98%E4%BA%AE%E4%BB%A3%E7%A0%81/</url>
+    <content><![CDATA[<p>做技术分享时，对于研发来讲，经常会有大量的代码介绍，那么如何快速在keynote中插入代码呢？</p>
+<a id="more"></a>
+<p>最简单的就是粘贴截图，O(∩_∩)O哈哈~</p>
+<p>下面介绍另外一种方式，使用 RTF 格式插入文字格式的高亮代码。</p>
+<p>首先，使用 brew 安装 highlight。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">brew install highlight</span><br></pre></td></tr></table></figure>
+
+<h3 id="粘贴文件中指定代码块"><a href="#粘贴文件中指定代码块" class="headerlink" title="粘贴文件中指定代码块"></a>粘贴文件中指定代码块</h3><p>如果只是想粘贴指定的代码块，可以选中需要粘贴的代码块，然后执行</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pbpaste | highlight --style=github -k <span class="string">&quot;Fira Code&quot;</span> -K 36 -u <span class="string">&quot;utf-8&quot;</span> -t 4 -O rtf| pbcopy</span><br></pre></td></tr></table></figure>
+<ul>
+<li>–syntax 指定语法</li>
+<li>–style 设定样式</li>
+<li>-k 设定font</li>
+<li>-K 设定 font-size</li>
+<li>-u 设定encoding</li>
+<li>-t 空格代替tab</li>
+</ul>
+<h3 id="粘贴指定文件"><a href="#粘贴指定文件" class="headerlink" title="粘贴指定文件"></a>粘贴指定文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">highlight --style=github -k <span class="string">&quot;Fira Code&quot;</span> -K 36 -u <span class="string">&quot;utf-8&quot;</span> -t 4 -O rtf &lt;filename&gt;| pbcopy</span><br></pre></td></tr></table></figure>
+
+<p>然后在keynote中执行 command+v 即可。</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>keynote</tag>
       </tags>
   </entry>
   <entry>
