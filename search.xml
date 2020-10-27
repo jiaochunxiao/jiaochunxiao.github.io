@@ -27,6 +27,26 @@
       </tags>
   </entry>
   <entry>
+    <title>linux常用命令学习(四) -- pwd</title>
+    <url>/2016/04/15/20160415/</url>
+    <content><![CDATA[<h2 id="第四条linux命令-pwd"><a href="#第四条linux命令-pwd" class="headerlink" title="第四条linux命令: pwd"></a>第四条linux命令: pwd</h2><p>已经熟悉了 cd , ls , mkdir 命令，如果我们想知道当前所在目录的路径是怎样，怎么办呢？linux用 pwd 命令来查看，当前目录的完整路径。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>pwd [选项]</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><p>一般情况下, pwd 命令不带任何参数。对于目录是链接时，使用 pwd -P 显示出实际路径。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>pwd <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># mkdir -p parent/child/</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd  parent/child/</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># pwd</span></span><br><span class="line">/root/parent/child</span><br><span class="line">[root@kvm45072 child]<span class="comment"># ^C</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(二) -- cd</title>
     <url>/2016/04/13/20160413/</url>
     <content><![CDATA[<h2 id="第二条linux命令-cd"><a href="#第二条linux命令-cd" class="headerlink" title="第二条linux命令: cd"></a>第二条linux命令: cd</h2><p>相信大家对 cd 这个命令，应该是再熟悉不过的了， cd 命令可以说是linux中最基本的命令了。下面就介绍下关于 cd 命令的相关知识。</p>
@@ -111,26 +131,6 @@
       </tags>
   </entry>
   <entry>
-    <title>linux常用命令学习(四) -- pwd</title>
-    <url>/2016/04/15/20160415/</url>
-    <content><![CDATA[<h2 id="第四条linux命令-pwd"><a href="#第四条linux命令-pwd" class="headerlink" title="第四条linux命令: pwd"></a>第四条linux命令: pwd</h2><p>已经熟悉了 cd , ls , mkdir 命令，如果我们想知道当前所在目录的路径是怎样，怎么办呢？linux用 pwd 命令来查看，当前目录的完整路径。</p>
-<a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>pwd [选项]</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><p>一般情况下, pwd 命令不带任何参数。对于目录是链接时，使用 pwd -P 显示出实际路径。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>pwd <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># mkdir -p parent/child/</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd  parent/child/</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># pwd</span></span><br><span class="line">/root/parent/child</span><br><span class="line">[root@kvm45072 child]<span class="comment"># ^C</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux常用命令学习(五) -- rm</title>
     <url>/2016/04/16/20160416/</url>
     <content><![CDATA[<h2 id="第五条linux命令-rm"><a href="#第五条linux命令-rm" class="headerlink" title="第五条linux命令: rm"></a>第五条linux命令: rm</h2><p>今天要学的是一个危险的命令 – rm 。Linux rm 命令用于删除文件和目录， 可以删除一个目录中的一个或多个文件或目录。也可以将某个目录及其目录内的所有文件及子目录删除。对于链接文件，只删除链接，而原有文件不变。</p>
@@ -166,36 +166,6 @@
 <tr>
 <td>- -version</td>
 <td align="center"></td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux常用命令学习(六) -- rmdir</title>
-    <url>/2016/04/17/20160417/</url>
-    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
-<a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-p</td>
-<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
-</tr>
-<tr>
-<td>-v</td>
-<td align="center">–verbose, 详细显示进行的步骤。</td>
 </tr>
 </tbody></table>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
@@ -256,6 +226,36 @@
       </tags>
   </entry>
   <entry>
+    <title>linux常用命令学习(六) -- rmdir</title>
+    <url>/2016/04/17/20160417/</url>
+    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p</td>
+<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
+</tr>
+<tr>
+<td>-v</td>
+<td align="center">–verbose, 详细显示进行的步骤。</td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(八) -- cp</title>
     <url>/2016/04/19/20160419/</url>
     <content><![CDATA[<p>cp, copy之意，用于文件或目录的复制。注意：一般情况下，使用命令行下复制文件时，如果目标文件已经存在，就会询问是否覆盖，无论是否使用 -i 参数。但是在shell脚本中执行cp时，如果没有-i参数，则不会询问是否覆盖-命令行和shell脚本的执行方式有些不同。 <a id="more"></a></p>
@@ -296,72 +296,6 @@
 <li>cp demo1.log ../demo2<br>将目录demo1下的文件demo1.log复制到demo2文件夹下。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># ll</span></span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x. 2 root root 4096 Apr 29 16:03 demo-1</span><br><span class="line">-rw-r--r--. 1 root root   10 Apr 29 16:29 demo1.log</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cp demo1.log ../demo2</span></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cd ../demo2</span></span><br><span class="line">[root@kvm45072 demo2]<span class="comment"># ll</span></span><br><span class="line">total 4</span><br><span class="line">-rw-r--r--. 1 root root 10 Apr 29 16:31 demo1.log</span><br><span class="line">[root@kvm45072 demo2]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
 <li>cp -f demo1.log ../demo2<br>目标文件存在时，会询问是否覆盖。因为cp是cp -i的别名。目标文件存在时，即使加了-f标志，也还会询问是否覆盖。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cp -f demo1.log ../demo2</span></span><br><span class="line">cp: overwrite `../demo2/demo1.log<span class="string">&#x27;? </span></span><br></pre></td></tr></table></figure></li>
 </ul>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux常用命令学习(九) -- cat</title>
-    <url>/2016/04/20/20160420/</url>
-    <content><![CDATA[<p>cat，全称为concatenate files and print on the standard output，主要作用为：查看文件内容，也可以给文件追加内容到结尾。 <a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>cat [选项] [文件]</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-A</td>
-<td align="center">–show-all ;和-vET等价。</td>
-</tr>
-<tr>
-<td>-b</td>
-<td align="center">–number-nonblank ; 列出行号，仅对非空行号显示，空白行不标记行号</td>
-</tr>
-<tr>
-<td>-e</td>
-<td align="center">和-vE等价;</td>
-</tr>
-<tr>
-<td>-E</td>
-<td align="center">–show-ends, 将结尾的断行字符$显示出来</td>
-</tr>
-<tr>
-<td>-n</td>
-<td align="center">–number,对输出的所有行进行编号，编号由1开始递增。空白行也有行号。与-b命令不同。</td>
-</tr>
-<tr>
-<td>-T</td>
-<td align="center">–show-tabs, 将[tab]按键以 ^I 显示出来。</td>
-</tr>
-<tr>
-<td>-v</td>
-<td align="center">–show-nonprinting, 列出一些看不出的特殊字符。</td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>cat -n demo1.log<br>显示文件demo1.log的行号，包括空行。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -n demo1.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line">     5</span><br><span class="line">     6  <span class="built_in">test</span></span><br><span class="line">     7</span><br><span class="line">     8  demo1</span><br><span class="line">     9  demo1</span><br><span class="line">    10  demo</span><br><span class="line">    11  demo</span><br><span class="line">    12</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>cat -b demo1.log<br>显示文件demo1.log的行号，只显示非空行号。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -b demo1.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     5  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  demo</span><br><span class="line"></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>cat -b demo1.log demo2.log log.log<br>将demo1.log/demo2.log附加到log.log，并显示非空行号。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -b demo1.log demo2.log log.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     5  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  demo</span><br><span class="line"></span><br><span class="line">    10  this is demo2.log</span><br><span class="line">    11  this is demo2.log</span><br><span class="line"></span><br><span class="line">    12  <span class="built_in">test</span></span><br><span class="line">    13  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">    14  demo</span><br><span class="line">    15  demo</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>cat &gt;log.txt &lt;&lt;EOF<br>生成文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat &gt;log.txt &lt;&lt;EOF</span></span><br><span class="line">&gt; HELLO</span><br><span class="line">&gt; WORLD</span><br><span class="line">&gt; PWD=$(<span class="built_in">pwd</span>)</span><br><span class="line">&gt; <span class="built_in">test</span></span><br><span class="line">&gt; EOF</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># ls -l log.txt</span></span><br><span class="line">-rw-r--r--. 1 root root 39 May  4 14:14 log.txt</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cat log.txt</span></span><br><span class="line">HELLO</span><br><span class="line">WORLD</span><br><span class="line">PWD=/root/linux/demo1</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-
 ]]></content>
       <categories>
         <category>linux</category>
@@ -456,6 +390,72 @@
       <tags>
         <tag>js</tag>
         <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux常用命令学习(九) -- cat</title>
+    <url>/2016/04/20/20160420/</url>
+    <content><![CDATA[<p>cat，全称为concatenate files and print on the standard output，主要作用为：查看文件内容，也可以给文件追加内容到结尾。 <a id="more"></a></p>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>cat [选项] [文件]</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-A</td>
+<td align="center">–show-all ;和-vET等价。</td>
+</tr>
+<tr>
+<td>-b</td>
+<td align="center">–number-nonblank ; 列出行号，仅对非空行号显示，空白行不标记行号</td>
+</tr>
+<tr>
+<td>-e</td>
+<td align="center">和-vE等价;</td>
+</tr>
+<tr>
+<td>-E</td>
+<td align="center">–show-ends, 将结尾的断行字符$显示出来</td>
+</tr>
+<tr>
+<td>-n</td>
+<td align="center">–number,对输出的所有行进行编号，编号由1开始递增。空白行也有行号。与-b命令不同。</td>
+</tr>
+<tr>
+<td>-T</td>
+<td align="center">–show-tabs, 将[tab]按键以 ^I 显示出来。</td>
+</tr>
+<tr>
+<td>-v</td>
+<td align="center">–show-nonprinting, 列出一些看不出的特殊字符。</td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>cat -n demo1.log<br>显示文件demo1.log的行号，包括空行。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -n demo1.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line">     5</span><br><span class="line">     6  <span class="built_in">test</span></span><br><span class="line">     7</span><br><span class="line">     8  demo1</span><br><span class="line">     9  demo1</span><br><span class="line">    10  demo</span><br><span class="line">    11  demo</span><br><span class="line">    12</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>cat -b demo1.log<br>显示文件demo1.log的行号，只显示非空行号。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -b demo1.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     5  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  demo</span><br><span class="line"></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>cat -b demo1.log demo2.log log.log<br>将demo1.log/demo2.log附加到log.log，并显示非空行号。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -b demo1.log demo2.log log.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     5  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  demo</span><br><span class="line"></span><br><span class="line">    10  this is demo2.log</span><br><span class="line">    11  this is demo2.log</span><br><span class="line"></span><br><span class="line">    12  <span class="built_in">test</span></span><br><span class="line">    13  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">    14  demo</span><br><span class="line">    15  demo</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>cat &gt;log.txt &lt;&lt;EOF<br>生成文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat &gt;log.txt &lt;&lt;EOF</span></span><br><span class="line">&gt; HELLO</span><br><span class="line">&gt; WORLD</span><br><span class="line">&gt; PWD=$(<span class="built_in">pwd</span>)</span><br><span class="line">&gt; <span class="built_in">test</span></span><br><span class="line">&gt; EOF</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># ls -l log.txt</span></span><br><span class="line">-rw-r--r--. 1 root root 39 May  4 14:14 log.txt</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cat log.txt</span></span><br><span class="line">HELLO</span><br><span class="line">WORLD</span><br><span class="line">PWD=/root/linux/demo1</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -703,6 +703,17 @@ alert(element.childNodes.length);//2</code></pre>
       </tags>
   </entry>
   <entry>
+    <title>JavaScript高级程序设计笔记(12)-DOM2和DOM3</title>
+    <url>/2016/11/20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-12/</url>
+    <content><![CDATA[<h4 id="计算的样式"><a href="#计算的样式" class="headerlink" title="计算的样式"></a>计算的样式</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = <span class="built_in">document</span>.defaultView.getComputedStyle(myDiv, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE不支持getComputedStyle()方法，在IE中每个具有style属性的元素还要一个currentStyle属性。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = myDiv.currentStyle;</span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript高级程序设计笔记(11)-DOM扩展</title>
     <url>/2016/11/15/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-11/</url>
     <content><![CDATA[<h2 id="选择符API"><a href="#选择符API" class="headerlink" title="选择符API"></a>选择符API</h2><h3 id="querySelector-方法"><a href="#querySelector-方法" class="headerlink" title="querySelector()方法"></a>querySelector()方法</h3><p>querySelector()方法接收一个css选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回null。<a id="more"></a></p>
@@ -747,17 +758,6 @@ alert(element.childNodes.length);//2</code></pre>
 <h3 id="专有扩展"><a href="#专有扩展" class="headerlink" title="专有扩展"></a>专有扩展</h3><h4 id="文档模式"><a href="#文档模式" class="headerlink" title="文档模式"></a>文档模式</h4><h4 id="children属性"><a href="#children属性" class="headerlink" title="children属性"></a>children属性</h4><h4 id="contains"><a href="#contains" class="headerlink" title="contains"></a>contains</h4><h4 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h4><p>innerText</p>
 <p>outerText</p>
 <h4 id="滚动"><a href="#滚动" class="headerlink" title="滚动"></a>滚动</h4>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript高级程序设计笔记(12)-DOM2和DOM3</title>
-    <url>/2016/11/20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-12/</url>
-    <content><![CDATA[<h4 id="计算的样式"><a href="#计算的样式" class="headerlink" title="计算的样式"></a>计算的样式</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = <span class="built_in">document</span>.defaultView.getComputedStyle(myDiv, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE不支持getComputedStyle()方法，在IE中每个具有style属性的元素还要一个currentStyle属性。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = myDiv.currentStyle;</span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -1719,6 +1719,78 @@ cookie的读取、写入和删除。</li>
       </tags>
   </entry>
   <entry>
+    <title>Javascript数据基本类型与引用类型</title>
+    <url>/2017/02/21/Javascript%E6%95%B0%E6%8D%AE%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<h2 id="JavaScript-数据类型"><a href="#JavaScript-数据类型" class="headerlink" title="JavaScript 数据类型"></a>JavaScript 数据类型</h2><p>说起Javascript的数据类型，通常我们会看到下面两种分类。</p>
+<blockquote>
+<p>字符串、数字、布尔、数组、对象、Null、Undefined(w3c)</p>
+</blockquote>
+<p>还有一种经常看到的就是把数组归类在对象中(这大概也是大家通常认为的吧)：<a id="more"></a></p>
+<blockquote>
+<p>数值（number）：整数和小数（比如1和3.14）<br>字符串（string）：字符组成的文本（比如”Hello World”）<br>布尔值（boolean）：true（真）和false（假）两个特定值<br>undefined：表示“未定义”或不存在，即此处目前没有任何值<br>null：表示空缺，即此处应该有一个值，但目前为空<br>对象（object）：各种值组成的集合</p>
+</blockquote>
+<p><em>现在又要多加一种了，ES6新增 符号(symbol)</em></p>
+<p>其中对象又可以分为：</p>
+<blockquote>
+<p>狭义的对象（object）<br>数组（array）<br>函数（function）</p>
+</blockquote>
+<p>js的数据类型根据在内存中的存储方式，又可以分为两类：</p>
+<blockquote>
+<p>(1)值类型：数值、布尔值、null、undefined、String。<br>(2)引用类型：对象、数组、函数。</p>
+</blockquote>
+<p>js基本数据类型有： number、string、boolean、undefined、null，对于基本类型，它们在内存中占有固定的大小空间，通过值的形式保存在桟内存中，我们通过按值来访问。</p>
+<p>对于引用类型的赋值，需要在堆内存中为这个值分配空间。由于值的大小不固定（数组大小、对象属性和方法个数都不确定），因此不能把把它们保存在桟内存中。但是我们可以在桟内存中保存值的内存地址，因为内存地址大小是固定的。引用类型对象存储的实际是它们的引用地址，对象的实际内容单独存放，因为引用对象通常比较庞大，这是数据开销和内存开销优化的手段。</p>
+<p>简而言之，堆内存存放引用值，栈内存存放固定类型值。“引用”是一个指向对象实际位置的指针。</p>
+<h2 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h2><h3 id="1、基本数据类型"><a href="#1、基本数据类型" class="headerlink" title="1、基本数据类型"></a>1、基本数据类型</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">a = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);<span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(b);<span class="comment">// 1</span></span><br><span class="line"><span class="keyword">var</span> c = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> d = c;</span><br><span class="line">c = <span class="string">&#x27;1234&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(c);<span class="comment">//&#x27;1234&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(d);<span class="comment">//&#x27;123&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、引用类型"><a href="#2、引用类型" class="headerlink" title="2、引用类型"></a>2、引用类型</h3><p>在这里需注意的是，引用指向的是具体的对象，而不是另一个引用。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123; <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;a&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> b = a; <span class="comment">//此时b.name为&#x27;a&#x27;</span></span><br><span class="line">a.name = <span class="string">&#x27;c&#x27;</span>; <span class="comment">//b.name = a.name = &#x27;c&#x27;</span></span><br><span class="line">b.name = <span class="string">&#x27;d&#x27;</span>; <span class="comment">//b.name = a.name = &#x27;d&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(a.name);<span class="comment">// d</span></span><br><span class="line"><span class="built_in">console</span>.log(b.name);<span class="comment">// d</span></span><br></pre></td></tr></table></figure>
+
+<p>对象的克隆：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123; <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;1&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> b = &#123;&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> a)&#123;</span><br><span class="line">	b[key] = a[key];</span><br><span class="line">&#125;</span><br><span class="line">b.name = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);<span class="comment">//&#123; &#x27;name&#x27;: &#x27;a&#x27;,&#x27;age&#x27;:&#x27;1&#x27;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(b);<span class="comment">//&#123; &#x27;name&#x27;: &#x27;b&#x27;,&#x27;age&#x27;:&#x27;1&#x27;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(a.name);<span class="comment">// a</span></span><br><span class="line"><span class="built_in">console</span>.log(b.name);<span class="comment">// b</span></span><br></pre></td></tr></table></figure>
+
+<p>再来看另一个栗子：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123; <span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;a&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">a = <span class="number">1</span>; <span class="comment">//此时a已经不是引用类型</span></span><br><span class="line"><span class="built_in">console</span>.log(b.name); <span class="comment">// a</span></span><br><span class="line"><span class="built_in">console</span>.log(a.name); <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
+<p>关于数组的一个栗子:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">b.push(<span class="string">&#x27;4&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// [&#x27;1&#x27;,&#x27;2&#x27;,&#x27;3&#x27;,&#x27;4&#x27;]</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// [&#x27;1&#x27;,&#x27;2&#x27;,&#x27;3&#x27;,&#x27;4&#x27;]</span></span><br></pre></td></tr></table></figure>
+<p>怎样实现对一个数组的克隆，同时操作克隆对象又不影响原数组呢？</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> b = [];</span><br><span class="line"><span class="keyword">var</span> n = a.length;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> m = <span class="number">0</span>; m &lt; n; m++)&#123;</span><br><span class="line">	b.push(a[m]);</span><br><span class="line">&#125;</span><br><span class="line">b.push(<span class="string">&#x27;4&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// [&#x27;1&#x27;,&#x27;2&#x27;,&#x27;3&#x27;]</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// [&#x27;1&#x27;,&#x27;2&#x27;,&#x27;3&#x27;,&#x27;4&#x27;]</span></span><br></pre></td></tr></table></figure>
+
+<p>关于函数的一个栗子</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> x = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line">a();<span class="comment">// 0</span></span><br><span class="line">b();<span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
+<p>基于上面的例子，有人总结了下面的内容：</p>
+<blockquote>
+<p>函数的克隆，与其它引用对象有所不同，利用’=’赋值即可实现克隆。对克隆对象的操作，不会影响原对象。这是因为克隆之后的对象会单独复制一次并存储实际数据，属于真正的克隆。</p>
+</blockquote>
+<p>但应该注意：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> x = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line">a.test = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">a.test = <span class="string">&#x27;c&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a.test);<span class="comment">//c</span></span><br><span class="line"><span class="built_in">console</span>.log(b.test);<span class="comment">//c</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>如何实现完整的对象克隆？</strong></p>
+<blockquote>
+<p>完整的对象克隆，包括克隆普通对象、引用对象。因此实现完整克隆时，需要对克隆对象进行判断。对于基本类型和引用类型的方法不同。对于引用对象的完整克隆(深度克隆/对象的深度克隆/对象的深度复制，不同的称谓)，包括对象的值也是一个对象也要进行完整克隆。</p>
+</blockquote>
+<p>其实简单理解，可以认为我们需要创建一个对象b，使它与a有一样的属性和方法，但b的操作又不能影响a。</p>
+<p>引用网上一个深度克隆的方法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clone</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> o, i, j, k;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">typeof</span>(obj) != <span class="string">&quot;object&quot;</span> || obj === <span class="literal">null</span>) <span class="keyword">return</span> obj;</span><br><span class="line">	<span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">Array</span>) &#123;</span><br><span class="line">		o = [];</span><br><span class="line">		i = <span class="number">0</span>;</span><br><span class="line">		j = obj.length;</span><br><span class="line">		<span class="keyword">for</span> (; i &lt; j; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">typeof</span>(obj[i]) == <span class="string">&quot;object&quot;</span> &amp;&amp; obj[i] != <span class="literal">null</span>) &#123;</span><br><span class="line">				o[i] = <span class="built_in">arguments</span>.callee(obj[i]);</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				o[i] = obj[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		o = &#123;&#125;;</span><br><span class="line">		<span class="keyword">for</span> (i <span class="keyword">in</span> obj) &#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">typeof</span>(obj[i]) == <span class="string">&quot;object&quot;</span> &amp;&amp; obj[i] != <span class="literal">null</span>) &#123;</span><br><span class="line">				o[i] = <span class="built_in">arguments</span>.callee(obj[i]);</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				o[i] = obj[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> o;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>简化下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> targetObj = <span class="built_in">Array</span>.isArray(obj) ? [] : &#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span> (obj &amp;&amp; <span class="keyword">typeof</span> obj === <span class="string">&#x27;object&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj.hasOwnProperty(key)) &#123;</span><br><span class="line">                <span class="keyword">if</span> (obj[key] &amp;&amp; <span class="keyword">typeof</span> obj[key] === <span class="string">&#x27;object&#x27;</span>) &#123;</span><br><span class="line">                    targetObj[key] = deepClone(obj[key]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    targetObj[key] = obj[key];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> targetObj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>同样，我们借用 JSON.parse 和 JSON.stringify 也可以实现深拷贝</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> _obj = <span class="built_in">JSON</span>.stringify(obj),</span><br><span class="line">        objClone = <span class="built_in">JSON</span>.parse(_obj);</span><br><span class="line">    <span class="keyword">return</span> objClone</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>补充</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	basic: &#123;</span><br><span class="line">		Name: <span class="string">&quot;xiaoming&quot;</span></span><br><span class="line">	&#125;,</span><br><span class="line">	sayHello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">&quot;Hello,I&#x27;m &quot;</span> + <span class="built_in">this</span>.basic.Name)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</span><br><span class="line">p1.sayHello();<span class="comment">// Hello.I &#x27;m xiaoming</span></span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> Person();</span><br><span class="line">p2.sayHello();<span class="comment">// Hello, I &#x27;m xiaoming</span></span><br><span class="line">p1.basic.Name = <span class="string">&quot;xiaowang&quot;</span>;</span><br><span class="line">p1.sayHello();<span class="comment">// Hello, I, m xiaowang</span></span><br><span class="line">p2.sayHello();<span class="comment">// Hello, I, m xiaowang</span></span><br></pre></td></tr></table></figure>
+
+<p>可能会疑问，改变了p1的属性，为什么p2的也改变了。这就得从函数的基于原型链实现继承中对属性和方法的访问说起。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//重写函数原型为basic/sayHello</span></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	basic: &#123;</span><br><span class="line">		Name: <span class="string">&quot;xiaoming&quot;</span></span><br><span class="line">	&#125;,</span><br><span class="line">	sayHello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">&quot;Hello,I&#x27;m &quot;</span> + <span class="built_in">this</span>.basic.Name)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化对象</span></span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例本身没有sayHello方法，因此调用原型链上的sayHello方法。</span></span><br><span class="line">p1.sayHello();<span class="comment">// Hello.I &#x27;m xiaoming</span></span><br><span class="line">p2.sayHello();<span class="comment">// Hello, I &#x27;m xiaoming</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//修改实例对象的属性和方法时，如果此对象的该属性或方法不存在，只会在该对象上创建该属性，而不是修改原型链上的属性</span></span><br><span class="line">p1.address = <span class="string">&#x27;beijing&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(p1.address);<span class="comment">//beijing</span></span><br><span class="line"><span class="built_in">console</span>.log(p2.address);<span class="comment">//undefined</span></span><br><span class="line"></span><br><span class="line">p1.basic = <span class="string">&#x27;test&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(p1.basic);<span class="comment">// test,p1自己的属性</span></span><br><span class="line"><span class="built_in">console</span>.log(p2.basic);<span class="comment">//Object &#123;Name: &quot;xiaoming&quot;&#125;,p2依旧访问原型链上的属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//注意了</span></span><br><span class="line"><span class="keyword">delete</span> p1.basic;</span><br><span class="line"><span class="built_in">console</span>.log(p1.basic);<span class="comment">//删除了p1的属性，访问原型链上的属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//更改实例对象在原型链上的属性，如果按照前面的说法，p1可能会创建自己的basic.name属性并赋值为xiaowang。实际情况并非如此。如果实例对象要修改自身的一级属性（p1.basic = &quot;xxx&quot;;），并且该属性不存在，那么，会在该实例对象上创建该属性，并赋值该属性。此时，不会影响对原型链上的该属性造成影响。如果实例对象要修改自身的N(N&gt;1)级属性（p1.basic.name = &quot;xxx&quot;;)时，若该实例不存在N级前的N-1级中的某个属性，就会到原型链上查找该属性，若未找到，查找下一级原型链，如果到最后都没有找到，给出TypeError错误，如果找到了，那么就在该原型链上修改此属性</span></span><br><span class="line">p1.basic.Name = <span class="string">&quot;xiaowang&quot;</span>;<span class="comment">//自身不存在该属性，访问原型链，在原型链上找到该属性，并修改</span></span><br><span class="line">p1.sayHello();<span class="comment">// Hello, I, m xiaowang, 原型链已被修改</span></span><br><span class="line">p2.sayHello();<span class="comment">// Hello, I, m xiaowang, 原型链已被修改</span></span><br><span class="line"><span class="built_in">console</span>.log(p1.father.name);<span class="comment">//Uncaught TypeError: Cannot read property &#x27;name&#x27; of undefined(…)</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript高级程序设计笔记（5）-引用类型之基本包装类型</title>
     <url>/2016/11/03/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0%EF%BC%885%EF%BC%89/</url>
     <content><![CDATA[<h2 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h2><blockquote>
@@ -1831,78 +1903,6 @@ cookie的读取、写入和删除。</li>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">String</span>.fromCharCode(<span class="number">104</span>,<span class="number">101</span>,<span class="number">108</span>,<span class="number">108</span>,<span class="number">111</span>));<span class="comment">//&#x27;hello&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="HTML方法"><a href="#HTML方法" class="headerlink" title="HTML方法"></a>HTML方法</h4>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Javascript数据基本类型与引用类型</title>
-    <url>/2017/02/21/Javascript%E6%95%B0%E6%8D%AE%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<h2 id="JavaScript-数据类型"><a href="#JavaScript-数据类型" class="headerlink" title="JavaScript 数据类型"></a>JavaScript 数据类型</h2><p>说起Javascript的数据类型，通常我们会看到下面两种分类。</p>
-<blockquote>
-<p>字符串、数字、布尔、数组、对象、Null、Undefined(w3c)</p>
-</blockquote>
-<p>还有一种经常看到的就是把数组归类在对象中(这大概也是大家通常认为的吧)：<a id="more"></a></p>
-<blockquote>
-<p>数值（number）：整数和小数（比如1和3.14）<br>字符串（string）：字符组成的文本（比如”Hello World”）<br>布尔值（boolean）：true（真）和false（假）两个特定值<br>undefined：表示“未定义”或不存在，即此处目前没有任何值<br>null：表示空缺，即此处应该有一个值，但目前为空<br>对象（object）：各种值组成的集合</p>
-</blockquote>
-<p><em>现在又要多加一种了，ES6新增 符号(symbol)</em></p>
-<p>其中对象又可以分为：</p>
-<blockquote>
-<p>狭义的对象（object）<br>数组（array）<br>函数（function）</p>
-</blockquote>
-<p>js的数据类型根据在内存中的存储方式，又可以分为两类：</p>
-<blockquote>
-<p>(1)值类型：数值、布尔值、null、undefined、String。<br>(2)引用类型：对象、数组、函数。</p>
-</blockquote>
-<p>js基本数据类型有： number、string、boolean、undefined、null，对于基本类型，它们在内存中占有固定的大小空间，通过值的形式保存在桟内存中，我们通过按值来访问。</p>
-<p>对于引用类型的赋值，需要在堆内存中为这个值分配空间。由于值的大小不固定（数组大小、对象属性和方法个数都不确定），因此不能把把它们保存在桟内存中。但是我们可以在桟内存中保存值的内存地址，因为内存地址大小是固定的。引用类型对象存储的实际是它们的引用地址，对象的实际内容单独存放，因为引用对象通常比较庞大，这是数据开销和内存开销优化的手段。</p>
-<p>简而言之，堆内存存放引用值，栈内存存放固定类型值。“引用”是一个指向对象实际位置的指针。</p>
-<h2 id="举个栗子"><a href="#举个栗子" class="headerlink" title="举个栗子"></a>举个栗子</h2><h3 id="1、基本数据类型"><a href="#1、基本数据类型" class="headerlink" title="1、基本数据类型"></a>1、基本数据类型</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">a = <span class="number">2</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);<span class="comment">// 2</span></span><br><span class="line"><span class="built_in">console</span>.log(b);<span class="comment">// 1</span></span><br><span class="line"><span class="keyword">var</span> c = <span class="string">&#x27;123&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> d = c;</span><br><span class="line">c = <span class="string">&#x27;1234&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(c);<span class="comment">//&#x27;1234&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(d);<span class="comment">//&#x27;123&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2、引用类型"><a href="#2、引用类型" class="headerlink" title="2、引用类型"></a>2、引用类型</h3><p>在这里需注意的是，引用指向的是具体的对象，而不是另一个引用。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123; <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;a&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> b = a; <span class="comment">//此时b.name为&#x27;a&#x27;</span></span><br><span class="line">a.name = <span class="string">&#x27;c&#x27;</span>; <span class="comment">//b.name = a.name = &#x27;c&#x27;</span></span><br><span class="line">b.name = <span class="string">&#x27;d&#x27;</span>; <span class="comment">//b.name = a.name = &#x27;d&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(a.name);<span class="comment">// d</span></span><br><span class="line"><span class="built_in">console</span>.log(b.name);<span class="comment">// d</span></span><br></pre></td></tr></table></figure>
-
-<p>对象的克隆：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123; <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="string">&#x27;1&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> b = &#123;&#125;;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> a)&#123;</span><br><span class="line">	b[key] = a[key];</span><br><span class="line">&#125;</span><br><span class="line">b.name = <span class="string">&#x27;b&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a);<span class="comment">//&#123; &#x27;name&#x27;: &#x27;a&#x27;,&#x27;age&#x27;:&#x27;1&#x27;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(b);<span class="comment">//&#123; &#x27;name&#x27;: &#x27;b&#x27;,&#x27;age&#x27;:&#x27;1&#x27;&#125;</span></span><br><span class="line"><span class="built_in">console</span>.log(a.name);<span class="comment">// a</span></span><br><span class="line"><span class="built_in">console</span>.log(b.name);<span class="comment">// b</span></span><br></pre></td></tr></table></figure>
-
-<p>再来看另一个栗子：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123; <span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;a&#x27;</span>&#125;;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">a = <span class="number">1</span>; <span class="comment">//此时a已经不是引用类型</span></span><br><span class="line"><span class="built_in">console</span>.log(b.name); <span class="comment">// a</span></span><br><span class="line"><span class="built_in">console</span>.log(a.name); <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure>
-<p>关于数组的一个栗子:</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">b.push(<span class="string">&#x27;4&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// [&#x27;1&#x27;,&#x27;2&#x27;,&#x27;3&#x27;,&#x27;4&#x27;]</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// [&#x27;1&#x27;,&#x27;2&#x27;,&#x27;3&#x27;,&#x27;4&#x27;]</span></span><br></pre></td></tr></table></figure>
-<p>怎样实现对一个数组的克隆，同时操作克隆对象又不影响原数组呢？</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>];</span><br><span class="line"><span class="keyword">var</span> b = [];</span><br><span class="line"><span class="keyword">var</span> n = a.length;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> m = <span class="number">0</span>; m &lt; n; m++)&#123;</span><br><span class="line">	b.push(a[m]);</span><br><span class="line">&#125;</span><br><span class="line">b.push(<span class="string">&#x27;4&#x27;</span>);</span><br><span class="line"><span class="built_in">console</span>.log(a); <span class="comment">// [&#x27;1&#x27;,&#x27;2&#x27;,&#x27;3&#x27;]</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">// [&#x27;1&#x27;,&#x27;2&#x27;,&#x27;3&#x27;,&#x27;4&#x27;]</span></span><br></pre></td></tr></table></figure>
-
-<p>关于函数的一个栗子</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> x = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">b = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> x = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line">a();<span class="comment">// 0</span></span><br><span class="line">b();<span class="comment">// 1</span></span><br></pre></td></tr></table></figure>
-<p>基于上面的例子，有人总结了下面的内容：</p>
-<blockquote>
-<p>函数的克隆，与其它引用对象有所不同，利用’=’赋值即可实现克隆。对克隆对象的操作，不会影响原对象。这是因为克隆之后的对象会单独复制一次并存储实际数据，属于真正的克隆。</p>
-</blockquote>
-<p>但应该注意：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> x = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">console</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line">a.test = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="keyword">var</span> b = a;</span><br><span class="line">a.test = <span class="string">&#x27;c&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a.test);<span class="comment">//c</span></span><br><span class="line"><span class="built_in">console</span>.log(b.test);<span class="comment">//c</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>如何实现完整的对象克隆？</strong></p>
-<blockquote>
-<p>完整的对象克隆，包括克隆普通对象、引用对象。因此实现完整克隆时，需要对克隆对象进行判断。对于基本类型和引用类型的方法不同。对于引用对象的完整克隆(深度克隆/对象的深度克隆/对象的深度复制，不同的称谓)，包括对象的值也是一个对象也要进行完整克隆。</p>
-</blockquote>
-<p>其实简单理解，可以认为我们需要创建一个对象b，使它与a有一样的属性和方法，但b的操作又不能影响a。</p>
-<p>引用网上一个深度克隆的方法：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clone</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">var</span> o, i, j, k;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">typeof</span>(obj) != <span class="string">&quot;object&quot;</span> || obj === <span class="literal">null</span>) <span class="keyword">return</span> obj;</span><br><span class="line">	<span class="keyword">if</span> (obj <span class="keyword">instanceof</span> <span class="built_in">Array</span>) &#123;</span><br><span class="line">		o = [];</span><br><span class="line">		i = <span class="number">0</span>;</span><br><span class="line">		j = obj.length;</span><br><span class="line">		<span class="keyword">for</span> (; i &lt; j; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">typeof</span>(obj[i]) == <span class="string">&quot;object&quot;</span> &amp;&amp; obj[i] != <span class="literal">null</span>) &#123;</span><br><span class="line">				o[i] = <span class="built_in">arguments</span>.callee(obj[i]);</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				o[i] = obj[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		o = &#123;&#125;;</span><br><span class="line">		<span class="keyword">for</span> (i <span class="keyword">in</span> obj) &#123;</span><br><span class="line">			<span class="keyword">if</span> (<span class="keyword">typeof</span>(obj[i]) == <span class="string">&quot;object&quot;</span> &amp;&amp; obj[i] != <span class="literal">null</span>) &#123;</span><br><span class="line">				o[i] = <span class="built_in">arguments</span>.callee(obj[i]);</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				o[i] = obj[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> o;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>简化下：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> targetObj = <span class="built_in">Array</span>.isArray(obj) ? [] : &#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span> (obj &amp;&amp; <span class="keyword">typeof</span> obj === <span class="string">&#x27;object&#x27;</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">            <span class="keyword">if</span> (obj.hasOwnProperty(key)) &#123;</span><br><span class="line">                <span class="keyword">if</span> (obj[key] &amp;&amp; <span class="keyword">typeof</span> obj[key] === <span class="string">&#x27;object&#x27;</span>) &#123;</span><br><span class="line">                    targetObj[key] = deepClone(obj[key]);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> &#123;</span><br><span class="line">                    targetObj[key] = obj[key];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> targetObj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>同样，我们借用 JSON.parse 和 JSON.stringify 也可以实现深拷贝</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">deepClone</span>(<span class="params">obj</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> _obj = <span class="built_in">JSON</span>.stringify(obj),</span><br><span class="line">        objClone = <span class="built_in">JSON</span>.parse(_obj);</span><br><span class="line">    <span class="keyword">return</span> objClone</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>补充</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	basic: &#123;</span><br><span class="line">		Name: <span class="string">&quot;xiaoming&quot;</span></span><br><span class="line">	&#125;,</span><br><span class="line">	sayHello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">&quot;Hello,I&#x27;m &quot;</span> + <span class="built_in">this</span>.basic.Name)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</span><br><span class="line">p1.sayHello();<span class="comment">// Hello.I &#x27;m xiaoming</span></span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> Person();</span><br><span class="line">p2.sayHello();<span class="comment">// Hello, I &#x27;m xiaoming</span></span><br><span class="line">p1.basic.Name = <span class="string">&quot;xiaowang&quot;</span>;</span><br><span class="line">p1.sayHello();<span class="comment">// Hello, I, m xiaowang</span></span><br><span class="line">p2.sayHello();<span class="comment">// Hello, I, m xiaowang</span></span><br></pre></td></tr></table></figure>
-
-<p>可能会疑问，改变了p1的属性，为什么p2的也改变了。这就得从函数的基于原型链实现继承中对属性和方法的访问说起。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//重写函数原型为basic/sayHello</span></span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	basic: &#123;</span><br><span class="line">		Name: <span class="string">&quot;xiaoming&quot;</span></span><br><span class="line">	&#125;,</span><br><span class="line">	sayHello: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(<span class="string">&quot;Hello,I&#x27;m &quot;</span> + <span class="built_in">this</span>.basic.Name)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化对象</span></span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> Person();</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例本身没有sayHello方法，因此调用原型链上的sayHello方法。</span></span><br><span class="line">p1.sayHello();<span class="comment">// Hello.I &#x27;m xiaoming</span></span><br><span class="line">p2.sayHello();<span class="comment">// Hello, I &#x27;m xiaoming</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//修改实例对象的属性和方法时，如果此对象的该属性或方法不存在，只会在该对象上创建该属性，而不是修改原型链上的属性</span></span><br><span class="line">p1.address = <span class="string">&#x27;beijing&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(p1.address);<span class="comment">//beijing</span></span><br><span class="line"><span class="built_in">console</span>.log(p2.address);<span class="comment">//undefined</span></span><br><span class="line"></span><br><span class="line">p1.basic = <span class="string">&#x27;test&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(p1.basic);<span class="comment">// test,p1自己的属性</span></span><br><span class="line"><span class="built_in">console</span>.log(p2.basic);<span class="comment">//Object &#123;Name: &quot;xiaoming&quot;&#125;,p2依旧访问原型链上的属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//注意了</span></span><br><span class="line"><span class="keyword">delete</span> p1.basic;</span><br><span class="line"><span class="built_in">console</span>.log(p1.basic);<span class="comment">//删除了p1的属性，访问原型链上的属性</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//更改实例对象在原型链上的属性，如果按照前面的说法，p1可能会创建自己的basic.name属性并赋值为xiaowang。实际情况并非如此。如果实例对象要修改自身的一级属性（p1.basic = &quot;xxx&quot;;），并且该属性不存在，那么，会在该实例对象上创建该属性，并赋值该属性。此时，不会影响对原型链上的该属性造成影响。如果实例对象要修改自身的N(N&gt;1)级属性（p1.basic.name = &quot;xxx&quot;;)时，若该实例不存在N级前的N-1级中的某个属性，就会到原型链上查找该属性，若未找到，查找下一级原型链，如果到最后都没有找到，给出TypeError错误，如果找到了，那么就在该原型链上修改此属性</span></span><br><span class="line">p1.basic.Name = <span class="string">&quot;xiaowang&quot;</span>;<span class="comment">//自身不存在该属性，访问原型链，在原型链上找到该属性，并修改</span></span><br><span class="line">p1.sayHello();<span class="comment">// Hello, I, m xiaowang, 原型链已被修改</span></span><br><span class="line">p2.sayHello();<span class="comment">// Hello, I, m xiaowang, 原型链已被修改</span></span><br><span class="line"><span class="built_in">console</span>.log(p1.father.name);<span class="comment">//Uncaught TypeError: Cannot read property &#x27;name&#x27; of undefined(…)</span></span><br></pre></td></tr></table></figure>
-]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -3105,6 +3105,27 @@ Visit http://127.0.0.1:3003/?port=5858 to start debugging.
       </categories>
       <tags>
         <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>module.exports和exports的区别</title>
+    <url>/2020/10/27/module-exports%E5%92%8Cexports%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<blockquote>
+<p>require方能看到的只有 module.exports 这个对象，它是看不到 exports 对象的，而我们在编写模块时用到的 exports 对象，实际上只是对 module.exports 的引用。</p>
+</blockquote>
+<a id="more"></a>
+
+<p>以上引用自<a href="https://www.zhihu.com/question/26621212/answer/625539463">Node.js模块里exports与module.exports的区别?</a> 问题下 <a href="https://www.zhihu.com/people/xiaomingplus">小明plus</a>的回答。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">require</span>(<span class="params"><span class="regexp">/* ... */</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="built_in">module</span> = &#123; <span class="attr">exports</span>: &#123;&#125; &#125;;</span><br><span class="line">  (<span class="function">(<span class="params"><span class="built_in">module</span>, <span class="built_in">exports</span></span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// Module code here. In this example, define a function.</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">someFunc</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">    <span class="built_in">exports</span> = someFunc;</span><br><span class="line">    <span class="comment">// At this point, exports is no longer a shortcut to module.exports, and</span></span><br><span class="line">    <span class="comment">// this module will still export an empty default object.</span></span><br><span class="line">    <span class="built_in">module</span>.exports = someFunc;</span><br><span class="line">    <span class="comment">// At this point, the module will now export someFunc, instead of the</span></span><br><span class="line">    <span class="comment">// default object.</span></span><br><span class="line">  &#125;)(<span class="built_in">module</span>, <span class="built_in">module</span>.exports);</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">module</span>.exports;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>module.exports</tag>
+        <tag>exports</tag>
       </tags>
   </entry>
   <entry>
