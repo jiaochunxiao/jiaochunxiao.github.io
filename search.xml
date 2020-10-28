@@ -27,26 +27,6 @@
       </tags>
   </entry>
   <entry>
-    <title>linux常用命令学习(四) -- pwd</title>
-    <url>/2016/04/15/20160415/</url>
-    <content><![CDATA[<h2 id="第四条linux命令-pwd"><a href="#第四条linux命令-pwd" class="headerlink" title="第四条linux命令: pwd"></a>第四条linux命令: pwd</h2><p>已经熟悉了 cd , ls , mkdir 命令，如果我们想知道当前所在目录的路径是怎样，怎么办呢？linux用 pwd 命令来查看，当前目录的完整路径。</p>
-<a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>pwd [选项]</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><p>一般情况下, pwd 命令不带任何参数。对于目录是链接时，使用 pwd -P 显示出实际路径。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>pwd <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># mkdir -p parent/child/</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd  parent/child/</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># pwd</span></span><br><span class="line">/root/parent/child</span><br><span class="line">[root@kvm45072 child]<span class="comment"># ^C</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux常用命令学习(二) -- cd</title>
     <url>/2016/04/13/20160413/</url>
     <content><![CDATA[<h2 id="第二条linux命令-cd"><a href="#第二条linux命令-cd" class="headerlink" title="第二条linux命令: cd"></a>第二条linux命令: cd</h2><p>相信大家对 cd 这个命令，应该是再熟悉不过的了， cd 命令可以说是linux中最基本的命令了。下面就介绍下关于 cd 命令的相关知识。</p>
@@ -177,6 +157,56 @@
       </tags>
   </entry>
   <entry>
+    <title>linux常用命令学习(四) -- pwd</title>
+    <url>/2016/04/15/20160415/</url>
+    <content><![CDATA[<h2 id="第四条linux命令-pwd"><a href="#第四条linux命令-pwd" class="headerlink" title="第四条linux命令: pwd"></a>第四条linux命令: pwd</h2><p>已经熟悉了 cd , ls , mkdir 命令，如果我们想知道当前所在目录的路径是怎样，怎么办呢？linux用 pwd 命令来查看，当前目录的完整路径。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>pwd [选项]</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><p>一般情况下, pwd 命令不带任何参数。对于目录是链接时，使用 pwd -P 显示出实际路径。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>pwd <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># mkdir -p parent/child/</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd  parent/child/</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># pwd</span></span><br><span class="line">/root/parent/child</span><br><span class="line">[root@kvm45072 child]<span class="comment"># ^C</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux常用命令学习(六) -- rmdir</title>
+    <url>/2016/04/17/20160417/</url>
+    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p</td>
+<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
+</tr>
+<tr>
+<td>-v</td>
+<td align="center">–verbose, 详细显示进行的步骤。</td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(七) -- mv</title>
     <url>/2016/04/18/20160418/</url>
     <content><![CDATA[<p>今天来学习的是 linux中常用命令之一的– mv。mv命令是move的缩写，用于移动文件或者文件重命名。这里先提前说一下与 cp 命令不同，mv 命令是完全将源文件移动到指定目录， cp 命令只是复制文件内容从一个目录到另一个目录。</p>
@@ -226,36 +256,6 @@
       </tags>
   </entry>
   <entry>
-    <title>linux常用命令学习(六) -- rmdir</title>
-    <url>/2016/04/17/20160417/</url>
-    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
-<a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-p</td>
-<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
-</tr>
-<tr>
-<td>-v</td>
-<td align="center">–verbose, 详细显示进行的步骤。</td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux常用命令学习(八) -- cp</title>
     <url>/2016/04/19/20160419/</url>
     <content><![CDATA[<p>cp, copy之意，用于文件或目录的复制。注意：一般情况下，使用命令行下复制文件时，如果目标文件已经存在，就会询问是否覆盖，无论是否使用 -i 参数。但是在shell脚本中执行cp时，如果没有-i参数，则不会询问是否覆盖-命令行和shell脚本的执行方式有些不同。 <a id="more"></a></p>
@@ -296,6 +296,72 @@
 <li>cp demo1.log ../demo2<br>将目录demo1下的文件demo1.log复制到demo2文件夹下。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># ll</span></span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x. 2 root root 4096 Apr 29 16:03 demo-1</span><br><span class="line">-rw-r--r--. 1 root root   10 Apr 29 16:29 demo1.log</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cp demo1.log ../demo2</span></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cd ../demo2</span></span><br><span class="line">[root@kvm45072 demo2]<span class="comment"># ll</span></span><br><span class="line">total 4</span><br><span class="line">-rw-r--r--. 1 root root 10 Apr 29 16:31 demo1.log</span><br><span class="line">[root@kvm45072 demo2]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
 <li>cp -f demo1.log ../demo2<br>目标文件存在时，会询问是否覆盖。因为cp是cp -i的别名。目标文件存在时，即使加了-f标志，也还会询问是否覆盖。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cp -f demo1.log ../demo2</span></span><br><span class="line">cp: overwrite `../demo2/demo1.log<span class="string">&#x27;? </span></span><br></pre></td></tr></table></figure></li>
 </ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux常用命令学习(九) -- cat</title>
+    <url>/2016/04/20/20160420/</url>
+    <content><![CDATA[<p>cat，全称为concatenate files and print on the standard output，主要作用为：查看文件内容，也可以给文件追加内容到结尾。 <a id="more"></a></p>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>cat [选项] [文件]</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-A</td>
+<td align="center">–show-all ;和-vET等价。</td>
+</tr>
+<tr>
+<td>-b</td>
+<td align="center">–number-nonblank ; 列出行号，仅对非空行号显示，空白行不标记行号</td>
+</tr>
+<tr>
+<td>-e</td>
+<td align="center">和-vE等价;</td>
+</tr>
+<tr>
+<td>-E</td>
+<td align="center">–show-ends, 将结尾的断行字符$显示出来</td>
+</tr>
+<tr>
+<td>-n</td>
+<td align="center">–number,对输出的所有行进行编号，编号由1开始递增。空白行也有行号。与-b命令不同。</td>
+</tr>
+<tr>
+<td>-T</td>
+<td align="center">–show-tabs, 将[tab]按键以 ^I 显示出来。</td>
+</tr>
+<tr>
+<td>-v</td>
+<td align="center">–show-nonprinting, 列出一些看不出的特殊字符。</td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>cat -n demo1.log<br>显示文件demo1.log的行号，包括空行。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -n demo1.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line">     5</span><br><span class="line">     6  <span class="built_in">test</span></span><br><span class="line">     7</span><br><span class="line">     8  demo1</span><br><span class="line">     9  demo1</span><br><span class="line">    10  demo</span><br><span class="line">    11  demo</span><br><span class="line">    12</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>cat -b demo1.log<br>显示文件demo1.log的行号，只显示非空行号。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -b demo1.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     5  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  demo</span><br><span class="line"></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>cat -b demo1.log demo2.log log.log<br>将demo1.log/demo2.log附加到log.log，并显示非空行号。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -b demo1.log demo2.log log.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     5  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  demo</span><br><span class="line"></span><br><span class="line">    10  this is demo2.log</span><br><span class="line">    11  this is demo2.log</span><br><span class="line"></span><br><span class="line">    12  <span class="built_in">test</span></span><br><span class="line">    13  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">    14  demo</span><br><span class="line">    15  demo</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>cat &gt;log.txt &lt;&lt;EOF<br>生成文件</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat &gt;log.txt &lt;&lt;EOF</span></span><br><span class="line">&gt; HELLO</span><br><span class="line">&gt; WORLD</span><br><span class="line">&gt; PWD=$(<span class="built_in">pwd</span>)</span><br><span class="line">&gt; <span class="built_in">test</span></span><br><span class="line">&gt; EOF</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># ls -l log.txt</span></span><br><span class="line">-rw-r--r--. 1 root root 39 May  4 14:14 log.txt</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cat log.txt</span></span><br><span class="line">HELLO</span><br><span class="line">WORLD</span><br><span class="line">PWD=/root/linux/demo1</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>linux</category>
@@ -390,72 +456,6 @@
       <tags>
         <tag>js</tag>
         <tag>ES6</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux常用命令学习(九) -- cat</title>
-    <url>/2016/04/20/20160420/</url>
-    <content><![CDATA[<p>cat，全称为concatenate files and print on the standard output，主要作用为：查看文件内容，也可以给文件追加内容到结尾。 <a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>cat [选项] [文件]</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-A</td>
-<td align="center">–show-all ;和-vET等价。</td>
-</tr>
-<tr>
-<td>-b</td>
-<td align="center">–number-nonblank ; 列出行号，仅对非空行号显示，空白行不标记行号</td>
-</tr>
-<tr>
-<td>-e</td>
-<td align="center">和-vE等价;</td>
-</tr>
-<tr>
-<td>-E</td>
-<td align="center">–show-ends, 将结尾的断行字符$显示出来</td>
-</tr>
-<tr>
-<td>-n</td>
-<td align="center">–number,对输出的所有行进行编号，编号由1开始递增。空白行也有行号。与-b命令不同。</td>
-</tr>
-<tr>
-<td>-T</td>
-<td align="center">–show-tabs, 将[tab]按键以 ^I 显示出来。</td>
-</tr>
-<tr>
-<td>-v</td>
-<td align="center">–show-nonprinting, 列出一些看不出的特殊字符。</td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>cat -n demo1.log<br>显示文件demo1.log的行号，包括空行。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -n demo1.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line">     5</span><br><span class="line">     6  <span class="built_in">test</span></span><br><span class="line">     7</span><br><span class="line">     8  demo1</span><br><span class="line">     9  demo1</span><br><span class="line">    10  demo</span><br><span class="line">    11  demo</span><br><span class="line">    12</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>cat -b demo1.log<br>显示文件demo1.log的行号，只显示非空行号。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -b demo1.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     5  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  demo</span><br><span class="line"></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>cat -b demo1.log demo2.log log.log<br>将demo1.log/demo2.log附加到log.log，并显示非空行号。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat -b demo1.log demo2.log log.log</span></span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  <span class="built_in">test</span></span><br><span class="line">     4  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     5  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  demo</span><br><span class="line"></span><br><span class="line">    10  this is demo2.log</span><br><span class="line">    11  this is demo2.log</span><br><span class="line"></span><br><span class="line">    12  <span class="built_in">test</span></span><br><span class="line">    13  <span class="built_in">test</span></span><br><span class="line"></span><br><span class="line">    14  demo</span><br><span class="line">    15  demo</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>cat &gt;log.txt &lt;&lt;EOF<br>生成文件</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat &gt;log.txt &lt;&lt;EOF</span></span><br><span class="line">&gt; HELLO</span><br><span class="line">&gt; WORLD</span><br><span class="line">&gt; PWD=$(<span class="built_in">pwd</span>)</span><br><span class="line">&gt; <span class="built_in">test</span></span><br><span class="line">&gt; EOF</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># ls -l log.txt</span></span><br><span class="line">-rw-r--r--. 1 root root 39 May  4 14:14 log.txt</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cat log.txt</span></span><br><span class="line">HELLO</span><br><span class="line">WORLD</span><br><span class="line">PWD=/root/linux/demo1</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
       </tags>
   </entry>
   <entry>
@@ -703,17 +703,6 @@ alert(element.childNodes.length);//2</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>JavaScript高级程序设计笔记(12)-DOM2和DOM3</title>
-    <url>/2016/11/20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-12/</url>
-    <content><![CDATA[<h4 id="计算的样式"><a href="#计算的样式" class="headerlink" title="计算的样式"></a>计算的样式</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = <span class="built_in">document</span>.defaultView.getComputedStyle(myDiv, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE不支持getComputedStyle()方法，在IE中每个具有style属性的元素还要一个currentStyle属性。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = myDiv.currentStyle;</span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript高级程序设计笔记(11)-DOM扩展</title>
     <url>/2016/11/15/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-11/</url>
     <content><![CDATA[<h2 id="选择符API"><a href="#选择符API" class="headerlink" title="选择符API"></a>选择符API</h2><h3 id="querySelector-方法"><a href="#querySelector-方法" class="headerlink" title="querySelector()方法"></a>querySelector()方法</h3><p>querySelector()方法接收一个css选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回null。<a id="more"></a></p>
@@ -758,6 +747,17 @@ alert(element.childNodes.length);//2</code></pre>
 <h3 id="专有扩展"><a href="#专有扩展" class="headerlink" title="专有扩展"></a>专有扩展</h3><h4 id="文档模式"><a href="#文档模式" class="headerlink" title="文档模式"></a>文档模式</h4><h4 id="children属性"><a href="#children属性" class="headerlink" title="children属性"></a>children属性</h4><h4 id="contains"><a href="#contains" class="headerlink" title="contains"></a>contains</h4><h4 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h4><p>innerText</p>
 <p>outerText</p>
 <h4 id="滚动"><a href="#滚动" class="headerlink" title="滚动"></a>滚动</h4>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript高级程序设计笔记(12)-DOM2和DOM3</title>
+    <url>/2016/11/20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-12/</url>
+    <content><![CDATA[<h4 id="计算的样式"><a href="#计算的样式" class="headerlink" title="计算的样式"></a>计算的样式</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = <span class="built_in">document</span>.defaultView.getComputedStyle(myDiv, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE不支持getComputedStyle()方法，在IE中每个具有style属性的元素还要一个currentStyle属性。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = myDiv.currentStyle;</span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -2639,7 +2639,7 @@ Visit http://127.0.0.1:3003/?port=5858 to start debugging.
 
 <h3 id="readonly修饰符"><a href="#readonly修饰符" class="headerlink" title="readonly修饰符"></a>readonly修饰符</h3><p>只读属性必须在声明时或构造函数里被初始化。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Octopus</span> </span>&#123;</span><br><span class="line">    readonly name: string;</span><br><span class="line">    readonly numberOfLegs: number = <span class="number">8</span>;</span><br><span class="line">    <span class="keyword">constructor</span> (theName: string) &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = theName;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> dad = <span class="keyword">new</span> Octopus(<span class="string">&quot;Man with the 8 strong legs&quot;</span>);</span><br><span class="line">dad.name = <span class="string">&quot;Man with the 3-piece suit&quot;</span>; <span class="comment">// 错误! name 是只读的.</span></span><br></pre></td></tr></table></figure>
-<h4 id="参数属性"><a href="#参数属性" class="headerlink" title="参数属性"></a>参数属性</h4><p>在上面的例子中，我们必须在Octopus类里定义一个只读成员 name和一个参数为 theName的构造函数，并且立刻将 theName的值赋给 name，这种情况经常会遇到。 参数属性可以方便地让我们在一个地方定义并初始化一个成员。 </p>
+<h4 id="参数属性"><a href="#参数属性" class="headerlink" title="参数属性"></a>参数属性</h4><p>在上面的例子中，我们必须在Octopus类里定义一个只读成员 name和一个参数为 theName的构造函数，并且立刻将 theName的值赋给 name，这种情况经常会遇到。 参数属性可以方便地让我们在一个地方定义并初始化一个成员。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Octopus</span> </span>&#123;</span><br><span class="line">    readonly numberOfLegs: number = <span class="number">8</span>;</span><br><span class="line">    <span class="keyword">constructor</span>(readonly name: string) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>注意看我们是如何舍弃了 theName，仅在构造函数里使用 readonly name: string参数来创建和初始化 name成员。 我们把声明和赋值合并至一处。</p>
 <p>参数属性通过给构造函数参数前面添加一个访问限定符来声明。 使用 private限定一个参数属性会声明并初始化一个私有成员；对于 public和 protected来说也是一样。</p>
@@ -3126,6 +3126,118 @@ Visit http://127.0.0.1:3003/?port=5858 to start debugging.
       <tags>
         <tag>module.exports</tag>
         <tag>exports</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>package.json指南</title>
+    <url>/2020/10/28/package-json%E8%AF%A6%E8%A7%A3/</url>
+    <content><![CDATA[<p>对于应用程序，package.json 文件中的内容没有固定的要求。 唯一的要求是必须遵守 JSON 格式，否则，尝试以编程的方式访问其属性的程序则无法读取它。</p>
+<a id="more"></a>
+<p><a href="https://docs.npmjs.com/cli/v6/configuring-npm/package-json">package.json</a></p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>选取了一个典型的package.json实例，<a href="https://github.com/vuejs/vue">vue</a>仓库的package.json:</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;vue&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;2.6.12&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Reactive, component-oriented view layer for modern web interfaces.&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;dist/vue.runtime.common.js&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;module&quot;</span>: <span class="string">&quot;dist/vue.runtime.esm.js&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;unpkg&quot;</span>: <span class="string">&quot;dist/vue.js&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;jsdelivr&quot;</span>: <span class="string">&quot;dist/vue.js&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;typings&quot;</span>: <span class="string">&quot;types/index.d.ts&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;files&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;src&quot;</span>,</span><br><span class="line">    <span class="string">&quot;dist/*.js&quot;</span>,</span><br><span class="line">    <span class="string">&quot;types/*.d.ts&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">&quot;sideEffects&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;dev&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:web-full-dev&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:cjs&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:web-runtime-cjs-dev&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:esm&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:web-runtime-esm&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:test&quot;</span>: <span class="string">&quot;karma start test/unit/karma.dev.config.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:ssr&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:web-server-renderer&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:compiler&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:web-compiler &quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:weex&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:weex-framework&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:weex:factory&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:weex-factory&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:weex:compiler&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:weex-compiler &quot;</span>,</span><br><span class="line">    <span class="attr">&quot;build&quot;</span>: <span class="string">&quot;node scripts/build.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;build:ssr&quot;</span>: <span class="string">&quot;npm run build -- web-runtime-cjs,web-server-renderer&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;build:weex&quot;</span>: <span class="string">&quot;npm run build -- weex&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test&quot;</span>: <span class="string">&quot;npm run lint &amp;&amp; flow check &amp;&amp; npm run test:types &amp;&amp; npm run test:cover &amp;&amp; npm run test:e2e -- --env phantomjs &amp;&amp; npm run test:ssr &amp;&amp; npm run test:weex&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test:unit&quot;</span>: <span class="string">&quot;karma start test/unit/karma.unit.config.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test:cover&quot;</span>: <span class="string">&quot;karma start test/unit/karma.cover.config.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test:e2e&quot;</span>: <span class="string">&quot;npm run build -- web-full-prod,web-server-basic-renderer &amp;&amp; node test/e2e/runner.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test:weex&quot;</span>: <span class="string">&quot;npm run build:weex &amp;&amp; jasmine JASMINE_CONFIG_PATH=test/weex/jasmine.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test:ssr&quot;</span>: <span class="string">&quot;npm run build:ssr &amp;&amp; jasmine JASMINE_CONFIG_PATH=test/ssr/jasmine.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test:sauce&quot;</span>: <span class="string">&quot;npm run sauce -- 0 &amp;&amp; npm run sauce -- 1 &amp;&amp; npm run sauce -- 2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;test:types&quot;</span>: <span class="string">&quot;tsc -p ./types/test/tsconfig.json&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;lint&quot;</span>: <span class="string">&quot;eslint src scripts test&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;flow&quot;</span>: <span class="string">&quot;flow check&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;sauce&quot;</span>: <span class="string">&quot;karma start test/unit/karma.sauce.config.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;bench:ssr&quot;</span>: <span class="string">&quot;npm run build:ssr &amp;&amp; node benchmarks/ssr/renderToString.js &amp;&amp; node benchmarks/ssr/renderToStream.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;release&quot;</span>: <span class="string">&quot;bash scripts/release.sh&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;release:weex&quot;</span>: <span class="string">&quot;bash scripts/release-weex.sh&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;release:note&quot;</span>: <span class="string">&quot;node scripts/gen-release-note.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;commit&quot;</span>: <span class="string">&quot;git-cz&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;gitHooks&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;pre-commit&quot;</span>: <span class="string">&quot;lint-staged&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;commit-msg&quot;</span>: <span class="string">&quot;node scripts/verify-commit-msg.js&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;lint-staged&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;*.js&quot;</span>: [</span><br><span class="line">      <span class="string">&quot;eslint --fix&quot;</span>,</span><br><span class="line">      <span class="string">&quot;git add&quot;</span></span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;repository&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;git&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;git+https://github.com/vuejs/vue.git&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;keywords&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;vue&quot;</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">&quot;author&quot;</span>: <span class="string">&quot;Evan You&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;license&quot;</span>: <span class="string">&quot;MIT&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;bugs&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://github.com/vuejs/vue/issues&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;homepage&quot;</span>: <span class="string">&quot;https://github.com/vuejs/vue#readme&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;@babel/core&quot;</span>: <span class="string">&quot;^7.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@babel/plugin-proposal-class-properties&quot;</span>: <span class="string">&quot;^7.1.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@babel/plugin-syntax-dynamic-import&quot;</span>: <span class="string">&quot;^7.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@babel/plugin-syntax-jsx&quot;</span>: <span class="string">&quot;^7.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@babel/plugin-transform-flow-strip-types&quot;</span>: <span class="string">&quot;^7.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@babel/preset-env&quot;</span>: <span class="string">&quot;^7.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@babel/register&quot;</span>: <span class="string">&quot;^7.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@types/node&quot;</span>: <span class="string">&quot;^12.12.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;@types/webpack&quot;</span>: <span class="string">&quot;^4.4.22&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;acorn&quot;</span>: <span class="string">&quot;^5.2.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;babel-eslint&quot;</span>: <span class="string">&quot;^10.0.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;babel-helper-vue-jsx-merge-props&quot;</span>: <span class="string">&quot;^2.0.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;babel-loader&quot;</span>: <span class="string">&quot;^8.0.4&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;babel-plugin-istanbul&quot;</span>: <span class="string">&quot;^5.1.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;babel-plugin-transform-vue-jsx&quot;</span>: <span class="string">&quot;^4.0.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;babel-preset-flow-vue&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;buble&quot;</span>: <span class="string">&quot;^0.19.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;chalk&quot;</span>: <span class="string">&quot;^2.3.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;chromedriver&quot;</span>: <span class="string">&quot;^2.45.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;codecov&quot;</span>: <span class="string">&quot;^3.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;commitizen&quot;</span>: <span class="string">&quot;^2.9.6&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;conventional-changelog&quot;</span>: <span class="string">&quot;^1.1.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;cross-spawn&quot;</span>: <span class="string">&quot;^6.0.5&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;cz-conventional-changelog&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;de-indent&quot;</span>: <span class="string">&quot;^1.0.2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;es6-promise&quot;</span>: <span class="string">&quot;^4.1.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;escodegen&quot;</span>: <span class="string">&quot;^1.8.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;eslint&quot;</span>: <span class="string">&quot;^5.7.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;eslint-plugin-flowtype&quot;</span>: <span class="string">&quot;^2.34.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;eslint-plugin-jasmine&quot;</span>: <span class="string">&quot;^2.8.4&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;file-loader&quot;</span>: <span class="string">&quot;^3.0.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;flow-bin&quot;</span>: <span class="string">&quot;^0.61.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;hash-sum&quot;</span>: <span class="string">&quot;^1.0.2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;he&quot;</span>: <span class="string">&quot;^1.1.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;http-server&quot;</span>: <span class="string">&quot;^0.11.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;jasmine&quot;</span>: <span class="string">&quot;^2.99.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;jasmine-core&quot;</span>: <span class="string">&quot;^2.99.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma&quot;</span>: <span class="string">&quot;^3.1.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-chrome-launcher&quot;</span>: <span class="string">&quot;^2.1.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-coverage&quot;</span>: <span class="string">&quot;^1.1.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-firefox-launcher&quot;</span>: <span class="string">&quot;^1.0.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-jasmine&quot;</span>: <span class="string">&quot;^1.1.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-mocha-reporter&quot;</span>: <span class="string">&quot;^2.2.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-phantomjs-launcher&quot;</span>: <span class="string">&quot;^1.0.4&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-safari-launcher&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-sauce-launcher&quot;</span>: <span class="string">&quot;^2.0.2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-sourcemap-loader&quot;</span>: <span class="string">&quot;^0.3.7&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-webpack&quot;</span>: <span class="string">&quot;^4.0.0-rc.2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;lint-staged&quot;</span>: <span class="string">&quot;^8.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;lodash&quot;</span>: <span class="string">&quot;^4.17.4&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;lodash.template&quot;</span>: <span class="string">&quot;^4.4.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;lodash.uniq&quot;</span>: <span class="string">&quot;^4.5.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;lru-cache&quot;</span>: <span class="string">&quot;^5.1.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;nightwatch&quot;</span>: <span class="string">&quot;^0.9.16&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;nightwatch-helpers&quot;</span>: <span class="string">&quot;^1.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;phantomjs-prebuilt&quot;</span>: <span class="string">&quot;^2.1.14&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;puppeteer&quot;</span>: <span class="string">&quot;^1.11.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;resolve&quot;</span>: <span class="string">&quot;^1.3.3&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;rollup&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;rollup-plugin-alias&quot;</span>: <span class="string">&quot;^1.3.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;rollup-plugin-buble&quot;</span>: <span class="string">&quot;^0.19.6&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;rollup-plugin-commonjs&quot;</span>: <span class="string">&quot;^9.2.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;rollup-plugin-flow-no-whitespace&quot;</span>: <span class="string">&quot;^1.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;rollup-plugin-node-resolve&quot;</span>: <span class="string">&quot;^4.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;rollup-plugin-replace&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;selenium-server&quot;</span>: <span class="string">&quot;^2.53.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;serialize-javascript&quot;</span>: <span class="string">&quot;^3.1.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;shelljs&quot;</span>: <span class="string">&quot;^0.8.1&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;terser&quot;</span>: <span class="string">&quot;^3.10.2&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;typescript&quot;</span>: <span class="string">&quot;^3.6.4&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;webpack&quot;</span>: <span class="string">&quot;~4.28.4&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;weex-js-runtime&quot;</span>: <span class="string">&quot;^0.23.6&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;weex-styler&quot;</span>: <span class="string">&quot;^0.3.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;yorkie&quot;</span>: <span class="string">&quot;^2.0.0&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;config&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;commitizen&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;path&quot;</span>: <span class="string">&quot;./node_modules/cz-conventional-changelog&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="主要属性简介"><a href="#主要属性简介" class="headerlink" title="主要属性简介"></a>主要属性简介</h2><h3 id="name-✨"><a href="#name-✨" class="headerlink" title="name ✨"></a>name ✨</h3><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;vue&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>设置 npm包或者工程项目的名称。</p>
+<p>一些规则：</p>
+<ul>
+<li>名称必须少于214个字符，且不能包含空格，只能包含小写字母、连字符（-）或下划线（_）。</li>
+<li>新包的名称不能有大写字母</li>
+<li>名称最终成为URL的一部分、命令行上的参数和文件夹名称。因此，名称不能包含任何非url安全字符。</li>
+</ul>
+<p>一些tips:</p>
+<ul>
+<li>不要使用与 Node 核心模块相同的名称</li>
+<li>不要在名称中加入 js 或 node。</li>
+<li>名称可能作为参数传递给 require(), 因此它应该简短，但也具有合理的描述性。</li>
+</ul>
+<h3 id="author"><a href="#author" class="headerlink" title="author"></a>author</h3><p> npm包或者工程项目的作者</p>
+<h3 id="contributors"><a href="#contributors" class="headerlink" title="contributors"></a>contributors</h3><p>除作者外，该项目可以有一个或多个贡献者。此属性为数组结构。</p>
+<h3 id="version-✨"><a href="#version-✨" class="headerlink" title="version ✨"></a>version ✨</h3><p>指定 npm包或者工程项目的当前版本。</p>
+<p>该属性遵循版本的语义版本控制记法，意味着该版本始终以3个数字表示： x.x.x</p>
+<p>Version 必须能够被 <a href="https://github.com/npm/node-semver">node-semver</a> 解析。具体规范参考<a href="https://docs.npmjs.com/cli/v6/using-npm/semver">semver</a>。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;2.6.12&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="description-✨"><a href="#description-✨" class="headerlink" title="description ✨"></a>description ✨</h3><p>对 npm包或者工程项目的简短描述。它将被展示在 npm search, 这有助于开发者发现你的 package。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;description&quot;</span>: <span class="string">&quot;Reactive, component-oriented view layer for modern web interfaces.&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="keywords-✨"><a href="#keywords-✨" class="headerlink" title="keywords ✨"></a>keywords ✨</h3><p>设置关键字，它是一个字符串数组。它将被列出在 npm search，这有助于开发者发现你的 package。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;keywords&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;vue&quot;</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="homepage"><a href="#homepage" class="headerlink" title="homepage"></a>homepage</h3><p>设置 npm包或者工程项目的主页，通常指向项目的readme。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;homepage&quot;</span>: <span class="string">&quot;https://github.com/vuejs/vue#readme&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="bugs"><a href="#bugs" class="headerlink" title="bugs"></a>bugs</h3><p>项目的问题跟踪的 url 或应该报告问题的电子邮件地址。这些对遇到您的软件包问题的人很有帮助。最常见的和上面的 vue 的类似，指向项目的 issues。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;bugs&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;url&quot;</span> : <span class="string">&quot;https://github.com/owner/project/issues&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;email&quot;</span> : <span class="string">&quot;project@hostname.com&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="licence-✨"><a href="#licence-✨" class="headerlink" title="licence ✨"></a>licence ✨</h3><p>指定软件的许可证。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;licence&quot;</span>: <span class="string">&quot;MIT&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最流行的六开源许可证： GPL、BSD、MIT、Mozilla、Apache和 LGPL。</p>
+<p>具体区分参考<a href="http://www.ruanyifeng.com/blog/2011/05/how_to_choose_free_software_licenses.html">如何选择开源许可证？</a></p>
+<h3 id="funding"><a href="#funding" class="headerlink" title="funding"></a>funding</h3><p>可以指定一个对象，其中包含一个URL，该URL提供有关帮助您的 package 开发的资金的最新信息（比较少看到😂），可以是一个字符串URL，也可以为数组:</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&quot;funding&quot;: &#123;</span><br><span class="line">  &quot;type&quot; : &quot;individual&quot;,</span><br><span class="line">  &quot;url&quot; : &quot;http://example.com/donate&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&quot;funding&quot;: &#123;</span><br><span class="line">  &quot;type&quot; : &quot;patreon&quot;,</span><br><span class="line">  &quot;url&quot; : &quot;https://www.patreon.com/my-account&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&quot;funding&quot;: &quot;http://example.com/donate&quot;</span><br><span class="line"></span><br><span class="line">&quot;funding&quot;: [</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">&quot;type&quot;</span> : <span class="string">&quot;individual&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;url&quot;</span> : <span class="string">&quot;http://example.com/donate&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;http://example.com/donateAlso&quot;,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="attr">&quot;type&quot;</span> : <span class="string">&quot;patreon&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;url&quot;</span> : <span class="string">&quot;https://www.patreon.com/my-account&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<h3 id="files"><a href="#files" class="headerlink" title="files"></a>files</h3><p>可选的 files 字段为一个文件模式数组，描述当你的 package 作为依赖被安装时要包含的选项。</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">&quot;files&quot;: [</span><br><span class="line">    &quot;src&quot;,</span><br><span class="line">    &quot;dist/*.js&quot;,</span><br><span class="line">    <span class="string">&quot;types/*.d.ts&quot;</span></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>文件模式遵循与 .gitignore相近的语法，但是表达的意义想法，它是指包含一个文件、目录或者 glob模式。</p>
+<p>省略该字段，将使其默认为 [“*”]，意味着它将包含所有文件。</p>
+<p>您还可以在包的根目录或子目录中提供.npmignore文件，它将防止包含文件。在包的根目录下，它不会覆盖“files”字段，但在子目录中会覆盖。npmignore文件就像.gitignore一样工作。如果有一个.gitignore文件，并且丢失了.npmignore，那么.gitignore的内容将被使用。</p>
+<p>包含在 “package.json#file” 中的文件，不能通过.npmignore或.gitignore排除。</p>
+<h3 id="main"><a href="#main" class="headerlink" title="main"></a>main</h3><p>设置 package 的入口。</p>
+<p>当在应用程序中导入此 package 时，应用程序会在该位置搜索模块的导出。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;main&quot;</span>: <span class="string">&quot;dist/vue.runtime.common.js&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="browserslist"><a href="#browserslist" class="headerlink" title="browserslist"></a>browserslist</h3><p>如果你的 package 用户浏览器端，该字段用于说明，你的 package 支持的浏览器及其版本</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;browserslist&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;Android &gt;= 7&quot;</span>,</span><br><span class="line">    <span class="string">&quot;IOS &gt;= 11&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Safari &gt;= 11&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Chrome &gt;= 49&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Firefox &gt;= 31&quot;</span>,</span><br><span class="line">    <span class="string">&quot;Samsung &gt;= 5&quot;</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 以下配置说明需要支持使用率超过 %1的所有浏览器的最新的两个主版本，但不包含 IE8 及更低版本。</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;browserslist&quot;</span>: [</span><br><span class="line">    <span class="string">&quot;&gt; 1%&quot;</span>,</span><br><span class="line">    <span class="string">&quot;last 2 versions&quot;</span>,</span><br><span class="line">    <span class="string">&quot;not ie &lt;= 8&quot;</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="scripts-✨"><a href="#scripts-✨" class="headerlink" title="scripts ✨"></a>scripts ✨</h3><p>scripts 指定了运行脚本命令的 npm 命令行的缩写。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;dev&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:web-full-dev&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:cjs&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:web-runtime-cjs-dev&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:esm&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:web-runtime-esm&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:test&quot;</span>: <span class="string">&quot;karma start test/unit/karma.dev.config.js&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;dev:ssr&quot;</span>: <span class="string">&quot;rollup -w -c scripts/config.js --environment TARGET:web-server-renderer&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="bin"><a href="#bin" class="headerlink" title="bin"></a>bin</h3><p>bin项用来指定各个内部命令对应的可执行文件的位置。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;bin&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;someTool&quot;</span>: <span class="string">&quot;./bin/someTool.js&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面代码指定，someTool 命令对应的可执行文件为 bin 子目录下的 someTool.js。Npm会寻找这个文件，在node_modules/.bin/目录下建立符号链接。在上面的例子中，someTool.js会建立符号链接node_modules/.bin/someTool。由于node_modules/.bin/目录会在运行时加入系统的PATH变量，因此在运行npm时，就可以不带路径，直接通过命令来调用这些脚本。</p>
+<p>因此，像下面这样的写法可以采用简写。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;start&quot;</span>: <span class="string">&quot;./node_modules/bin/someTool.js build&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 简写为</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;start&quot;</span>: <span class="string">&quot;someTool build&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>所有node_modules/.bin/目录下的命令，都可以用npm run [命令]的格式运行。在命令行下，键入npm run，然后按tab键，就会显示所有可以使用的命令。</p>
+<h3 id="config"><a href="#config" class="headerlink" title="config"></a>config</h3><p>config 对象可以用来设置 package 脚本中使用的配置参数。<br>比如，一个 package 有如下配置：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;foo&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;config&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;port&quot;</span>: <span class="string">&quot;8080&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;start&quot;</span>: <span class="string">&quot;node server.js&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后，在 server.js 脚本中可引用 config字段的值：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">http</span><br><span class="line">  .createServer(...)</span><br><span class="line">  .listen(process.env.npm_package_config_port)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>然用户可通过执行 npm config set foo:port 8001 来覆盖。</p>
+<h3 id="dependencies"><a href="#dependencies" class="headerlink" title="dependencies"></a>dependencies</h3><p>dependencies 字段指定了项目运行依赖的模块。</p>
+<p>该对象的各个成员分别有模块名和对应的版本组成，表示依赖模块及其版本范围。版本范围遵循<a href="https://docs.npmjs.com/cli/v6/using-npm/semver">semver</a></p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;devDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;browserify&quot;</span>: <span class="string">&quot;~13.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;karma-browserify&quot;</span>: <span class="string">&quot;~5.0.1&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>请不要在依赖对象中放置测试用例或者转译器。</p>
+<h3 id="devDependencies"><a href="#devDependencies" class="headerlink" title="devDependencies"></a>devDependencies</h3><p>devDependencies 字段指定了项目开发所需要的模块。</p>
+<p>该对象的各个成员分别有模块名和对应的版本组成，表示依赖模块及其版本范围。版本范围遵循<a href="https://docs.npmjs.com/cli/v6/using-npm/semver">semver</a></p>
+<h3 id="peerDependencies"><a href="#peerDependencies" class="headerlink" title="peerDependencies"></a>peerDependencies</h3><p>该字段用来供插件指定去所需要的主工具的版本。</p>
+<blockquote>
+<p>peerDependencies的目的是提示宿主环境去安装满足插件peerDependencies所指定依赖的包，然后在插件import或者require所依赖的包的时候，永远都是引用宿主环境统一安装的npm包，最终解决插件与所依赖包不一致的问题。</p>
+</blockquote>
+<p>举例，我们使用 element-ui, element-ui的 package.json中有如下配置：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;peerDependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;vue&quot;</span>: <span class="string">&quot;^2.5.17&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>它要求宿主环境安装指定版本的 vue 版本。</p>
+<h3 id="private"><a href="#private" class="headerlink" title="private"></a>private</h3><p>如果设置为 true，则可以防止应用程序/软件包被意外发布到 npm 上。</p>
+<h3 id="engines"><a href="#engines" class="headerlink" title="engines"></a>engines</h3><p>设置此 package 或 项目要运行的 Node.js 或其他命令的版本。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;engines&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;node&quot;</span>: <span class="string">&quot;&gt;= 6.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;npm&quot;</span>: <span class="string">&quot;&gt;= 3.0.0&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;yarn&quot;</span>: <span class="string">&quot;^0.13.0&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>本片文章介绍了日常使用中使用频率较高的属性描述，如需查看全部属性，可查阅<a href="https://docs.npmjs.com/cli/v6/configuring-npm/package-json">package.json</a></p>
+<p><strong>参考</strong></p>
+<ol>
+<li><a href="http://nodejs.cn/learn">node.js入门教程</a></li>
+<li><a href="https://docs.npmjs.com/cli/v6/configuring-npm/package-json">package.json</a></li>
+<li><a href="https://javascript.ruanyifeng.com/nodejs/packagejson.html">package.json文件</a></li>
+<li><a href="https://www.cnblogs.com/wonyun/p/9692476.html">探讨npm依赖管理之peerDependencies</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>package.json</tag>
       </tags>
   </entry>
   <entry>
