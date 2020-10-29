@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>如何得到你想要的table？</title>
+    <url>/2016/01/04/20160104/</url>
+    <content><![CDATA[<p>关于table，你也许会吐槽：table元素会使浏览器解析页面速读变慢，延迟页面渲染速度等等。但是呢，吐槽归吐槽，table在数据表格的展现中，仍是最合理的方式之一。尤其在MIS系统中，table的用处基本是每个页面都需要的。在数据长度不一致的情况下，如何得到你想要的表格布局呢？<a id="more"></a></p>
+<h2 id="关于table-layout"><a href="#关于table-layout" class="headerlink" title="关于table-layout"></a>关于table-layout</h2><p>来举个栗子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">	html,body&#123;</span><br><span class="line">		width: 100%;</span><br><span class="line">		height: 100%;</span><br><span class="line">		padding: 0;</span><br><span class="line">		margin: 0;</span><br><span class="line">		font-family: &#x27;Microsoft Yahei&#x27;;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-class">.table</span>&#123;</span></span><br><span class="line">		width: 1050px;</span><br><span class="line">		margin: 50px auto;</span><br><span class="line"><span class="css">		<span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-id">#ccc</span> <span class="selector-tag">solid</span>;</span></span><br><span class="line">		line-height: 30px;</span><br><span class="line">		border-collapse: collapse;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-class">.table</span> <span class="selector-tag">th</span>,</span></span><br><span class="line"><span class="css">	<span class="selector-class">.table</span> <span class="selector-tag">td</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-id">#ccc</span> <span class="selector-tag">solid</span>;</span></span><br><span class="line">		text-align: center;</span><br><span class="line">		width: 10%;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">&#x27;table&#x27;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Age<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Class<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Address<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Telphone<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Age<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Class<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Address<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Telphone<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果如图下图：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table1.png"><br>我擦嘞，说好的单元格10%呢，address和telphone怎么都撑开了？<br>这个时候，table-layout就要展示它的能力了。<br>table-layout: automatic|fixed|inherit<br>-table-layout: automatic, 默认值，列宽有单元格的内容宽度决定(碰上一长串的数字，表格看起来简直是灾难).<br>-table-layout: fixed, 列宽有表格宽度和单元格宽度的设定值展现(你想要的，就在这里).<br>-table-layout: inherit, 从父元素继承 table-layout 属性的值.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table&#123;</span><br><span class="line">	width: 800px;</span><br><span class="line">	margin: 50px auto;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	line-height: 30px;</span><br><span class="line">	border-collapse: collapse;</span><br><span class="line">	table-layout: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果图来了，<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table2.png"><br>每个单元格终于乖乖的实现了10%，但是呢，这些字怎么跑出来了啊？咱们继续看！</p>
+<h2 id="word-wrap和word-break"><a href="#word-wrap和word-break" class="headerlink" title="word-wrap和word-break"></a>word-wrap和word-break</h2><p>单元格宽度就那么宽，当内容太多时，文本溢出了，该怎么办呢？换行呗！咱们看下这两个属性：<em>word-wrap</em>和<em>word-break</em>。<br>-word-wrap: 告诉浏览器是否允许它在单词内断句，防止一个字符串太长，无法找到自然断点而产生溢出现象(是不是又想起来上面的table了)。<br>-word-break: 可以让浏览器实现在任意位置的换行。</p>
+<p><strong>word-wrap</strong>:<strong>normal</strong>(只在允许的断字点换行,浏览器保持默认处理)|<strong>break-word</strong>(在长单词或 URL 地址内部进行换行)</p>
+<p>来实践一下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table th,</span><br><span class="line">.table td&#123;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	text-align: center;</span><br><span class="line">	width: 10%;</span><br><span class="line">	word-wrap: break-word;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果来了：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table3.png"><br>我们可以看到允许单词内换行，Northwest和Washington，均为单词内换行。</p>
+<p>如果我们不想长单词被在词内换行呢？</p>
+<p><strong>word-break</strong>:<strong>normal</strong>(浏览器保持默认处理)|<strong>break-all</strong>(允许在单词内换行)|<strong>keep-all</strong>(只能在半角空格或连字符处换行)</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table th,</span><br><span class="line">.table td&#123;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	text-align: center;</span><br><span class="line">	width: 10%;</span><br><span class="line">	word-break: keep-all;</span><br><span class="line">	word-wrap: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>大功告成：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table4.png"></p>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(二) -- cd</title>
     <url>/2016/04/13/20160413/</url>
     <content><![CDATA[<h2 id="第二条linux命令-cd"><a href="#第二条linux命令-cd" class="headerlink" title="第二条linux命令: cd"></a>第二条linux命令: cd</h2><p>相信大家对 cd 这个命令，应该是再熟悉不过的了， cd 命令可以说是linux中最基本的命令了。下面就介绍下关于 cd 命令的相关知识。</p>
@@ -27,32 +53,6 @@
       </categories>
       <tags>
         <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何得到你想要的table？</title>
-    <url>/2016/01/04/20160104/</url>
-    <content><![CDATA[<p>关于table，你也许会吐槽：table元素会使浏览器解析页面速读变慢，延迟页面渲染速度等等。但是呢，吐槽归吐槽，table在数据表格的展现中，仍是最合理的方式之一。尤其在MIS系统中，table的用处基本是每个页面都需要的。在数据长度不一致的情况下，如何得到你想要的表格布局呢？<a id="more"></a></p>
-<h2 id="关于table-layout"><a href="#关于table-layout" class="headerlink" title="关于table-layout"></a>关于table-layout</h2><p>来举个栗子：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span></span><br><span class="line">	html,body&#123;</span><br><span class="line">		width: 100%;</span><br><span class="line">		height: 100%;</span><br><span class="line">		padding: 0;</span><br><span class="line">		margin: 0;</span><br><span class="line">		font-family: &#x27;Microsoft Yahei&#x27;;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-class">.table</span>&#123;</span></span><br><span class="line">		width: 1050px;</span><br><span class="line">		margin: 50px auto;</span><br><span class="line"><span class="css">		<span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-id">#ccc</span> <span class="selector-tag">solid</span>;</span></span><br><span class="line">		line-height: 30px;</span><br><span class="line">		border-collapse: collapse;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="css">	<span class="selector-class">.table</span> <span class="selector-tag">th</span>,</span></span><br><span class="line"><span class="css">	<span class="selector-class">.table</span> <span class="selector-tag">td</span>&#123;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-id">#ccc</span> <span class="selector-tag">solid</span>;</span></span><br><span class="line">		text-align: center;</span><br><span class="line">		width: 10%;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">&#x27;table&#x27;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Age<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Class<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Address<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Telphone<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Age<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Class<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Address<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Telphone<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>效果如图下图：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table1.png"><br>我擦嘞，说好的单元格10%呢，address和telphone怎么都撑开了？<br>这个时候，table-layout就要展示它的能力了。<br>table-layout: automatic|fixed|inherit<br>-table-layout: automatic, 默认值，列宽有单元格的内容宽度决定(碰上一长串的数字，表格看起来简直是灾难).<br>-table-layout: fixed, 列宽有表格宽度和单元格宽度的设定值展现(你想要的，就在这里).<br>-table-layout: inherit, 从父元素继承 table-layout 属性的值.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table&#123;</span><br><span class="line">	width: 800px;</span><br><span class="line">	margin: 50px auto;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	line-height: 30px;</span><br><span class="line">	border-collapse: collapse;</span><br><span class="line">	table-layout: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果图来了，<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table2.png"><br>每个单元格终于乖乖的实现了10%，但是呢，这些字怎么跑出来了啊？咱们继续看！</p>
-<h2 id="word-wrap和word-break"><a href="#word-wrap和word-break" class="headerlink" title="word-wrap和word-break"></a>word-wrap和word-break</h2><p>单元格宽度就那么宽，当内容太多时，文本溢出了，该怎么办呢？换行呗！咱们看下这两个属性：<em>word-wrap</em>和<em>word-break</em>。<br>-word-wrap: 告诉浏览器是否允许它在单词内断句，防止一个字符串太长，无法找到自然断点而产生溢出现象(是不是又想起来上面的table了)。<br>-word-break: 可以让浏览器实现在任意位置的换行。</p>
-<p><strong>word-wrap</strong>:<strong>normal</strong>(只在允许的断字点换行,浏览器保持默认处理)|<strong>break-word</strong>(在长单词或 URL 地址内部进行换行)</p>
-<p>来实践一下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table th,</span><br><span class="line">.table td&#123;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	text-align: center;</span><br><span class="line">	width: 10%;</span><br><span class="line">	word-wrap: break-word;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果来了：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table3.png"><br>我们可以看到允许单词内换行，Northwest和Washington，均为单词内换行。</p>
-<p>如果我们不想长单词被在词内换行呢？</p>
-<p><strong>word-break</strong>:<strong>normal</strong>(浏览器保持默认处理)|<strong>break-all</strong>(允许在单词内换行)|<strong>keep-all</strong>(只能在半角空格或连字符处换行)</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table th,</span><br><span class="line">.table td&#123;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	text-align: center;</span><br><span class="line">	width: 10%;</span><br><span class="line">	word-break: keep-all;</span><br><span class="line">	word-wrap: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>大功告成：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table4.png"></p>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -177,6 +177,36 @@
       </tags>
   </entry>
   <entry>
+    <title>linux常用命令学习(六) -- rmdir</title>
+    <url>/2016/04/17/20160417/</url>
+    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p</td>
+<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
+</tr>
+<tr>
+<td>-v</td>
+<td align="center">–verbose, 详细显示进行的步骤。</td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(七) -- mv</title>
     <url>/2016/04/18/20160418/</url>
     <content><![CDATA[<p>今天来学习的是 linux中常用命令之一的– mv。mv命令是move的缩写，用于移动文件或者文件重命名。这里先提前说一下与 cp 命令不同，mv 命令是完全将源文件移动到指定目录， cp 命令只是复制文件内容从一个目录到另一个目录。</p>
@@ -218,36 +248,6 @@
 <li>mv -f demo1/test.log demo2<br>即使存在同名文件，强制覆盖<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 linux]<span class="comment"># mv -f demo1/test.log demo2</span></span><br><span class="line">[root@kvm45072 linux]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux常用命令学习(六) -- rmdir</title>
-    <url>/2016/04/17/20160417/</url>
-    <content><![CDATA[<h2 id="第六条linux命令-rmdir"><a href="#第六条linux命令-rmdir" class="headerlink" title="第六条linux命令: rmdir"></a>第六条linux命令: rmdir</h2><p>前面我们学习了 rm 删除文件或目录的指令，今天学习另外一个常用的指令—— rmdir 。该命令主要用于删除空目录，在该目录删除之前，此目录必须是空的。当然你也可以用 rm -r dir 命令代替，但鉴于 rm 命令的危险性，还是用 rmdir 命令靠谱些。</p>
-<a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>rmdir [选项] 目录</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-p</td>
-<td align="center">递归删除目录dirname，若自子目录删除后父目录为空则一并删除</td>
-</tr>
-<tr>
-<td>-v</td>
-<td align="center">–verbose, 详细显示进行的步骤。</td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -417,65 +417,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ES6-变量的解构赋值</title>
-    <url>/2016/08/22/ES6-%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/</url>
-    <content><![CDATA[<p>ES6的解构赋值，可以让我们更加简洁、清晰的进行变量的声明与赋值，同时也减少了代码量，使得代码的可读性更强。</p>
-<h2 id="什么是解构赋值？"><a href="#什么是解构赋值？" class="headerlink" title="什么是解构赋值？"></a>什么是解构赋值？</h2><blockquote>
-<p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</p>
-</blockquote>
-<p>摘自阮一峰老师<a href="http://es6.ruanyifeng.com/#docs/destructuring">ECMAScript 6 入门</a> 。</p>
-<a id="more"></a>
-
-<h2 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h2><p>ES5中为多个变量赋值：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>, b = <span class="number">2</span>, c = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
-<p>ES6中可以这样写：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">a;<span class="comment">//1</span></span><br><span class="line">b;<span class="comment">//2</span></span><br><span class="line">c;<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,[[b],c]] =[<span class="number">1</span>,[[<span class="number">2</span>],<span class="number">3</span>]];</span><br><span class="line">a;<span class="comment">//1</span></span><br><span class="line">b;<span class="comment">//2</span></span><br><span class="line">c;<span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [,,d] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">d;<span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, , y] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">x; <span class="comment">// 1</span></span><br><span class="line">y; <span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [e, ...f] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">e; <span class="comment">// 1</span></span><br><span class="line">f; <span class="comment">// [2, 3, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, y, ...z] = [<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">x; <span class="comment">// &quot;a&quot;</span></span><br><span class="line">y; <span class="comment">// undefined</span></span><br><span class="line">z; <span class="comment">// []注意！</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>如果解构不成功，变量值就等于undefined</p>
-</blockquote>
-<h3 id="不完全解构"><a href="#不完全解构" class="headerlink" title="不完全解构"></a>不完全解构</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, [y], z] = [<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>], <span class="number">4</span>];</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>如果等号右边不是数组，或者严格地说，不是可遍历的结构，那么将会报错。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 报错</span></span><br><span class="line"><span class="keyword">let</span> [foo] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> [foo] = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">let</span> [foo] = <span class="literal">NaN</span>;</span><br><span class="line"><span class="keyword">let</span> [foo] = <span class="literal">undefined</span>;</span><br><span class="line"><span class="keyword">let</span> [foo] = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">let</span> [foo] = &#123;&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h3><blockquote>
-<p>ES6内部使用严格相等运算符（===），判断一个位置是否有值。所以，如果一个数组成员不严格等于undefined，默认值是不会生效的。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a = <span class="string">&#x27;hello&#x27;</span>,b =<span class="string">&#x27;world&#x27;</span>] = [];</span><br><span class="line">a;<span class="comment">//hello</span></span><br><span class="line">b;<span class="comment">//world</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [c=<span class="string">&#x27;world&#x27;</span>,d=<span class="string">&#x27;world&#x27;</span>] = [<span class="string">&#x27;hello&#x27;</span>];</span><br><span class="line">c;<span class="comment">//hello</span></span><br><span class="line">d;<span class="comment">//world</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x=<span class="string">&#x27;hello&#x27;</span>,y=<span class="string">&#x27;world&#x27;</span>] = [<span class="literal">null</span>];</span><br><span class="line">x;<span class="comment">//null</span></span><br><span class="line">y;<span class="comment">//world</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>利用结构赋值，可以简单的实现两个变量的值，[x,y]=[y,x]</strong></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [x, y] = [<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line">[x,y] = [y,x];</span><br><span class="line">x;<span class="comment">//2</span></span><br><span class="line">y;<span class="comment">//1</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h2><blockquote>
-<p>对象的解构与数组有一个重要的不同。数组的元素是按次序排列的，变量的取值由它的位置决定；而对象的属性没有次序，变量必须与属性同名，才能取到正确的值。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; name, age&#125; = &#123; <span class="attr">name</span>: <span class="string">&#x27;test&#x27;</span>, <span class="attr">age</span>: <span class="number">12</span>&#125;;</span><br><span class="line">name;<span class="comment">//test</span></span><br><span class="line">age;<span class="comment">//12</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123; grade, classes &#125; = &#123; <span class="attr">classes</span>: <span class="number">2</span>, <span class="attr">grade</span>: <span class="number">3</span>&#125;;</span><br><span class="line">grade;<span class="comment">//3</span></span><br><span class="line">classes;<span class="comment">//2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//嵌套</span></span><br><span class="line"><span class="keyword">let</span> person = &#123;<span class="attr">name</span>: &#123;<span class="attr">firstName</span>: <span class="string">&quot;Green&quot;</span>, <span class="attr">lastName</span>: <span class="string">&quot;Tom&quot;</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">name</span>: &#123;firstName, lastName&#125;&#125; = person;</span><br><span class="line">firstName;<span class="comment">//Green</span></span><br><span class="line">lastName;<span class="comment">//Tom</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> person = &#123;<span class="attr">dateOfBirth</span>: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1980</span>]&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">dateOfBirth</span>: [day, month, year]&#125; = person;</span><br><span class="line">day;<span class="comment">//1</span></span><br><span class="line">month;<span class="comment">//1</span></span><br><span class="line">year;<span class="comment">//1980</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a>字符串的解构赋值</h2><blockquote>
-<p>字符串在解构赋值时，被转换成了一个类数组的对象。类数组的对象的length属性，也可以进行解构赋值。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c,d,e]=<span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">a;<span class="comment">//h</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">length</span>: len&#125; = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">len;<span class="comment">//5</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="数值和布尔值的解构赋值"><a href="#数值和布尔值的解构赋值" class="headerlink" title="数值和布尔值的解构赋值"></a>数值和布尔值的解构赋值</h2><blockquote>
-<p>解构赋值时，如果等号右边是数值和布尔值，则会先转为对象。等号右边是undefined、null，由于不能转换成对象，会导致解构失败。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//数值和布尔值的包装对象都有toString属性，因此变量s都能取到值。</span></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">toString</span>: s&#125; = <span class="number">123</span>;</span><br><span class="line">s === <span class="built_in">Number</span>.prototype.toString <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">toString</span>: s&#125; = <span class="literal">true</span>;</span><br><span class="line">s === <span class="built_in">Boolean</span>.prototype.toString <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">prop</span>: x &#125; = <span class="literal">undefined</span>; <span class="comment">// TypeError</span></span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">prop</span>: y &#125; = <span class="literal">null</span>; <span class="comment">// TypeError</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="函数参数的解构赋值"><a href="#函数参数的解构赋值" class="headerlink" title="函数参数的解构赋值"></a>函数参数的解构赋值</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">nameString</span>(<span class="params">[firstName ,lastName]</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (lastName + <span class="string">&#x27; &#x27;</span> + firstName);</span><br><span class="line">&#125;</span><br><span class="line">nameString([<span class="string">&#x27;Green&#x27;</span>,<span class="string">&#x27;Jim&#x27;</span>]);<span class="comment">//&quot;Jim Green&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//undefined会触发函数的默认值</span></span><br><span class="line">[<span class="number">1</span>, <span class="literal">undefined</span>, <span class="number">3</span>].map(<span class="function">(<span class="params">x = <span class="string">&#x27;yes&#x27;</span></span>) =&gt;</span> x);</span><br><span class="line"><span class="comment">//[1,&#x27;yes&#x27;, 3]</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-        <tag>ES6</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>ES6-let&amp;const</title>
     <url>/2016/06/30/ES6-let-const/</url>
     <content><![CDATA[<h2 id="let-amp-const"><a href="#let-amp-const" class="headerlink" title="let&amp;const"></a>let&amp;const</h2><p>let和const命令是ES6中新增的用来声明变量的命令。</p>
@@ -585,6 +526,65 @@
 <p>之所以会产生这样的结果是因为：</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span> </span>&#123;&#125;</span><br><span class="line"><span class="comment">// B的实例继承 A的实例</span></span><br><span class="line"><span class="built_in">Object</span>.setPrototypeOf(B.prototype, A.prototype);</span><br><span class="line"><span class="comment">// B继承A的静态属性</span></span><br><span class="line"><span class="built_in">Object</span>.setPrototypeOf(B, A);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> b = <span class="keyword">new</span> B();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Object.setPrototypeOf 实现</span></span><br><span class="line"><span class="built_in">Object</span>.setPrototypeOf = <span class="function"><span class="keyword">function</span>(<span class="params">obj, proto</span>) </span>&#123;</span><br><span class="line">    obj.__proto__ = proto;</span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//  因此上述过程为</span></span><br><span class="line"><span class="built_in">Object</span>.setPrototypeOf(B.prototype, A.prototype);</span><br><span class="line"><span class="comment">//等同于</span></span><br><span class="line">B.prototype.__proto__ = A.prototype;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.setPrototypeOf(B, A);</span><br><span class="line"><span class="comment">// 等同于</span></span><br><span class="line">B.__proto__ = A;</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ES6-变量的解构赋值</title>
+    <url>/2016/08/22/ES6-%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC/</url>
+    <content><![CDATA[<p>ES6的解构赋值，可以让我们更加简洁、清晰的进行变量的声明与赋值，同时也减少了代码量，使得代码的可读性更强。</p>
+<h2 id="什么是解构赋值？"><a href="#什么是解构赋值？" class="headerlink" title="什么是解构赋值？"></a>什么是解构赋值？</h2><blockquote>
+<p>ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称为解构（Destructuring）。</p>
+</blockquote>
+<p>摘自阮一峰老师<a href="http://es6.ruanyifeng.com/#docs/destructuring">ECMAScript 6 入门</a> 。</p>
+<a id="more"></a>
+
+<h2 id="数组的解构赋值"><a href="#数组的解构赋值" class="headerlink" title="数组的解构赋值"></a>数组的解构赋值</h2><p>ES5中为多个变量赋值：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>, b = <span class="number">2</span>, c = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+<p>ES6中可以这样写：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">a;<span class="comment">//1</span></span><br><span class="line">b;<span class="comment">//2</span></span><br><span class="line">c;<span class="comment">//3</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>本质上，这种写法属于“模式匹配”，只要等号两边的模式相同，左边的变量就会被赋予对应的值。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,[[b],c]] =[<span class="number">1</span>,[[<span class="number">2</span>],<span class="number">3</span>]];</span><br><span class="line">a;<span class="comment">//1</span></span><br><span class="line">b;<span class="comment">//2</span></span><br><span class="line">c;<span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [,,d] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">d;<span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, , y] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line">x; <span class="comment">// 1</span></span><br><span class="line">y; <span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [e, ...f] = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line">e; <span class="comment">// 1</span></span><br><span class="line">f; <span class="comment">// [2, 3, 4]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, y, ...z] = [<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">x; <span class="comment">// &quot;a&quot;</span></span><br><span class="line">y; <span class="comment">// undefined</span></span><br><span class="line">z; <span class="comment">// []注意！</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果解构不成功，变量值就等于undefined</p>
+</blockquote>
+<h3 id="不完全解构"><a href="#不完全解构" class="headerlink" title="不完全解构"></a>不完全解构</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c] = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x, [y], z] = [<span class="number">1</span>, [<span class="number">2</span>, <span class="number">3</span>], <span class="number">4</span>];</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>如果等号右边不是数组，或者严格地说，不是可遍历的结构，那么将会报错。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 报错</span></span><br><span class="line"><span class="keyword">let</span> [foo] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">let</span> [foo] = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">let</span> [foo] = <span class="literal">NaN</span>;</span><br><span class="line"><span class="keyword">let</span> [foo] = <span class="literal">undefined</span>;</span><br><span class="line"><span class="keyword">let</span> [foo] = <span class="literal">null</span>;</span><br><span class="line"><span class="keyword">let</span> [foo] = &#123;&#125;;</span><br></pre></td></tr></table></figure>
+<h3 id="默认值"><a href="#默认值" class="headerlink" title="默认值"></a>默认值</h3><blockquote>
+<p>ES6内部使用严格相等运算符（===），判断一个位置是否有值。所以，如果一个数组成员不严格等于undefined，默认值是不会生效的。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a = <span class="string">&#x27;hello&#x27;</span>,b =<span class="string">&#x27;world&#x27;</span>] = [];</span><br><span class="line">a;<span class="comment">//hello</span></span><br><span class="line">b;<span class="comment">//world</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [c=<span class="string">&#x27;world&#x27;</span>,d=<span class="string">&#x27;world&#x27;</span>] = [<span class="string">&#x27;hello&#x27;</span>];</span><br><span class="line">c;<span class="comment">//hello</span></span><br><span class="line">d;<span class="comment">//world</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> [x=<span class="string">&#x27;hello&#x27;</span>,y=<span class="string">&#x27;world&#x27;</span>] = [<span class="literal">null</span>];</span><br><span class="line">x;<span class="comment">//null</span></span><br><span class="line">y;<span class="comment">//world</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>利用结构赋值，可以简单的实现两个变量的值，[x,y]=[y,x]</strong></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [x, y] = [<span class="number">1</span>,<span class="number">2</span>];</span><br><span class="line">[x,y] = [y,x];</span><br><span class="line">x;<span class="comment">//2</span></span><br><span class="line">y;<span class="comment">//1</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="对象的解构赋值"><a href="#对象的解构赋值" class="headerlink" title="对象的解构赋值"></a>对象的解构赋值</h2><blockquote>
+<p>对象的解构与数组有一个重要的不同。数组的元素是按次序排列的，变量的取值由它的位置决定；而对象的属性没有次序，变量必须与属性同名，才能取到正确的值。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> &#123; name, age&#125; = &#123; <span class="attr">name</span>: <span class="string">&#x27;test&#x27;</span>, <span class="attr">age</span>: <span class="number">12</span>&#125;;</span><br><span class="line">name;<span class="comment">//test</span></span><br><span class="line">age;<span class="comment">//12</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123; grade, classes &#125; = &#123; <span class="attr">classes</span>: <span class="number">2</span>, <span class="attr">grade</span>: <span class="number">3</span>&#125;;</span><br><span class="line">grade;<span class="comment">//3</span></span><br><span class="line">classes;<span class="comment">//2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//嵌套</span></span><br><span class="line"><span class="keyword">let</span> person = &#123;<span class="attr">name</span>: &#123;<span class="attr">firstName</span>: <span class="string">&quot;Green&quot;</span>, <span class="attr">lastName</span>: <span class="string">&quot;Tom&quot;</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">name</span>: &#123;firstName, lastName&#125;&#125; = person;</span><br><span class="line">firstName;<span class="comment">//Green</span></span><br><span class="line">lastName;<span class="comment">//Tom</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> person = &#123;<span class="attr">dateOfBirth</span>: [<span class="number">1</span>, <span class="number">1</span>, <span class="number">1980</span>]&#125;;</span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">dateOfBirth</span>: [day, month, year]&#125; = person;</span><br><span class="line">day;<span class="comment">//1</span></span><br><span class="line">month;<span class="comment">//1</span></span><br><span class="line">year;<span class="comment">//1980</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="字符串的解构赋值"><a href="#字符串的解构赋值" class="headerlink" title="字符串的解构赋值"></a>字符串的解构赋值</h2><blockquote>
+<p>字符串在解构赋值时，被转换成了一个类数组的对象。类数组的对象的length属性，也可以进行解构赋值。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b,c,d,e]=<span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">a;<span class="comment">//h</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">length</span>: len&#125; = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">len;<span class="comment">//5</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="数值和布尔值的解构赋值"><a href="#数值和布尔值的解构赋值" class="headerlink" title="数值和布尔值的解构赋值"></a>数值和布尔值的解构赋值</h2><blockquote>
+<p>解构赋值时，如果等号右边是数值和布尔值，则会先转为对象。等号右边是undefined、null，由于不能转换成对象，会导致解构失败。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//数值和布尔值的包装对象都有toString属性，因此变量s都能取到值。</span></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">toString</span>: s&#125; = <span class="number">123</span>;</span><br><span class="line">s === <span class="built_in">Number</span>.prototype.toString <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123;<span class="attr">toString</span>: s&#125; = <span class="literal">true</span>;</span><br><span class="line">s === <span class="built_in">Boolean</span>.prototype.toString <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">prop</span>: x &#125; = <span class="literal">undefined</span>; <span class="comment">// TypeError</span></span><br><span class="line"><span class="keyword">let</span> &#123; <span class="attr">prop</span>: y &#125; = <span class="literal">null</span>; <span class="comment">// TypeError</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="函数参数的解构赋值"><a href="#函数参数的解构赋值" class="headerlink" title="函数参数的解构赋值"></a>函数参数的解构赋值</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">nameString</span>(<span class="params">[firstName ,lastName]</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (lastName + <span class="string">&#x27; &#x27;</span> + firstName);</span><br><span class="line">&#125;</span><br><span class="line">nameString([<span class="string">&#x27;Green&#x27;</span>,<span class="string">&#x27;Jim&#x27;</span>]);<span class="comment">//&quot;Jim Green&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//undefined会触发函数的默认值</span></span><br><span class="line">[<span class="number">1</span>, <span class="literal">undefined</span>, <span class="number">3</span>].map(<span class="function">(<span class="params">x = <span class="string">&#x27;yes&#x27;</span></span>) =&gt;</span> x);</span><br><span class="line"><span class="comment">//[1,&#x27;yes&#x27;, 3]</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -3131,7 +3131,17 @@ Visit http://127.0.0.1:3003/?port=5858 to start debugging.
   <entry>
     <title>package.json指南</title>
     <url>/2020/10/28/package-json%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<p>对于应用程序，package.json 文件中的内容没有固定的要求。 唯一的要求是必须遵守 JSON 格式，否则，尝试以编程的方式访问其属性的程序则无法读取它。</p>
+    <content><![CDATA[<style type="text/css">
+img {
+  max-width: 400px;
+}
+</style>
+<p><img src="/images/npm.png"></p>
+<p>在日常开发工作中，相信大家对于 package.json 并不陌生，但对于 package.json的各属性的含义，是否都详细了解呢？如果对于它了如指掌了，那么可忽略本文。对于尚不太熟悉的人，请继续阅读。</p>
+<p>对于应用程序，package.json 文件中的内容没有固定的要求。 唯一的要求是必须遵守 JSON 格式，否则，尝试以编程的方式访问其属性的程序则无法读取它。</p>
+<blockquote>
+<p>它必须是实际的JSON，而不仅仅是JavaScript对象文字。</p>
+</blockquote>
 <a id="more"></a>
 <p><a href="https://docs.npmjs.com/cli/v6/configuring-npm/package-json">package.json</a></p>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>选取了一个典型的package.json实例，<a href="https://github.com/vuejs/vue">vue</a>仓库的package.json:</p>
