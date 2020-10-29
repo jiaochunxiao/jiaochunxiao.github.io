@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>linux常用命令学习(二) -- cd</title>
+    <url>/2016/04/13/20160413/</url>
+    <content><![CDATA[<h2 id="第二条linux命令-cd"><a href="#第二条linux命令-cd" class="headerlink" title="第二条linux命令: cd"></a>第二条linux命令: cd</h2><p>相信大家对 cd 这个命令，应该是再熟悉不过的了， cd 命令可以说是linux中最基本的命令了。下面就介绍下关于 cd 命令的相关知识。</p>
+<a id="more"></a>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>cd [目录名]</p>
+<h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>切换当前目录到指定目录（dirName）</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>进入系统根目录 cd /<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment">#  cd /</span></span><br><span class="line">[root@kvm45072 /]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
+<li>目录回退 cd .. 或者 cd ../<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 /]<span class="comment"># cd root</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd ..</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
+<li>进入当前系统主目录 cd </li>
+</ul>
+<p>系统当前主目录和系统的根目录是两个不同的概念。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>返回进入此目录之前所在的目录 cd -<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd -</span></span><br><span class="line">/root/<span class="built_in">test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
+<li>把上个命令的参数作为cd参数使用 cd !$<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd -</span></span><br><span class="line">/root</span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd !$</span></span><br><span class="line"><span class="built_in">cd</span> -</span><br><span class="line">/root/<span class="built_in">test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>如何得到你想要的table？</title>
     <url>/2016/01/04/20160104/</url>
     <content><![CDATA[<p>关于table，你也许会吐槽：table元素会使浏览器解析页面速读变慢，延迟页面渲染速度等等。但是呢，吐槽归吐槽，table在数据表格的展现中，仍是最合理的方式之一。尤其在MIS系统中，table的用处基本是每个页面都需要的。在数据长度不一致的情况下，如何得到你想要的表格布局呢？<a id="more"></a></p>
@@ -73,35 +102,6 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># mkdir -p parent/child</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># ls</span></span><br><span class="line">parent</span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd parent</span></span><br><span class="line">[root@kvm45072 parent]<span class="comment"># ls </span></span><br><span class="line">child</span><br><span class="line">[root@kvm45072 parent]<span class="comment"># cd child</span></span><br><span class="line">[root@kvm45072 child]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux常用命令学习(二) -- cd</title>
-    <url>/2016/04/13/20160413/</url>
-    <content><![CDATA[<h2 id="第二条linux命令-cd"><a href="#第二条linux命令-cd" class="headerlink" title="第二条linux命令: cd"></a>第二条linux命令: cd</h2><p>相信大家对 cd 这个命令，应该是再熟悉不过的了， cd 命令可以说是linux中最基本的命令了。下面就介绍下关于 cd 命令的相关知识。</p>
-<a id="more"></a>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>cd [目录名]</p>
-<h3 id="命令功能"><a href="#命令功能" class="headerlink" title="命令功能"></a>命令功能</h3><p>切换当前目录到指定目录（dirName）</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>进入系统根目录 cd /<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment">#  cd /</span></span><br><span class="line">[root@kvm45072 /]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
-<li>目录回退 cd .. 或者 cd ../<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 /]<span class="comment"># cd root</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd ..</span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
-<li>进入当前系统主目录 cd </li>
-</ul>
-<p>系统当前主目录和系统的根目录是两个不同的概念。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>返回进入此目录之前所在的目录 cd -<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># </span></span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd -</span></span><br><span class="line">/root/<span class="built_in">test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
-<li>把上个命令的参数作为cd参数使用 cd !$<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]<span class="comment"># cd test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># cd -</span></span><br><span class="line">/root</span><br><span class="line">[root@kvm45072 ~]<span class="comment"># cd !$</span></span><br><span class="line"><span class="built_in">cd</span> -</span><br><span class="line">/root/<span class="built_in">test</span></span><br><span class="line">[root@kvm45072 <span class="built_in">test</span>]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
 ]]></content>
       <categories>
         <category>linux</category>
@@ -305,6 +305,52 @@
       </tags>
   </entry>
   <entry>
+    <title>linux常用命令学习(十) -- nl</title>
+    <url>/2016/05/24/20160524/</url>
+    <content><![CDATA[<p> linux关于文件行号显示，cat / nl 命令均可以实现，但nl 可以将行号做比较多的显示设计，包括位数与是否自动补齐 0 等等的功能。<a id="more"></a></p>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>nl [选项] [文件]</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-b</td>
+<td align="center">-b指定行号显示有两种显示结果：-b a 无论是否为空行，均显示行号(类似 cat -n); -b -t 仅对非空行号显示，空白行不标记行号</td>
+</tr>
+<tr>
+<td>-n</td>
+<td align="center">-n ln 行号在行号栏最左方显示；-n rn 行号在行号栏最右方显示,且不加0；-n rz 行号在行号栏最右方显示,且加0</td>
+</tr>
+<tr>
+<td>-w</td>
+<td align="center">行号栏占用位数</td>
+</tr>
+<tr>
+<td>-p</td>
+<td align="center">在逻辑定界符处不重新开始计算</td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>nl -b a 无论是否为空行，均显示行号<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a demo1.log</span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">     5</span><br><span class="line">     6  test</span><br><span class="line">     7</span><br><span class="line">     8  demo1</span><br><span class="line">     9  demo1</span><br><span class="line">    10  demo</span><br><span class="line">    11  d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -b t 仅对非空行号显示，空白行不标记行号<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b t demo1.log</span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">       </span><br><span class="line">     5  test</span><br><span class="line">       </span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -n ln 行号在行号栏最左方显示<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n ln demo1.log </span><br><span class="line">1       this is demo1.log</span><br><span class="line">2       this is demo1.log</span><br><span class="line">3       test</span><br><span class="line">4       test</span><br><span class="line">       </span><br><span class="line">5       test</span><br><span class="line">       </span><br><span class="line">6       demo1</span><br><span class="line">7       demo1</span><br><span class="line">8       demo</span><br><span class="line">9       d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -n rn 行号在行号栏最右方显示,且不加0<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n rn demo1.log </span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">       </span><br><span class="line">     5  test</span><br><span class="line">       </span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -n rz 行号在行号栏最右方显示,且加0<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n rz demo1.log </span><br><span class="line">000001  this is demo1.log</span><br><span class="line">000002  this is demo1.log</span><br><span class="line">000003  test</span><br><span class="line">000004  test</span><br><span class="line">       </span><br><span class="line">000005  test</span><br><span class="line">       </span><br><span class="line">000006  demo1</span><br><span class="line">000007  demo1</span><br><span class="line">000008  demo</span><br><span class="line">000009  d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -b a -n rz <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a -n rz demo1.log </span><br><span class="line">000001  this is demo1.log</span><br><span class="line">000002  this is demo1.log</span><br><span class="line">000003  test</span><br><span class="line">000004  test</span><br><span class="line">000005</span><br><span class="line">000006  test</span><br><span class="line">000007</span><br><span class="line">000008  demo1</span><br><span class="line">000009  demo1</span><br><span class="line">000010  demo</span><br><span class="line">000011  d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -b a -n rz -w 行号显示位数<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a -n rz -w 3 demo1.log </span><br><span class="line">001     this is demo1.log</span><br><span class="line">002     this is demo1.log</span><br><span class="line">003     test</span><br><span class="line">004     test</span><br><span class="line">005</span><br><span class="line">006     test</span><br><span class="line">007</span><br><span class="line">008     demo1</span><br><span class="line">009     demo1</span><br><span class="line">010     demo</span><br><span class="line">011     d:</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(九) -- cat</title>
     <url>/2016/04/20/20160420/</url>
     <content><![CDATA[<p>cat，全称为concatenate files and print on the standard output，主要作用为：查看文件内容，也可以给文件追加内容到结尾。 <a id="more"></a></p>
@@ -362,52 +408,6 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat &gt;log.txt &lt;&lt;EOF</span></span><br><span class="line">&gt; HELLO</span><br><span class="line">&gt; WORLD</span><br><span class="line">&gt; PWD=$(<span class="built_in">pwd</span>)</span><br><span class="line">&gt; <span class="built_in">test</span></span><br><span class="line">&gt; EOF</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># ls -l log.txt</span></span><br><span class="line">-rw-r--r--. 1 root root 39 May  4 14:14 log.txt</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cat log.txt</span></span><br><span class="line">HELLO</span><br><span class="line">WORLD</span><br><span class="line">PWD=/root/linux/demo1</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux常用命令学习(十) -- nl</title>
-    <url>/2016/05/24/20160524/</url>
-    <content><![CDATA[<p> linux关于文件行号显示，cat / nl 命令均可以实现，但nl 可以将行号做比较多的显示设计，包括位数与是否自动补齐 0 等等的功能。<a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>nl [选项] [文件]</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-b</td>
-<td align="center">-b指定行号显示有两种显示结果：-b a 无论是否为空行，均显示行号(类似 cat -n); -b -t 仅对非空行号显示，空白行不标记行号</td>
-</tr>
-<tr>
-<td>-n</td>
-<td align="center">-n ln 行号在行号栏最左方显示；-n rn 行号在行号栏最右方显示,且不加0；-n rz 行号在行号栏最右方显示,且加0</td>
-</tr>
-<tr>
-<td>-w</td>
-<td align="center">行号栏占用位数</td>
-</tr>
-<tr>
-<td>-p</td>
-<td align="center">在逻辑定界符处不重新开始计算</td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>nl -b a 无论是否为空行，均显示行号<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a demo1.log</span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">     5</span><br><span class="line">     6  test</span><br><span class="line">     7</span><br><span class="line">     8  demo1</span><br><span class="line">     9  demo1</span><br><span class="line">    10  demo</span><br><span class="line">    11  d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -b t 仅对非空行号显示，空白行不标记行号<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b t demo1.log</span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">       </span><br><span class="line">     5  test</span><br><span class="line">       </span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -n ln 行号在行号栏最左方显示<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n ln demo1.log </span><br><span class="line">1       this is demo1.log</span><br><span class="line">2       this is demo1.log</span><br><span class="line">3       test</span><br><span class="line">4       test</span><br><span class="line">       </span><br><span class="line">5       test</span><br><span class="line">       </span><br><span class="line">6       demo1</span><br><span class="line">7       demo1</span><br><span class="line">8       demo</span><br><span class="line">9       d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -n rn 行号在行号栏最右方显示,且不加0<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n rn demo1.log </span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">       </span><br><span class="line">     5  test</span><br><span class="line">       </span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -n rz 行号在行号栏最右方显示,且加0<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n rz demo1.log </span><br><span class="line">000001  this is demo1.log</span><br><span class="line">000002  this is demo1.log</span><br><span class="line">000003  test</span><br><span class="line">000004  test</span><br><span class="line">       </span><br><span class="line">000005  test</span><br><span class="line">       </span><br><span class="line">000006  demo1</span><br><span class="line">000007  demo1</span><br><span class="line">000008  demo</span><br><span class="line">000009  d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -b a -n rz <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a -n rz demo1.log </span><br><span class="line">000001  this is demo1.log</span><br><span class="line">000002  this is demo1.log</span><br><span class="line">000003  test</span><br><span class="line">000004  test</span><br><span class="line">000005</span><br><span class="line">000006  test</span><br><span class="line">000007</span><br><span class="line">000008  demo1</span><br><span class="line">000009  demo1</span><br><span class="line">000010  demo</span><br><span class="line">000011  d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -b a -n rz -w 行号显示位数<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a -n rz -w 3 demo1.log </span><br><span class="line">001     this is demo1.log</span><br><span class="line">002     this is demo1.log</span><br><span class="line">003     test</span><br><span class="line">004     test</span><br><span class="line">005</span><br><span class="line">006     test</span><br><span class="line">007</span><br><span class="line">008     demo1</span><br><span class="line">009     demo1</span><br><span class="line">010     demo</span><br><span class="line">011     d:</span><br></pre></td></tr></table></figure></li>
-</ul>
 ]]></content>
       <categories>
         <category>linux</category>
@@ -646,6 +646,58 @@
       </tags>
   </entry>
   <entry>
+    <title>JavaScript高级程序设计笔记(11)-DOM扩展</title>
+    <url>/2016/11/15/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-11/</url>
+    <content><![CDATA[<h2 id="选择符API"><a href="#选择符API" class="headerlink" title="选择符API"></a>选择符API</h2><h3 id="querySelector-方法"><a href="#querySelector-方法" class="headerlink" title="querySelector()方法"></a>querySelector()方法</h3><p>querySelector()方法接收一个css选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回null。<a id="more"></a></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//取得body元素</span></span><br><span class="line"><span class="keyword">var</span> body = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;body&#x27;</span>);</span><br><span class="line"><span class="comment">//取得ID为&#x27;myDiv&#x27;的元素</span></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#myDiv&#x27;</span>);</span><br><span class="line"><span class="comment">//取得类为&#x27;selected&#x27;的第一个元素</span></span><br><span class="line"><span class="keyword">var</span> selected = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.selected&#x27;</span>);</span><br><span class="line"><span class="comment">//取得类为&#x27;button&#x27;的第一个图像元素</span></span><br><span class="line"><span class="keyword">var</span> img = <span class="built_in">document</span>.body.querySelector(<span class="string">&#x27;img.button&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="querySelectorAll"><a href="#querySelectorAll" class="headerlink" title="querySelectorAll()"></a>querySelectorAll()</h3><p>querySelectorAll()方法接收的参数与querySelector()方法一样，返回一个NodeList的实例。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> strongs = <span class="built_in">document</span>.querySelctorAll(<span class="string">&#x27;p strong&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> i, len, strong;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>, len = strongs.length; i &lt; len; i++)&#123;</span><br><span class="line">	strong = strongs[i];<span class="comment">//或者strongs.item(i)</span></span><br><span class="line">	strong.className = <span class="string">&#x27;important&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="matchesSelector-方法"><a href="#matchesSelector-方法" class="headerlink" title="matchesSelector()方法"></a>matchesSelector()方法</h3><h2 id="元素遍历"><a href="#元素遍历" class="headerlink" title="元素遍历"></a>元素遍历</h2><h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><h3 id="与类相关补充"><a href="#与类相关补充" class="headerlink" title="与类相关补充"></a>与类相关补充</h3><h4 id="getElementsByClassName"><a href="#getElementsByClassName" class="headerlink" title="getElementsByClassName()"></a>getElementsByClassName()</h4><h4 id="classList属性"><a href="#classList属性" class="headerlink" title="classList属性"></a>classList属性</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> classList = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>).classList;</span><br><span class="line"></span><br><span class="line">classList.remove(<span class="string">&#x27;user&#x27;</span>);</span><br><span class="line">classList.add(<span class="string">&#x27;current&#x27;</span>);</span><br><span class="line">classList.toggle(<span class="string">&#x27;user&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(classList.contains(<span class="string">&#x27;bd&#x27;</span>)&amp;&amp;classList.contains(<span class="string">&#x27;disabled&#x27;</span>))&#123;</span><br><span class="line">	<span class="comment">//执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="焦点管理"><a href="#焦点管理" class="headerlink" title="焦点管理"></a>焦点管理</h3><p>HTML5辅助管理DOM焦点：document.activeElement</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> button = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myButton&#x27;</span>);</span><br><span class="line">button.focus();</span><br><span class="line">alert(<span class="built_in">document</span>.activeElement === button);</span><br></pre></td></tr></table></figure>
+<h3 id="HTMLDocument的变化"><a href="#HTMLDocument的变化" class="headerlink" title="HTMLDocument的变化"></a>HTMLDocument的变化</h3><h4 id="readyState属性"><a href="#readyState属性" class="headerlink" title="readyState属性"></a>readyState属性</h4><p>HTML5标准：Document的readyState属性有两个值：</p>
+<p>1、 loading:正在加载文档<br>2、 complete:已经加载完文档</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.readyState == <span class="string">&#x27;complete&#x27;</span>)&#123;</span><br><span class="line">	<span class="comment">//执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="兼容模式"><a href="#兼容模式" class="headerlink" title="兼容模式"></a>兼容模式</h4><p>HTML5标准： document.compatMode，标准模式下该值等于’CSS1Compat’，混杂模式下，该值等于’BackCompat’。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.compatMode == <span class="string">&#x27;CSS1Compat&#x27;</span>)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Standard mode&#x27;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Quirks mode&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="head属性"><a href="#head属性" class="headerlink" title="head属性"></a>head属性</h4><p>HTML5标准：document.head</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> head = <span class="built_in">document</span>.head||<span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;head&#x27;</span>)[<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
+
+<h4 id="字符集属性"><a href="#字符集属性" class="headerlink" title="字符集属性"></a>字符集属性</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(<span class="built_in">document</span>.charset);</span><br><span class="line"><span class="built_in">document</span>.charset = <span class="string">&#x27;UTF-8&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.charset!=<span class="built_in">document</span>.defaultCharset)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Custom character set being used&#x27;</span>);</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<h4 id="自定义数据属性"><a href="#自定义数据属性" class="headerlink" title="自定义数据属性"></a>自定义数据属性</h4><blockquote>
+<p>HTML5规定可以为元素添加非标准的属性，但要添加前缀 data-，目的是为元素提供与渲染无关的信息，或者提供语义信息。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;myDiv&#x27;</span> <span class="attr">data-appId</span>=<span class="string">&#x27;2107&#x27;</span> <span class="attr">data-myname</span>=<span class="string">&#x27;hnwc&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>添加自定义属性后，通过元素的dataset属性来访问自定义属性的值。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="comment">//取得自定义属性值</span></span><br><span class="line"><span class="keyword">var</span> appId = div.dataset.appId;</span><br><span class="line"><span class="keyword">var</span> myName = div.dataset.myname;</span><br><span class="line"><span class="comment">//设置值</span></span><br><span class="line">div.dataset.appId = <span class="number">2014</span>;</span><br><span class="line">div.dataset.myname = <span class="string">&#x27;cq&#x27;</span>;</span><br><span class="line"><span class="comment">//判断</span></span><br><span class="line"><span class="keyword">if</span>(div.dataset.myname)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;hello &#x27;</span> + div.dataset.myname);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="插入标记"><a href="#插入标记" class="headerlink" title="插入标记"></a>插入标记</h4><p>1、 innerHTML<br>在取模式下，innerHTML属性返回与调用元素的所有子节点对应的HTML标记。<br>在写模式下，innerHTML会根据指定值创建新的DOM树，然后用这个DOM树完全替换调用元素下原先的所有子节点。</p>
+<blockquote>
+<p>不支持innerHTML的元素有： col、colgroup、frameset、head、html、style、table、tbody、thead、tfoot、tr。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> text = <span class="string">&quot;&lt;a href=\&quot;#\&quot; onclick=\&quot;alert(&#x27;hi&#x27;)\&quot;&gt;&lt;/a&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> sanitized = <span class="built_in">window</span>.toStaticHTML(text); <span class="comment">//only IE8</span></span><br><span class="line">alert(sanitized);</span><br></pre></td></tr></table></figure>
+
+<p>2、 outerHTML属性<br>在读模式下，outerHTML返回调用它的元素及所有子节点的HTML标签。<br>在写模式下，outerHTML会根据指定的HTML字符串创建新的DOM子树，然后用这个DOM子树完全替换调用元素。</p>
+<p>3、 insertAdjacentHTML()方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//作为前一个同辈元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;beforebegin&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为第一个子元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;afterbegin&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为最后一个子元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;beforeend&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为后一个同辈元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;afterend&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<p>4、 内存与性能问题</p>
+<h4 id="scrollIntoView-方法"><a href="#scrollIntoView-方法" class="headerlink" title="scrollIntoView()方法"></a>scrollIntoView()方法</h4><p>scrollIntoView()可以在所有HTML元素上调用，通过滚动浏览器窗口或某个容器，调用元素就可以出现在视口中。如果给这个方法传入true作为参数，或者不传入任何参数，那么窗口滚动之后会让调用元素的顶部与视口顶部尽可能平齐。如果传入false作为参数，调用元素会尽可能全部出现在视口中，不过顶部不一定平齐。</p>
+<h3 id="专有扩展"><a href="#专有扩展" class="headerlink" title="专有扩展"></a>专有扩展</h3><h4 id="文档模式"><a href="#文档模式" class="headerlink" title="文档模式"></a>文档模式</h4><h4 id="children属性"><a href="#children属性" class="headerlink" title="children属性"></a>children属性</h4><h4 id="contains"><a href="#contains" class="headerlink" title="contains"></a>contains</h4><h4 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h4><p>innerText</p>
+<p>outerText</p>
+<h4 id="滚动"><a href="#滚动" class="headerlink" title="滚动"></a>滚动</h4>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript高级程序设计笔记(10)-DOM</title>
     <url>/2016/11/11/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-10/</url>
     <content><![CDATA[<p>DOM(文档对象模型)是针对HTML和XML文档的一个API。<a id="more"></a></p>
@@ -695,58 +747,6 @@ alert(newNode.nodeValue);//&#39; world&#39;
 alert(element.childNodes.length);//2</code></pre>
 <h3 id="Comment类型"><a href="#Comment类型" class="headerlink" title="Comment类型"></a>Comment类型</h3><h2 id="DOM操作技术"><a href="#DOM操作技术" class="headerlink" title="DOM操作技术"></a>DOM操作技术</h2><p>NodeList、NamedNodeMap和HTMLCollection，这三个集合都是动态的，每当文档结构发生变化时，它们都会更新。NodeList对象都是在访问DOM文档时实时运行的查询。</p>
 ]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript高级程序设计笔记(11)-DOM扩展</title>
-    <url>/2016/11/15/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-11/</url>
-    <content><![CDATA[<h2 id="选择符API"><a href="#选择符API" class="headerlink" title="选择符API"></a>选择符API</h2><h3 id="querySelector-方法"><a href="#querySelector-方法" class="headerlink" title="querySelector()方法"></a>querySelector()方法</h3><p>querySelector()方法接收一个css选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回null。<a id="more"></a></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//取得body元素</span></span><br><span class="line"><span class="keyword">var</span> body = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;body&#x27;</span>);</span><br><span class="line"><span class="comment">//取得ID为&#x27;myDiv&#x27;的元素</span></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;#myDiv&#x27;</span>);</span><br><span class="line"><span class="comment">//取得类为&#x27;selected&#x27;的第一个元素</span></span><br><span class="line"><span class="keyword">var</span> selected = <span class="built_in">document</span>.querySelector(<span class="string">&#x27;.selected&#x27;</span>);</span><br><span class="line"><span class="comment">//取得类为&#x27;button&#x27;的第一个图像元素</span></span><br><span class="line"><span class="keyword">var</span> img = <span class="built_in">document</span>.body.querySelector(<span class="string">&#x27;img.button&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<h3 id="querySelectorAll"><a href="#querySelectorAll" class="headerlink" title="querySelectorAll()"></a>querySelectorAll()</h3><p>querySelectorAll()方法接收的参数与querySelector()方法一样，返回一个NodeList的实例。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> strongs = <span class="built_in">document</span>.querySelctorAll(<span class="string">&#x27;p strong&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> i, len, strong;</span><br><span class="line"><span class="keyword">for</span>(i = <span class="number">0</span>, len = strongs.length; i &lt; len; i++)&#123;</span><br><span class="line">	strong = strongs[i];<span class="comment">//或者strongs.item(i)</span></span><br><span class="line">	strong.className = <span class="string">&#x27;important&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="matchesSelector-方法"><a href="#matchesSelector-方法" class="headerlink" title="matchesSelector()方法"></a>matchesSelector()方法</h3><h2 id="元素遍历"><a href="#元素遍历" class="headerlink" title="元素遍历"></a>元素遍历</h2><h2 id="HTML5"><a href="#HTML5" class="headerlink" title="HTML5"></a>HTML5</h2><h3 id="与类相关补充"><a href="#与类相关补充" class="headerlink" title="与类相关补充"></a>与类相关补充</h3><h4 id="getElementsByClassName"><a href="#getElementsByClassName" class="headerlink" title="getElementsByClassName()"></a>getElementsByClassName()</h4><h4 id="classList属性"><a href="#classList属性" class="headerlink" title="classList属性"></a>classList属性</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> classList = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>).classList;</span><br><span class="line"></span><br><span class="line">classList.remove(<span class="string">&#x27;user&#x27;</span>);</span><br><span class="line">classList.add(<span class="string">&#x27;current&#x27;</span>);</span><br><span class="line">classList.toggle(<span class="string">&#x27;user&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(classList.contains(<span class="string">&#x27;bd&#x27;</span>)&amp;&amp;classList.contains(<span class="string">&#x27;disabled&#x27;</span>))&#123;</span><br><span class="line">	<span class="comment">//执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="焦点管理"><a href="#焦点管理" class="headerlink" title="焦点管理"></a>焦点管理</h3><p>HTML5辅助管理DOM焦点：document.activeElement</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> button = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myButton&#x27;</span>);</span><br><span class="line">button.focus();</span><br><span class="line">alert(<span class="built_in">document</span>.activeElement === button);</span><br></pre></td></tr></table></figure>
-<h3 id="HTMLDocument的变化"><a href="#HTMLDocument的变化" class="headerlink" title="HTMLDocument的变化"></a>HTMLDocument的变化</h3><h4 id="readyState属性"><a href="#readyState属性" class="headerlink" title="readyState属性"></a>readyState属性</h4><p>HTML5标准：Document的readyState属性有两个值：</p>
-<p>1、 loading:正在加载文档<br>2、 complete:已经加载完文档</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.readyState == <span class="string">&#x27;complete&#x27;</span>)&#123;</span><br><span class="line">	<span class="comment">//执行操作</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="兼容模式"><a href="#兼容模式" class="headerlink" title="兼容模式"></a>兼容模式</h4><p>HTML5标准： document.compatMode，标准模式下该值等于’CSS1Compat’，混杂模式下，该值等于’BackCompat’。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.compatMode == <span class="string">&#x27;CSS1Compat&#x27;</span>)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Standard mode&#x27;</span>);</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Quirks mode&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="head属性"><a href="#head属性" class="headerlink" title="head属性"></a>head属性</h4><p>HTML5标准：document.head</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> head = <span class="built_in">document</span>.head||<span class="built_in">document</span>.getElementsByTagName(<span class="string">&#x27;head&#x27;</span>)[<span class="number">0</span>];</span><br></pre></td></tr></table></figure>
-
-<h4 id="字符集属性"><a href="#字符集属性" class="headerlink" title="字符集属性"></a>字符集属性</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">alert(<span class="built_in">document</span>.charset);</span><br><span class="line"><span class="built_in">document</span>.charset = <span class="string">&#x27;UTF-8&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">document</span>.charset!=<span class="built_in">document</span>.defaultCharset)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;Custom character set being used&#x27;</span>);</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<h4 id="自定义数据属性"><a href="#自定义数据属性" class="headerlink" title="自定义数据属性"></a>自定义数据属性</h4><blockquote>
-<p>HTML5规定可以为元素添加非标准的属性，但要添加前缀 data-，目的是为元素提供与渲染无关的信息，或者提供语义信息。</p>
-</blockquote>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&#x27;myDiv&#x27;</span> <span class="attr">data-appId</span>=<span class="string">&#x27;2107&#x27;</span> <span class="attr">data-myname</span>=<span class="string">&#x27;hnwc&#x27;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>添加自定义属性后，通过元素的dataset属性来访问自定义属性的值。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> div = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="comment">//取得自定义属性值</span></span><br><span class="line"><span class="keyword">var</span> appId = div.dataset.appId;</span><br><span class="line"><span class="keyword">var</span> myName = div.dataset.myname;</span><br><span class="line"><span class="comment">//设置值</span></span><br><span class="line">div.dataset.appId = <span class="number">2014</span>;</span><br><span class="line">div.dataset.myname = <span class="string">&#x27;cq&#x27;</span>;</span><br><span class="line"><span class="comment">//判断</span></span><br><span class="line"><span class="keyword">if</span>(div.dataset.myname)&#123;</span><br><span class="line">	alert(<span class="string">&#x27;hello &#x27;</span> + div.dataset.myname);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="插入标记"><a href="#插入标记" class="headerlink" title="插入标记"></a>插入标记</h4><p>1、 innerHTML<br>在取模式下，innerHTML属性返回与调用元素的所有子节点对应的HTML标记。<br>在写模式下，innerHTML会根据指定值创建新的DOM树，然后用这个DOM树完全替换调用元素下原先的所有子节点。</p>
-<blockquote>
-<p>不支持innerHTML的元素有： col、colgroup、frameset、head、html、style、table、tbody、thead、tfoot、tr。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> text = <span class="string">&quot;&lt;a href=\&quot;#\&quot; onclick=\&quot;alert(&#x27;hi&#x27;)\&quot;&gt;&lt;/a&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> sanitized = <span class="built_in">window</span>.toStaticHTML(text); <span class="comment">//only IE8</span></span><br><span class="line">alert(sanitized);</span><br></pre></td></tr></table></figure>
-
-<p>2、 outerHTML属性<br>在读模式下，outerHTML返回调用它的元素及所有子节点的HTML标签。<br>在写模式下，outerHTML会根据指定的HTML字符串创建新的DOM子树，然后用这个DOM子树完全替换调用元素。</p>
-<p>3、 insertAdjacentHTML()方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//作为前一个同辈元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;beforebegin&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为第一个子元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;afterbegin&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为最后一个子元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;beforeend&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br><span class="line"><span class="comment">//作为后一个同辈元素插入</span></span><br><span class="line">element.insertAdjacentHTML(<span class="string">&#x27;afterend&#x27;</span>,<span class="string">&#x27;&lt;p&gt;Hello world!&lt;/p&gt;&#x27;</span>);</span><br></pre></td></tr></table></figure>
-<p>4、 内存与性能问题</p>
-<h4 id="scrollIntoView-方法"><a href="#scrollIntoView-方法" class="headerlink" title="scrollIntoView()方法"></a>scrollIntoView()方法</h4><p>scrollIntoView()可以在所有HTML元素上调用，通过滚动浏览器窗口或某个容器，调用元素就可以出现在视口中。如果给这个方法传入true作为参数，或者不传入任何参数，那么窗口滚动之后会让调用元素的顶部与视口顶部尽可能平齐。如果传入false作为参数，调用元素会尽可能全部出现在视口中，不过顶部不一定平齐。</p>
-<h3 id="专有扩展"><a href="#专有扩展" class="headerlink" title="专有扩展"></a>专有扩展</h3><h4 id="文档模式"><a href="#文档模式" class="headerlink" title="文档模式"></a>文档模式</h4><h4 id="children属性"><a href="#children属性" class="headerlink" title="children属性"></a>children属性</h4><h4 id="contains"><a href="#contains" class="headerlink" title="contains"></a>contains</h4><h4 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h4><p>innerText</p>
-<p>outerText</p>
-<h4 id="滚动"><a href="#滚动" class="headerlink" title="滚动"></a>滚动</h4>]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -1175,6 +1175,45 @@ cookie的读取、写入和删除。</li>
       </tags>
   </entry>
   <entry>
+    <title>JavaScript高级程序设计笔记(6)-引用类型之单体内置对象</title>
+    <url>/2016/11/07/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-6/</url>
+    <content><![CDATA[<p>由ECMAScript实现提供的，不依赖宿主环境的对象，这些对象在ECMAScript程序执行之前就已经存在了。比如： Object、Array、String，还有两个单体内置对象：Global和Math。<a id="more"></a></p>
+<h2 id="Global对象"><a href="#Global对象" class="headerlink" title="Global对象"></a>Global对象</h2><p>1、 encodeURI():主要用于整个URI，而encodeURIComponent()主要用于URI中的某一段进行编码。两者主要区别在于：encodeURI()方法不会对本身属于URI的特殊字符进行编码，比如：冒号、正斜杠、问号和井号；而encodeURIComponent则会对它发现的任何非标准字符进行编码。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;https://www.zhihu.com/topic#Web 开发&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">encodeURI</span>(s));<span class="comment">//&#x27;https://www.zhihu.com/topic#Web%20%E5%BC%80%E5%8F%91&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">encodeURIComponent</span>(s));<span class="comment">//&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web%20%E5%BC%80%E5%8F%91&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>与encodeURI()和encodeURICompoent()方法对应的，有decodeURI()和decodeURIComponent()方法。decodeURI()方法只能对使用encodeURI()方法替换的字符进行解码。同样，decodeURIComponent()方法能够解码encodeURIComponent()方法编码的所有字符，即他可以解码任何特殊字符。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> uri = <span class="string">&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web%20%E5%BC%80%E5%8F%91&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">decodeURI</span>(uri));<span class="comment">//&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web 开发&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">decodeURIComponent</span>(uri));<span class="string">&#x27;https://www.zhihu.com/topic#Web 开发&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>2、eval()方法</p>
+<p>eval()方法，大概是ECMAScript语言中最强大的一个方法。通过eval()执行的代码被认为是包含该次调用的执行环境的一部分。因此被执行的代码具有与该环境相同的作用域链。因此eval()方法可以调用包含在环境中的变量。</p>
+<p>严格模式下，在外部访问不到eval()中创建的任何变量或函数。</p>
+<p>3、 Global对象的属性</p>
+<p>4、 window对象</p>
+<p>在web中，全局对象作为window的一部分加以实现。因此全局作用域中所有声明的属性和方法，都成了window对象的属性。</p>
+<p>另一种取得Global对象的方法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">global</span> = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">&#125;();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h2><p>1、 Math对象的属性</p>
+<p>Math.E/Math.LN10/Math.PI等。</p>
+<p>2、 min()和max()方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max(<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>);</span><br><span class="line"><span class="keyword">var</span> min = <span class="built_in">Math</span>.min(<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>);</span><br></pre></td></tr></table></figure>
+<p>要获得数组中的最大/最小值可以使用apply()方法</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vaules = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, values);</span><br></pre></td></tr></table></figure>
+
+<p>3、 舍入方法</p>
+<p>Math.ceil(): 上舍入，即数值向上舍入为最接近的整数。<br>Math.floor(): 下舍入<br>Math.round(): 执行标准输入</p>
+<p>4、 random()方法： 返回大于0小于1的一个随机数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//返回一个1到10之间的数值</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">10</span> + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回一个2到10之间的数值</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()* <span class="number">9</span> + <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//指定范围</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectFrom</span>(<span class="params">lowerValue, upperValue</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> choices = upperValue - lowerValue + <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * choices + lowerValue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>5、 其他方法</p>
+<p>Math.abs(num)/Math.exp(num)/Math.log(num)/Math.pow(num, power)等等</p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript高级程序设计笔记(18)-新兴API</title>
     <url>/2016/12/17/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-18/</url>
     <content><![CDATA[<h2 id="Page-Visibility-API"><a href="#Page-Visibility-API" class="headerlink" title="Page Visibility API"></a>Page Visibility API</h2><ul>
@@ -1234,45 +1273,6 @@ cookie的读取、写入和删除。</li>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">worker.terminate();</span><br></pre></td></tr></table></figure>
 
 <h3 id="Worker的全局作用域"><a href="#Worker的全局作用域" class="headerlink" title="Worker的全局作用域"></a>Worker的全局作用域</h3><p>Web Worker所执行的Javascript代码完全在另一个作用域中，与当前网页中的代码不共享作用域。</p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript高级程序设计笔记(6)-引用类型之单体内置对象</title>
-    <url>/2016/11/07/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-6/</url>
-    <content><![CDATA[<p>由ECMAScript实现提供的，不依赖宿主环境的对象，这些对象在ECMAScript程序执行之前就已经存在了。比如： Object、Array、String，还有两个单体内置对象：Global和Math。<a id="more"></a></p>
-<h2 id="Global对象"><a href="#Global对象" class="headerlink" title="Global对象"></a>Global对象</h2><p>1、 encodeURI():主要用于整个URI，而encodeURIComponent()主要用于URI中的某一段进行编码。两者主要区别在于：encodeURI()方法不会对本身属于URI的特殊字符进行编码，比如：冒号、正斜杠、问号和井号；而encodeURIComponent则会对它发现的任何非标准字符进行编码。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;https://www.zhihu.com/topic#Web 开发&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">encodeURI</span>(s));<span class="comment">//&#x27;https://www.zhihu.com/topic#Web%20%E5%BC%80%E5%8F%91&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">encodeURIComponent</span>(s));<span class="comment">//&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web%20%E5%BC%80%E5%8F%91&#x27;</span></span><br></pre></td></tr></table></figure>
-<p>与encodeURI()和encodeURICompoent()方法对应的，有decodeURI()和decodeURIComponent()方法。decodeURI()方法只能对使用encodeURI()方法替换的字符进行解码。同样，decodeURIComponent()方法能够解码encodeURIComponent()方法编码的所有字符，即他可以解码任何特殊字符。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> uri = <span class="string">&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web%20%E5%BC%80%E5%8F%91&#x27;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">decodeURI</span>(uri));<span class="comment">//&#x27;https%3A%2F%2Fwww.zhihu.com%2Ftopic%23Web 开发&#x27;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">decodeURIComponent</span>(uri));<span class="string">&#x27;https://www.zhihu.com/topic#Web 开发&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>2、eval()方法</p>
-<p>eval()方法，大概是ECMAScript语言中最强大的一个方法。通过eval()执行的代码被认为是包含该次调用的执行环境的一部分。因此被执行的代码具有与该环境相同的作用域链。因此eval()方法可以调用包含在环境中的变量。</p>
-<p>严格模式下，在外部访问不到eval()中创建的任何变量或函数。</p>
-<p>3、 Global对象的属性</p>
-<p>4、 window对象</p>
-<p>在web中，全局对象作为window的一部分加以实现。因此全局作用域中所有声明的属性和方法，都成了window对象的属性。</p>
-<p>另一种取得Global对象的方法：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">global</span> = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">this</span>;</span><br><span class="line">&#125;();</span><br></pre></td></tr></table></figure>
-
-<h2 id="Math对象"><a href="#Math对象" class="headerlink" title="Math对象"></a>Math对象</h2><p>1、 Math对象的属性</p>
-<p>Math.E/Math.LN10/Math.PI等。</p>
-<p>2、 min()和max()方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max(<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>);</span><br><span class="line"><span class="keyword">var</span> min = <span class="built_in">Math</span>.min(<span class="number">1</span>, <span class="number">3</span>, <span class="number">6</span>, <span class="number">7</span>);</span><br></pre></td></tr></table></figure>
-<p>要获得数组中的最大/最小值可以使用apply()方法</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> vaules = [<span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>];</span><br><span class="line"><span class="keyword">var</span> max = <span class="built_in">Math</span>.max.apply(<span class="built_in">Math</span>, values);</span><br></pre></td></tr></table></figure>
-
-<p>3、 舍入方法</p>
-<p>Math.ceil(): 上舍入，即数值向上舍入为最接近的整数。<br>Math.floor(): 下舍入<br>Math.round(): 执行标准输入</p>
-<p>4、 random()方法： 返回大于0小于1的一个随机数</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//返回一个1到10之间的数值</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * <span class="number">10</span> + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//返回一个2到10之间的数值</span></span><br><span class="line"><span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random()* <span class="number">9</span> + <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//指定范围</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectFrom</span>(<span class="params">lowerValue, upperValue</span>)</span>&#123;</span><br><span class="line">	<span class="keyword">var</span> choices = upperValue - lowerValue + <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * choices + lowerValue);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>5、 其他方法</p>
-<p>Math.abs(num)/Math.exp(num)/Math.log(num)/Math.pow(num, power)等等</p>
 ]]></content>
       <categories>
         <category>js</category>
@@ -3132,8 +3132,10 @@ Visit http://127.0.0.1:3003/?port=5858 to start debugging.
     <title>package.json指南</title>
     <url>/2020/10/28/package-json%E8%AF%A6%E8%A7%A3/</url>
     <content><![CDATA[<style type="text/css">
-img {
-  max-width: 400px;
+@media screen and (min-width: 768px) {
+  img {
+    max-width: 400px;
+  }
 }
 </style>
 <p><img src="/images/npm.png"></p>
