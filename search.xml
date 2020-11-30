@@ -256,55 +256,6 @@
       </tags>
   </entry>
   <entry>
-    <title>linux常用命令学习(八) -- cp</title>
-    <url>/2016/04/19/20160419/</url>
-    <content><![CDATA[<p>cp, copy之意，用于文件或目录的复制。注意：一般情况下，使用命令行下复制文件时，如果目标文件已经存在，就会询问是否覆盖，无论是否使用 -i 参数。但是在shell脚本中执行cp时，如果没有-i参数，则不会询问是否覆盖-命令行和shell脚本的执行方式有些不同。 <a id="more"></a></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>cp [选项] 源文件或目录 目标目录</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-a</td>
-<td align="center">–archive ;等同于-dR; 复制整个目录，包括目录中的子目录等都递归的复制，同时保持文件的访问模式，所有者，时间戳等属性与原文件一样。</td>
-</tr>
-<tr>
-<td>-b</td>
-<td align="center">–backup ; 删除、覆盖目的文件先备份，备份的文件或目录亦建立为符号链接，并指向源文件或目录链接的源文件或目录。假如没有加上这个参数，在复制过程中若遇到符号链接，则会直接复制源文件或目录</td>
-</tr>
-<tr>
-<td>-f</td>
-<td align="center">–force; 强行复制文件或目录， 不论目的文件或目录是否已经存在</td>
-</tr>
-<tr>
-<td>-i</td>
-<td align="center">若目标文件已存在时，询问是否覆盖</td>
-</tr>
-<tr>
-<td>-u</td>
-<td align="center">如果目标文件已存在，且source比较新时，才会覆盖。</td>
-</tr>
-<tr>
-<td>-v</td>
-<td align="center">–verbose, 详细显示进行的步骤。</td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>cp demo1.log ../demo2<br>将目录demo1下的文件demo1.log复制到demo2文件夹下。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># ll</span></span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x. 2 root root 4096 Apr 29 16:03 demo-1</span><br><span class="line">-rw-r--r--. 1 root root   10 Apr 29 16:29 demo1.log</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cp demo1.log ../demo2</span></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cd ../demo2</span></span><br><span class="line">[root@kvm45072 demo2]<span class="comment"># ll</span></span><br><span class="line">total 4</span><br><span class="line">-rw-r--r--. 1 root root 10 Apr 29 16:31 demo1.log</span><br><span class="line">[root@kvm45072 demo2]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
-<li>cp -f demo1.log ../demo2<br>目标文件存在时，会询问是否覆盖。因为cp是cp -i的别名。目标文件存在时，即使加了-f标志，也还会询问是否覆盖。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cp -f demo1.log ../demo2</span></span><br><span class="line">cp: overwrite `../demo2/demo1.log<span class="string">&#x27;? </span></span><br></pre></td></tr></table></figure></li>
-</ul>
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>linux常用命令学习(九) -- cat</title>
     <url>/2016/04/20/20160420/</url>
     <content><![CDATA[<p>cat，全称为concatenate files and print on the standard output，主要作用为：查看文件内容，也可以给文件追加内容到结尾。 <a id="more"></a></p>
@@ -362,6 +313,55 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cat &gt;log.txt &lt;&lt;EOF</span></span><br><span class="line">&gt; HELLO</span><br><span class="line">&gt; WORLD</span><br><span class="line">&gt; PWD=$(<span class="built_in">pwd</span>)</span><br><span class="line">&gt; <span class="built_in">test</span></span><br><span class="line">&gt; EOF</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># ls -l log.txt</span></span><br><span class="line">-rw-r--r--. 1 root root 39 May  4 14:14 log.txt</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cat log.txt</span></span><br><span class="line">HELLO</span><br><span class="line">WORLD</span><br><span class="line">PWD=/root/linux/demo1</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
 
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux常用命令学习(八) -- cp</title>
+    <url>/2016/04/19/20160419/</url>
+    <content><![CDATA[<p>cp, copy之意，用于文件或目录的复制。注意：一般情况下，使用命令行下复制文件时，如果目标文件已经存在，就会询问是否覆盖，无论是否使用 -i 参数。但是在shell脚本中执行cp时，如果没有-i参数，则不会询问是否覆盖-命令行和shell脚本的执行方式有些不同。 <a id="more"></a></p>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>cp [选项] 源文件或目录 目标目录</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-a</td>
+<td align="center">–archive ;等同于-dR; 复制整个目录，包括目录中的子目录等都递归的复制，同时保持文件的访问模式，所有者，时间戳等属性与原文件一样。</td>
+</tr>
+<tr>
+<td>-b</td>
+<td align="center">–backup ; 删除、覆盖目的文件先备份，备份的文件或目录亦建立为符号链接，并指向源文件或目录链接的源文件或目录。假如没有加上这个参数，在复制过程中若遇到符号链接，则会直接复制源文件或目录</td>
+</tr>
+<tr>
+<td>-f</td>
+<td align="center">–force; 强行复制文件或目录， 不论目的文件或目录是否已经存在</td>
+</tr>
+<tr>
+<td>-i</td>
+<td align="center">若目标文件已存在时，询问是否覆盖</td>
+</tr>
+<tr>
+<td>-u</td>
+<td align="center">如果目标文件已存在，且source比较新时，才会覆盖。</td>
+</tr>
+<tr>
+<td>-v</td>
+<td align="center">–verbose, 详细显示进行的步骤。</td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>cp demo1.log ../demo2<br>将目录demo1下的文件demo1.log复制到demo2文件夹下。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># ll</span></span><br><span class="line">total 8</span><br><span class="line">drwxr-xr-x. 2 root root 4096 Apr 29 16:03 demo-1</span><br><span class="line">-rw-r--r--. 1 root root   10 Apr 29 16:29 demo1.log</span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cp demo1.log ../demo2</span></span><br><span class="line">[root@kvm45072 demo1]<span class="comment"># cd ../demo2</span></span><br><span class="line">[root@kvm45072 demo2]<span class="comment"># ll</span></span><br><span class="line">total 4</span><br><span class="line">-rw-r--r--. 1 root root 10 Apr 29 16:31 demo1.log</span><br><span class="line">[root@kvm45072 demo2]<span class="comment"># </span></span><br></pre></td></tr></table></figure></li>
+<li>cp -f demo1.log ../demo2<br>目标文件存在时，会询问是否覆盖。因为cp是cp -i的别名。目标文件存在时，即使加了-f标志，也还会询问是否覆盖。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]<span class="comment"># cp -f demo1.log ../demo2</span></span><br><span class="line">cp: overwrite `../demo2/demo1.log<span class="string">&#x27;? </span></span><br></pre></td></tr></table></figure></li>
+</ul>
 ]]></content>
       <categories>
         <category>linux</category>
@@ -703,17 +703,6 @@ alert(element.childNodes.length);//2</code></pre>
       </tags>
   </entry>
   <entry>
-    <title>JavaScript高级程序设计笔记(12)-DOM2和DOM3</title>
-    <url>/2016/11/20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-12/</url>
-    <content><![CDATA[<h4 id="计算的样式"><a href="#计算的样式" class="headerlink" title="计算的样式"></a>计算的样式</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = <span class="built_in">document</span>.defaultView.getComputedStyle(myDiv, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE不支持getComputedStyle()方法，在IE中每个具有style属性的元素还要一个currentStyle属性。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = myDiv.currentStyle;</span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JavaScript高级程序设计笔记(11)-DOM扩展</title>
     <url>/2016/11/15/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-11/</url>
     <content><![CDATA[<h2 id="选择符API"><a href="#选择符API" class="headerlink" title="选择符API"></a>选择符API</h2><h3 id="querySelector-方法"><a href="#querySelector-方法" class="headerlink" title="querySelector()方法"></a>querySelector()方法</h3><p>querySelector()方法接收一个css选择符，返回与该模式匹配的第一个元素，如果没有找到匹配的元素，返回null。<a id="more"></a></p>
@@ -758,6 +747,17 @@ alert(element.childNodes.length);//2</code></pre>
 <h3 id="专有扩展"><a href="#专有扩展" class="headerlink" title="专有扩展"></a>专有扩展</h3><h4 id="文档模式"><a href="#文档模式" class="headerlink" title="文档模式"></a>文档模式</h4><h4 id="children属性"><a href="#children属性" class="headerlink" title="children属性"></a>children属性</h4><h4 id="contains"><a href="#contains" class="headerlink" title="contains"></a>contains</h4><h4 id="插入文本"><a href="#插入文本" class="headerlink" title="插入文本"></a>插入文本</h4><p>innerText</p>
 <p>outerText</p>
 <h4 id="滚动"><a href="#滚动" class="headerlink" title="滚动"></a>滚动</h4>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript高级程序设计笔记(12)-DOM2和DOM3</title>
+    <url>/2016/11/20/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-12/</url>
+    <content><![CDATA[<h4 id="计算的样式"><a href="#计算的样式" class="headerlink" title="计算的样式"></a>计算的样式</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = <span class="built_in">document</span>.defaultView.getComputedStyle(myDiv, <span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br><span class="line"><span class="comment">//IE不支持getComputedStyle()方法，在IE中每个具有style属性的元素还要一个currentStyle属性。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> myDiv = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;myDiv&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> computedStyle = myDiv.currentStyle;</span><br><span class="line">alert(computedStyle.backgroundColor);</span><br><span class="line">alert(computedStyle.width);</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -3710,6 +3710,227 @@ Visit http://127.0.0.1:3003/?port=5858 to start debugging.
       </categories>
       <tags>
         <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>初识Nginx</title>
+    <url>/2020/11/30/%E5%88%9D%E8%AF%86nginx/</url>
+    <content><![CDATA[<h3 id="Nginx概述"><a href="#Nginx概述" class="headerlink" title="Nginx概述"></a>Nginx概述</h3><p>Nginx (engine x) 是一款轻量级的 Web 服务器 、反向代理服务器及电子邮件（IMAP/POP3）代理服务器。</p>
+<p>由伊戈尔·赛索耶夫创建并于2004年首次公开发布。2011年成立同名公司以提供支持。2019年3月11日，Nginx公司被F5 Networks以6.7亿美元收购。</p>
+<p>Nginx是免费的开源软件，根据类BSD许可证的条款发布。一大部分Web服务器使用Nginx，通常作为负载均衡器。</p>
+<a id="more"></a>
+
+<p><img src="/images/nginx/nginx_server_history.png" alt="web server市场份额统计"></p>
+<p><img src="/images/nginx/nginx_market.png" alt="2020年10月web server市场份额"></p>
+<ul>
+<li>Apache：Apache 软件基金会的一个开放源码的网页服务器，可以在大多数计算机操作系统中运行。由于其多平台和安全性被广泛使用，是最流行的 Web服务器端软件之一。它快速、可靠并且可通过简单的 API 扩展，将 Perl/Python 等解释器编译到服务器中。</li>
+<li>Microsoft：微软提供的基于运行 Microsoft Windows 的互联网基本服务。互联网信息服务（Internet Information Services），简称 IIS。</li>
+<li>Google：谷歌自主开发的 Google Web Server，简称 gws 。</li>
+<li>nginx：由伊戈尔·赛索耶夫为俄罗斯访问量第二的 Rambler.ru 站点开发的，免费开源、轻量级、高性能 Web 服务器。</li>
+</ul>
+<h4 id="Tengine"><a href="#Tengine" class="headerlink" title="Tengine"></a>Tengine</h4><p><a href="http://tengine.taobao.org/">Tengine</a></p>
+<blockquote>
+<p>Tengine是由淘宝网发起的Web服务器项目。它在Nginx的基础上，针对大访问量网站的需求，添加了很多高级功能和特性。Tengine的性能和稳定性已经在大型的网站如淘宝网，天猫商城等得到了很好的检验。它的最终目标是打造一个高效、稳定、安全、易用的Web平台。</p>
+</blockquote>
+<h4 id="OpenResty"><a href="#OpenResty" class="headerlink" title="OpenResty"></a>OpenResty</h4><p><a href="https://openresty.org/cn/">OpenResty</a></p>
+<blockquote>
+<p>OpenResty® 是一个基于 Nginx 与 Lua 的高性能 Web 平台，其内部集成了大量精良的 Lua 库、第三方模块以及大多数的依赖项。用于方便地搭建能够处理超高并发、扩展性极高的动态 Web 应用、Web 服务和动态网关。</p>
+</blockquote>
+<h4 id="国内主流网站的使用情况"><a href="#国内主流网站的使用情况" class="headerlink" title="国内主流网站的使用情况"></a>国内主流网站的使用情况</h4><ul>
+<li><p>百度主页</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I https://www.baidu.com/</span><br><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Accept-Ranges: bytes</span><br><span class="line">Cache-Control: private, no-cache, no-store, proxy-revalidate, no-transform</span><br><span class="line">Connection: keep-alive</span><br><span class="line">Content-Length: 277</span><br><span class="line">Content-Type: text/html</span><br><span class="line">Date: Tue, 24 Nov 2020 09:23:21 GMT</span><br><span class="line">Etag: <span class="string">&quot;575e1f5d-115&quot;</span></span><br><span class="line">Last-Modified: Mon, 13 Jun 2016 02:50:05 GMT</span><br><span class="line">Pragma: no-cache</span><br><span class="line">Server: bfe/1.0.8.18</span><br></pre></td></tr></table></figure></li>
+<li><p>淘宝主站</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I https://www.taobao.com/</span><br><span class="line">HTTP/2 200</span><br><span class="line">server: Tengine</span><br><span class="line">...</span><br></pre></td></tr></table></figure></li>
+<li><p>腾讯主站</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I https://www.qq.com/</span><br><span class="line">HTTP/2 200</span><br><span class="line">date: Tue, 24 Nov 2020 09:26:35 GMT</span><br><span class="line">content-type: text/html; charset=GB2312</span><br><span class="line">server: squid/3.5.24</span><br><span class="line">...</span><br></pre></td></tr></table></figure></li>
+<li><p>腾讯邮箱</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I https://mail.qq.com/</span><br><span class="line">HTTP/2 200</span><br><span class="line">server: nginx</span><br><span class="line">...</span><br></pre></td></tr></table></figure></li>
+<li><p>新浪</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I https://sina.com/</span><br><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Server: nginx/1.13.7</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>头条</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I https://www.toutiao.com/</span><br><span class="line">HTTP/2 200</span><br><span class="line">server: Tengine</span><br><span class="line">...</span><br></pre></td></tr></table></figure></li>
+<li><p>京东</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I https://www.jd.com/</span><br><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Server: nginx</span><br><span class="line">...</span><br></pre></td></tr></table></figure></li>
+<li><p>美团</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ curl -I https://www.meituan.com/</span><br><span class="line">HTTP/1.1 302 Moved Temporarily</span><br><span class="line">Server: openresty</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="为什么选择-nginx？"><a href="#为什么选择-nginx？" class="headerlink" title="为什么选择 nginx？"></a>为什么选择 nginx？</h4><ul>
+<li><p>更快</p>
+<ul>
+<li>正常情况下，单次次请求的响应更快</li>
+<li>高并发情况下，相比其他服务器响应更快</li>
+</ul>
+</li>
+<li><p>高扩展性</p>
+<p>nginx 由不同层次，不同功能，不同类型的低耦合的模块组成。</p>
+</li>
+<li><p>高可靠性</p>
+<p>Master/Wokr工作模式</p>
+</li>
+<li><p>低内存消耗</p>
+<p>一般情况下，10000个非活跃的HTTP keep-alive连接在nginx中仅消耗2.5MB内存。</p>
+</li>
+<li><p>单机支持10w以上的并发连接</p>
+<p>理论上，Nginx支持的并发连接上限取决于内存，10w远未封顶。</p>
+</li>
+<li><p>热部署</p>
+</li>
+<li><p>最自由的BSD协议</p>
+</li>
+</ul>
+<h4 id="正向代理"><a href="#正向代理" class="headerlink" title="正向代理"></a>正向代理</h4><p><img src="/images/nginx/forward_proxy.png" alt="正向代理"></p>
+<p>正向代理是一个位于客户端和目标服务器之间的服务器(代理服务器)，为了从目标服务器取得内容，客户端向代理服务器发送一个请求并指定目标，然后代理服务器向目标服务器转交请求并将获得的内容返回给客户端。</p>
+<p>为什么要使用正向代理：</p>
+<ul>
+<li><p>突破访问限制</p>
+<p>比如我们日常使用VPN来访问国外网站</p>
+</li>
+<li><p>提高访问速度</p>
+<p>通常代理服务器都设置一个较大的硬盘缓冲区，会将部分请求的响应保存到缓冲区中，当其他用户再访问相同的信息时， 则直接由缓冲区中取出信息，传给用户，以提高访问速度。</p>
+</li>
+<li><p>隐藏客户端真实IP</p>
+</li>
+</ul>
+<h4 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h4><p><img src="/images/nginx/reverse_proxy.png" alt="反向代理"></p>
+<p>反向代理是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个反向代理服务器。</p>
+<p>为什么使用反向代理?</p>
+<ul>
+<li>保护和隐藏原始资源服务器</li>
+<li>加密和SSL加速</li>
+<li>通过缓存静态资源，加速Web请求</li>
+<li>实现负载均衡</li>
+</ul>
+<h4 id="正向代理与反向代理的区别"><a href="#正向代理与反向代理的区别" class="headerlink" title="正向代理与反向代理的区别"></a>正向代理与反向代理的区别</h4><ul>
+<li><p>正向代理和反向代理的区别在于代理的对象不同。正向代理代理的是客户端，反向代理代理的是服务端。</p>
+</li>
+<li><p>正向代理一般是在客户端架设，比如安装代理软件等，反向代理一般是服务端架设。</p>
+</li>
+<li><p>正向代理中，服务器不知道真正的客户端到底是谁，以为访问自己的就是真实的客户端。而在反向代理中，客户端不知道真正的服务器是谁，以为自己访问的就是真实的服务器</p>
+</li>
+<li><p>正向代理和反向代理的作用和目的不同。正向代理主要是用来解决访问限制问题。而反向代理则是提供负载均衡、安全防护等作用。二者均能提高访问速度。</p>
+</li>
+</ul>
+<h4 id="负载均衡"><a href="#负载均衡" class="headerlink" title="负载均衡"></a>负载均衡</h4><h3 id="nginx-进程模型"><a href="#nginx-进程模型" class="headerlink" title="nginx 进程模型"></a>nginx 进程模型</h3><p><img src="/images/nginx/nginx_model.png" alt="nginx_model"></p>
+<h3 id="nginx-常用命令"><a href="#nginx-常用命令" class="headerlink" title="nginx 常用命令"></a>nginx 常用命令</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-?,-h</td>
+<td>this help</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>show version and exit</td>
+</tr>
+<tr>
+<td>-V</td>
+<td>show version and configure options then exit</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>test configuration and exit</td>
+</tr>
+<tr>
+<td>-T</td>
+<td>test configuration, dump it and exit</td>
+</tr>
+<tr>
+<td>-q</td>
+<td>suppress non-error messages during configuration testing</td>
+</tr>
+<tr>
+<td>-s signal</td>
+<td>send signal to a master process: stop, quit, reopen, reload</td>
+</tr>
+<tr>
+<td>-p prefix</td>
+<td>set prefix path (default: /etc/nginx/)</td>
+</tr>
+<tr>
+<td>-c filename</td>
+<td>set configuration file (default: /etc/nginx/nginx.conf)</td>
+</tr>
+<tr>
+<td>-g directives</td>
+<td>set global directives out of configuration file</td>
+</tr>
+</tbody></table>
+<h3 id="nginx配置文件"><a href="#nginx配置文件" class="headerlink" title="nginx配置文件"></a>nginx配置文件</h3><h4 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">user  nginx;</span><br><span class="line">worker_processes  1;</span><br><span class="line"></span><br><span class="line">error_log  /var/<span class="built_in">log</span>/nginx/error.log warn;</span><br><span class="line">pid        /var/run/nginx.pid;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections  1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    include       /etc/nginx/mime.types;</span><br><span class="line">    default_type  application/octet-stream;</span><br><span class="line"></span><br><span class="line">    log_format  main  <span class="string">&#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;</span></span><br><span class="line">                      <span class="string">&#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span></span><br><span class="line">                      <span class="string">&#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;</span>;</span><br><span class="line"></span><br><span class="line">    access_log  /var/<span class="built_in">log</span>/nginx/access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile        on;</span><br><span class="line">    <span class="comment">#tcp_nopush     on;</span></span><br><span class="line"></span><br><span class="line">    keepalive_timeout  65;</span><br><span class="line"></span><br><span class="line">    <span class="comment">#gzip  on;</span></span><br><span class="line"></span><br><span class="line">    include /etc/nginx/conf.d/*.conf;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><ul>
+<li>配置文件由指令与指令块构成</li>
+<li>每条指令以;分号结尾，指令与参数间以空格符合分割</li>
+<li>指令块以{} 大括号将多条指令组织在一起</li>
+<li>include 语句允许组合多个配置文件以提升可维护性</li>
+<li>使用 # 符号添加注释，提高可读性</li>
+<li>使用 $ 符号使用变量</li>
+<li>部分指令的参数支持正则表达式</li>
+</ul>
+<h4 id="nginx配置构成"><a href="#nginx配置构成" class="headerlink" title="nginx配置构成"></a>nginx配置构成</h4><ul>
+<li><p>全局块</p>
+<p>从配置文件开始到events之间的模块配置，配置影响nginx全局的指令。一般有运行nginx服务器的用户组，nginx进程pid存放路径，日志存放路径，配置文件引入，允许生成worker process数等。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">user</span><br><span class="line">work_process: auto | 4;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>events</p>
+<p>events 主要影响 nginx 服务器与用户网络的链接。有每个进程的最大连接数，选取哪种事件驱动模型处理连接请求，是否允许同时接受多个网路连接，开启多个网络连接序列化等</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">events &#123;</span><br><span class="line">  use epoll;</span><br><span class="line">  work_connections 65535;</span><br><span class="line">  <span class="comment"># ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>http</p>
+<p>nginx中配置最频繁的部分。可以嵌套多个server，配置代理，缓存，日志定义等绝大多数功能和第三方模块的配置。</p>
+<p>http分为全局块，server 块。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">  include       mime.types;</span><br><span class="line">  default_type  application/octet-stream;</span><br><span class="line">  upstream node_cluster &#123;</span><br><span class="line">    server 10.16.48.158:8080;</span><br><span class="line">    server 10.16.48.158:8081;</span><br><span class="line">    server 10.16.48.158:8082;</span><br><span class="line">  &#125;</span><br><span class="line">  server &#123;</span><br><span class="line">    server_name docker.test;</span><br><span class="line">    listen 80;</span><br><span class="line">    index index.html index.htm;</span><br><span class="line">    root /apps/;</span><br><span class="line">    location ~ /docker/ &#123;</span><br><span class="line">      proxy_pass http://node_cluster;</span><br><span class="line">      proxy_http_version 1.1;</span><br><span class="line">      proxy_set_header Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line">      proxy_set_header Connection <span class="string">&#x27;upgrade&#x27;</span>;</span><br><span class="line">      proxy_set_header Host <span class="variable">$host</span>;</span><br><span class="line">      proxy_cache_bypass <span class="variable">$http_upgrade</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    access_log  /var/<span class="built_in">log</span>/nginx/docker.test.log;</span><br><span class="line">    error_log  /var/<span class="built_in">log</span>/nginx/docker.test.error.log;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="http模块配置"><a href="#http模块配置" class="headerlink" title="http模块配置"></a>http模块配置</h4><h3 id="nginx负载均衡的几种方法"><a href="#nginx负载均衡的几种方法" class="headerlink" title="nginx负载均衡的几种方法"></a>nginx负载均衡的几种方法</h3><h4 id="轮询-round-robin"><a href="#轮询-round-robin" class="headerlink" title="轮询(round-robin)"></a>轮询(round-robin)</h4><p>每个请求按时间顺序逐一分配到不同的后端服务器，如果后端服务器down掉，能自动剔除</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">upstream node_cluster &#123;</span><br><span class="line">    server 10.16.48.158:8080;</span><br><span class="line">    server 10.16.48.158:8081;</span><br><span class="line">    server 10.16.48.158:8082;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">    ...</span><br><span class="line">    location ~ /docker/ &#123;</span><br><span class="line">        proxy_pass http://node_cluster;</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="加权轮询"><a href="#加权轮询" class="headerlink" title="加权轮询"></a>加权轮询</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">upstream node_cluster &#123;</span><br><span class="line">    server 10.16.48.158:8080 weight&#x3D;2;</span><br><span class="line">    server 10.16.48.158:8081 weight&#x3D;1;</span><br><span class="line">    server 10.16.48.158:8082 weight&#x3D;1;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">    ...</span><br><span class="line">    root &#x2F;apps&#x2F;;</span><br><span class="line">    location ~ &#x2F;docker&#x2F; &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;node_cluster;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="ip-hash"><a href="#ip-hash" class="headerlink" title="ip-hash"></a>ip-hash</h4><p>根据每个请求的ip的hash结果分配，因此每个固定ip能访问到同一个后端服务器，可以解决session问题。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">upstream node_cluster &#123;</span><br><span class="line">    ip_hash;</span><br><span class="line">    server 10.16.48.158:8080;</span><br><span class="line">    server 10.16.48.158:8081;</span><br><span class="line">    server 10.16.48.158:8082;</span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">    ...</span><br><span class="line">    root &#x2F;apps&#x2F;;</span><br><span class="line">    location ~ &#x2F;docker&#x2F; &#123;</span><br><span class="line">        proxy_pass http:&#x2F;&#x2F;node_cluster;</span><br><span class="line">        ...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="热备"><a href="#热备" class="headerlink" title="热备"></a>热备</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">upstream node_cluster &#123;</span><br><span class="line">    ip_hash;</span><br><span class="line">    server 10.16.48.158:8080;</span><br><span class="line">    server 10.16.48.158:8081;</span><br><span class="line">    server 10.16.48.158:8082 back;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="其他的一些方式"><a href="#其他的一些方式" class="headerlink" title="其他的一些方式"></a>其他的一些方式</h4><ul>
+<li><p>fair（第三方）</p>
+<p>按照后端服务器的响应时间来分配请求，响应时间短的优先分配。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">upstream favresin&#123;</span><br><span class="line">    server 10.0.0.10:8080;</span><br><span class="line">    server 10.0.0.11:8080;</span><br><span class="line">    fair;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>url_hash（第三方）</p>
+<p>按访问url的hash结果来分配请求，使每个url定向到同一个后端服务器，后端服务器为缓存时比较有效。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">upstream resinserver&#123;</span><br><span class="line">    server 10.0.0.10:7777;</span><br><span class="line">    server 10.0.0.11:8888;</span><br><span class="line">    <span class="built_in">hash</span> <span class="variable">$request_uri</span>;</span><br><span class="line">    hash_method crc32;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="参数解释"><a href="#参数解释" class="headerlink" title="参数解释"></a>参数解释</h4></li>
+<li><p>down，表示当前的server暂时不参与负载均衡。</p>
+</li>
+<li><p>backup，预留的备份机器。当其他所有的非backup机器出现故障或者忙的时候，才会请求backup机器，因此这台机器的压力最轻。</p>
+</li>
+<li><p>max_fails，允许请求失败的次数，默认为1。当超过最大次数时，返回proxy_next_upstream 模块定义的错误。</p>
+</li>
+<li><p>fail_timeout，请求失败超时时间，在经历了max_fails次失败后，暂停服务的时间。max_fails和fail_timeout可以一起使用</p>
+</li>
+</ul>
+<p><em>参考</em></p>
+<ul>
+<li><a href="https://www.nginx.cn/doc/">nginx中文文档</a></li>
+<li><a href="http://tengine.taobao.org/book/index.html#">Nginx开发从入门到精通</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1418457">终于有人把正向代理和反向代理解释的明明白白了</a></li>
+<li><a href="https://www.cnblogs.com/lvgg/p/6140584.html">nignx 负载均衡的几种算法介绍</a></li>
+<li><a href="https://www.cnblogs.com/sunsky303/p/11865321.html">hash 算法原理及应用漫谈</a></li>
+<li><a href="http://nginx.org/en/docs/varindex.html">Alphabetical index of variables</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Nginx</category>
+      </categories>
+      <tags>
+        <tag>Nginx</tag>
       </tags>
   </entry>
   <entry>
