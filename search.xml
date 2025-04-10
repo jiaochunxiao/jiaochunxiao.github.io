@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>如何得到你想要的table？</title>
+    <url>/2016/01/04/20160104/</url>
+    <content><![CDATA[<p>关于table，你也许会吐槽：table元素会使浏览器解析页面速读变慢，延迟页面渲染速度等等。但是呢，吐槽归吐槽，table在数据表格的展现中，仍是最合理的方式之一。尤其在MIS系统中，table的用处基本是每个页面都需要的。在数据长度不一致的情况下，如何得到你想要的表格布局呢？<span id="more"></span></p>
+<h2 id="关于table-layout"><a href="#关于table-layout" class="headerlink" title="关于table-layout"></a>关于table-layout</h2><p>来举个栗子：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">html</span>,<span class="selector-tag">body</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">font-family</span>: <span class="string">&#x27;Microsoft Yahei&#x27;</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.table</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">width</span>: <span class="number">1050px</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">margin</span>: <span class="number">50px</span> auto;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#ccc</span> solid;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">line-height</span>: <span class="number">30px</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">border-collapse</span>: collapse;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.table</span> <span class="selector-tag">th</span>,</span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.table</span> <span class="selector-tag">td</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#ccc</span> solid;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">width</span>: <span class="number">10%</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">&#x27;table&#x27;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Age<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Class<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Address<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Telphone<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Age<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Class<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Address<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Telphone<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果如图下图：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table1.png"><br>我擦嘞，说好的单元格10%呢，address和telphone怎么都撑开了？<br>这个时候，table-layout就要展示它的能力了。<br>table-layout: automatic|fixed|inherit<br>-table-layout: automatic, 默认值，列宽有单元格的内容宽度决定(碰上一长串的数字，表格看起来简直是灾难).<br>-table-layout: fixed, 列宽有表格宽度和单元格宽度的设定值展现(你想要的，就在这里).<br>-table-layout: inherit, 从父元素继承 table-layout 属性的值.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table&#123;</span><br><span class="line">	width: 800px;</span><br><span class="line">	margin: 50px auto;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	line-height: 30px;</span><br><span class="line">	border-collapse: collapse;</span><br><span class="line">	table-layout: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果图来了，<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table2.png"><br>每个单元格终于乖乖的实现了10%，但是呢，这些字怎么跑出来了啊？咱们继续看！</p>
+<h2 id="word-wrap和word-break"><a href="#word-wrap和word-break" class="headerlink" title="word-wrap和word-break"></a>word-wrap和word-break</h2><p>单元格宽度就那么宽，当内容太多时，文本溢出了，该怎么办呢？换行呗！咱们看下这两个属性：<em>word-wrap</em>和<em>word-break</em>。<br>-word-wrap: 告诉浏览器是否允许它在单词内断句，防止一个字符串太长，无法找到自然断点而产生溢出现象(是不是又想起来上面的table了)。<br>-word-break: 可以让浏览器实现在任意位置的换行。</p>
+<p><strong>word-wrap</strong>:<strong>normal</strong>(只在允许的断字点换行,浏览器保持默认处理)|<strong>break-word</strong>(在长单词或 URL 地址内部进行换行)</p>
+<p>来实践一下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table th,</span><br><span class="line">.table td&#123;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	text-align: center;</span><br><span class="line">	width: 10%;</span><br><span class="line">	word-wrap: break-word;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>效果来了：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table3.png"><br>我们可以看到允许单词内换行，Northwest和Washington，均为单词内换行。</p>
+<p>如果我们不想长单词被在词内换行呢？</p>
+<p><strong>word-break</strong>:<strong>normal</strong>(浏览器保持默认处理)|<strong>break-all</strong>(允许在单词内换行)|<strong>keep-all</strong>(只能在半角空格或连字符处换行)</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table th,</span><br><span class="line">.table td&#123;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	text-align: center;</span><br><span class="line">	width: 10%;</span><br><span class="line">	word-break: keep-all;</span><br><span class="line">	word-wrap: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>大功告成：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table4.png"></p>
+]]></content>
+      <categories>
+        <category>css</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(二) -- cd</title>
     <url>/2016/04/13/20160413/</url>
     <content><![CDATA[<h2 id="第二条linux命令-cd"><a href="#第二条linux命令-cd" class="headerlink" title="第二条linux命令: cd"></a>第二条linux命令: cd</h2><p>相信大家对 cd 这个命令，应该是再熟悉不过的了， cd 命令可以说是linux中最基本的命令了。下面就介绍下关于 cd 命令的相关知识。</p>
@@ -27,32 +53,6 @@
       </categories>
       <tags>
         <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何得到你想要的table？</title>
-    <url>/2016/01/04/20160104/</url>
-    <content><![CDATA[<p>关于table，你也许会吐槽：table元素会使浏览器解析页面速读变慢，延迟页面渲染速度等等。但是呢，吐槽归吐槽，table在数据表格的展现中，仍是最合理的方式之一。尤其在MIS系统中，table的用处基本是每个页面都需要的。在数据长度不一致的情况下，如何得到你想要的表格布局呢？<span id="more"></span></p>
-<h2 id="关于table-layout"><a href="#关于table-layout" class="headerlink" title="关于table-layout"></a>关于table-layout</h2><p>来举个栗子：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">html</span>,<span class="selector-tag">body</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">width</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">height</span>: <span class="number">100%</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">padding</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">margin</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">font-family</span>: <span class="string">&#x27;Microsoft Yahei&#x27;</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.table</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">width</span>: <span class="number">1050px</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">margin</span>: <span class="number">50px</span> auto;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#ccc</span> solid;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">line-height</span>: <span class="number">30px</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">border-collapse</span>: collapse;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.table</span> <span class="selector-tag">th</span>,</span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.table</span> <span class="selector-tag">td</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">border</span>: <span class="number">1px</span> <span class="number">#ccc</span> solid;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">text-align</span>: center;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">width</span>: <span class="number">10%</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">table</span> <span class="attr">class</span>=<span class="string">&#x27;table&#x27;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Age<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Class<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Address<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Telphone<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Name<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Age<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Class<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Address<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">th</span>&gt;</span>Telphone<span class="tag">&lt;/<span class="name">th</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>Jim Green<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>12<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span> Class Two, Grade Three<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>2025 M Street, Northwest, Washington, DC<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">td</span>&gt;</span>18511860000<span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>效果如图下图：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table1.png"><br>我擦嘞，说好的单元格10%呢，address和telphone怎么都撑开了？<br>这个时候，table-layout就要展示它的能力了。<br>table-layout: automatic|fixed|inherit<br>-table-layout: automatic, 默认值，列宽有单元格的内容宽度决定(碰上一长串的数字，表格看起来简直是灾难).<br>-table-layout: fixed, 列宽有表格宽度和单元格宽度的设定值展现(你想要的，就在这里).<br>-table-layout: inherit, 从父元素继承 table-layout 属性的值.</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table&#123;</span><br><span class="line">	width: 800px;</span><br><span class="line">	margin: 50px auto;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	line-height: 30px;</span><br><span class="line">	border-collapse: collapse;</span><br><span class="line">	table-layout: fixed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果图来了，<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table2.png"><br>每个单元格终于乖乖的实现了10%，但是呢，这些字怎么跑出来了啊？咱们继续看！</p>
-<h2 id="word-wrap和word-break"><a href="#word-wrap和word-break" class="headerlink" title="word-wrap和word-break"></a>word-wrap和word-break</h2><p>单元格宽度就那么宽，当内容太多时，文本溢出了，该怎么办呢？换行呗！咱们看下这两个属性：<em>word-wrap</em>和<em>word-break</em>。<br>-word-wrap: 告诉浏览器是否允许它在单词内断句，防止一个字符串太长，无法找到自然断点而产生溢出现象(是不是又想起来上面的table了)。<br>-word-break: 可以让浏览器实现在任意位置的换行。</p>
-<p><strong>word-wrap</strong>:<strong>normal</strong>(只在允许的断字点换行,浏览器保持默认处理)|<strong>break-word</strong>(在长单词或 URL 地址内部进行换行)</p>
-<p>来实践一下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table th,</span><br><span class="line">.table td&#123;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	text-align: center;</span><br><span class="line">	width: 10%;</span><br><span class="line">	word-wrap: break-word;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>效果来了：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table3.png"><br>我们可以看到允许单词内换行，Northwest和Washington，均为单词内换行。</p>
-<p>如果我们不想长单词被在词内换行呢？</p>
-<p><strong>word-break</strong>:<strong>normal</strong>(浏览器保持默认处理)|<strong>break-all</strong>(允许在单词内换行)|<strong>keep-all</strong>(只能在半角空格或连字符处换行)</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">.table th,</span><br><span class="line">.table td&#123;</span><br><span class="line">	border: 1px #ccc solid;</span><br><span class="line">	text-align: center;</span><br><span class="line">	width: 10%;</span><br><span class="line">	word-break: keep-all;</span><br><span class="line">	word-wrap: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>大功告成：<br><img src="http://7xprrp.com1.z0.glb.clouddn.com/table4.png"></p>
-]]></content>
-      <categories>
-        <category>css</category>
-      </categories>
-      <tags>
-        <tag>css</tag>
       </tags>
   </entry>
   <entry>
@@ -111,6 +111,26 @@
       </tags>
   </entry>
   <entry>
+    <title>linux常用命令学习(四) -- pwd</title>
+    <url>/2016/04/15/20160415/</url>
+    <content><![CDATA[<h2 id="第四条linux命令-pwd"><a href="#第四条linux命令-pwd" class="headerlink" title="第四条linux命令: pwd"></a>第四条linux命令: pwd</h2><p>已经熟悉了 cd , ls , mkdir 命令，如果我们想知道当前所在目录的路径是怎样，怎么办呢？linux用 pwd 命令来查看，当前目录的完整路径。</p>
+<span id="more"></span>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>pwd [选项]</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><p>一般情况下, pwd 命令不带任何参数。对于目录是链接时，使用 pwd -P 显示出实际路径。</p>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>pwd <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]# <span class="built_in">mkdir</span> -p parent/child/</span><br><span class="line">[root@kvm45072 ~]# <span class="built_in">cd</span>  parent/child/</span><br><span class="line">[root@kvm45072 child]# <span class="built_in">pwd</span></span><br><span class="line">/root/parent/child</span><br><span class="line">[root@kvm45072 child]# ^C</span><br><span class="line">[root@kvm45072 child]# </span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(五) -- rm</title>
     <url>/2016/04/16/20160416/</url>
     <content><![CDATA[<h2 id="第五条linux命令-rm"><a href="#第五条linux命令-rm" class="headerlink" title="第五条linux命令: rm"></a>第五条linux命令: rm</h2><p>今天要学的是一个危险的命令 – rm 。Linux rm 命令用于删除文件和目录， 可以删除一个目录中的一个或多个文件或目录。也可以将某个目录及其目录内的所有文件及子目录删除。对于链接文件，只删除链接，而原有文件不变。</p>
@@ -149,26 +169,6 @@
 </tr>
 </tbody></table>
 <h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3>]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux常用命令学习(四) -- pwd</title>
-    <url>/2016/04/15/20160415/</url>
-    <content><![CDATA[<h2 id="第四条linux命令-pwd"><a href="#第四条linux命令-pwd" class="headerlink" title="第四条linux命令: pwd"></a>第四条linux命令: pwd</h2><p>已经熟悉了 cd , ls , mkdir 命令，如果我们想知道当前所在目录的路径是怎样，怎么办呢？linux用 pwd 命令来查看，当前目录的完整路径。</p>
-<span id="more"></span>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>pwd [选项]</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><p>一般情况下, pwd 命令不带任何参数。对于目录是链接时，使用 pwd -P 显示出实际路径。</p>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>pwd <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]# <span class="built_in">mkdir</span> -p parent/child/</span><br><span class="line">[root@kvm45072 ~]# <span class="built_in">cd</span>  parent/child/</span><br><span class="line">[root@kvm45072 child]# <span class="built_in">pwd</span></span><br><span class="line">/root/parent/child</span><br><span class="line">[root@kvm45072 child]# ^C</span><br><span class="line">[root@kvm45072 child]# </span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-]]></content>
       <categories>
         <category>linux</category>
       </categories>
@@ -305,6 +305,52 @@
       </tags>
   </entry>
   <entry>
+    <title>linux常用命令学习(十) -- nl</title>
+    <url>/2016/05/24/20160524/</url>
+    <content><![CDATA[<p> linux关于文件行号显示，cat / nl 命令均可以实现，但nl 可以将行号做比较多的显示设计，包括位数与是否自动补齐 0 等等的功能。<span id="more"></span></p>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>nl [选项] [文件]</p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-b</td>
+<td align="center">-b指定行号显示有两种显示结果：-b a 无论是否为空行，均显示行号(类似 cat -n); -b -t 仅对非空行号显示，空白行不标记行号</td>
+</tr>
+<tr>
+<td>-n</td>
+<td align="center">-n ln 行号在行号栏最左方显示；-n rn 行号在行号栏最右方显示,且不加0；-n rz 行号在行号栏最右方显示,且加0</td>
+</tr>
+<tr>
+<td>-w</td>
+<td align="center">行号栏占用位数</td>
+</tr>
+<tr>
+<td>-p</td>
+<td align="center">在逻辑定界符处不重新开始计算</td>
+</tr>
+</tbody></table>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
+<li>nl -b a 无论是否为空行，均显示行号<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a demo1.log</span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">     5</span><br><span class="line">     6  test</span><br><span class="line">     7</span><br><span class="line">     8  demo1</span><br><span class="line">     9  demo1</span><br><span class="line">    10  demo</span><br><span class="line">    11  d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -b t 仅对非空行号显示，空白行不标记行号<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b t demo1.log</span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">       </span><br><span class="line">     5  test</span><br><span class="line">       </span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -n ln 行号在行号栏最左方显示<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n ln demo1.log </span><br><span class="line">1       this is demo1.log</span><br><span class="line">2       this is demo1.log</span><br><span class="line">3       test</span><br><span class="line">4       test</span><br><span class="line">       </span><br><span class="line">5       test</span><br><span class="line">       </span><br><span class="line">6       demo1</span><br><span class="line">7       demo1</span><br><span class="line">8       demo</span><br><span class="line">9       d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -n rn 行号在行号栏最右方显示,且不加0<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n rn demo1.log </span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">       </span><br><span class="line">     5  test</span><br><span class="line">       </span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -n rz 行号在行号栏最右方显示,且加0<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n rz demo1.log </span><br><span class="line">000001  this is demo1.log</span><br><span class="line">000002  this is demo1.log</span><br><span class="line">000003  test</span><br><span class="line">000004  test</span><br><span class="line">       </span><br><span class="line">000005  test</span><br><span class="line">       </span><br><span class="line">000006  demo1</span><br><span class="line">000007  demo1</span><br><span class="line">000008  demo</span><br><span class="line">000009  d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -b a -n rz <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a -n rz demo1.log </span><br><span class="line">000001  this is demo1.log</span><br><span class="line">000002  this is demo1.log</span><br><span class="line">000003  test</span><br><span class="line">000004  test</span><br><span class="line">000005</span><br><span class="line">000006  test</span><br><span class="line">000007</span><br><span class="line">000008  demo1</span><br><span class="line">000009  demo1</span><br><span class="line">000010  demo</span><br><span class="line">000011  d:</span><br></pre></td></tr></table></figure></li>
+<li>nl -b a -n rz -w 行号显示位数<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a -n rz -w 3 demo1.log </span><br><span class="line">001     this is demo1.log</span><br><span class="line">002     this is demo1.log</span><br><span class="line">003     test</span><br><span class="line">004     test</span><br><span class="line">005</span><br><span class="line">006     test</span><br><span class="line">007</span><br><span class="line">008     demo1</span><br><span class="line">009     demo1</span><br><span class="line">010     demo</span><br><span class="line">011     d:</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>linux常用命令学习(九) -- cat</title>
     <url>/2016/04/20/20160420/</url>
     <content><![CDATA[<p>cat，全称为concatenate files and print on the standard output，主要作用为：查看文件内容，也可以给文件追加内容到结尾。 <span id="more"></span></p>
@@ -362,52 +408,6 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# <span class="built_in">cat</span> &gt;log.txt &lt;&lt;<span class="string">EOF</span></span><br><span class="line"><span class="string">&gt; HELLO</span></span><br><span class="line"><span class="string">&gt; WORLD</span></span><br><span class="line"><span class="string">&gt; PWD=$(pwd)</span></span><br><span class="line"><span class="string">&gt; test</span></span><br><span class="line"><span class="string">&gt; EOF</span></span><br><span class="line">[root@kvm45072 demo1]# <span class="built_in">ls</span> -l log.txt</span><br><span class="line">-rw-r--r--. 1 root root 39 May  4 14:14 log.txt</span><br><span class="line">[root@kvm45072 demo1]# <span class="built_in">cat</span> log.txt</span><br><span class="line">HELLO</span><br><span class="line">WORLD</span><br><span class="line">PWD=/root/linux/demo1</span><br><span class="line"><span class="built_in">test</span></span><br><span class="line">[root@kvm45072 demo1]# </span><br></pre></td></tr></table></figure>
 
-]]></content>
-      <categories>
-        <category>linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>linux常用命令学习(十) -- nl</title>
-    <url>/2016/05/24/20160524/</url>
-    <content><![CDATA[<p> linux关于文件行号显示，cat / nl 命令均可以实现，但nl 可以将行号做比较多的显示设计，包括位数与是否自动补齐 0 等等的功能。<span id="more"></span></p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p>nl [选项] [文件]</p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-b</td>
-<td align="center">-b指定行号显示有两种显示结果：-b a 无论是否为空行，均显示行号(类似 cat -n); -b -t 仅对非空行号显示，空白行不标记行号</td>
-</tr>
-<tr>
-<td>-n</td>
-<td align="center">-n ln 行号在行号栏最左方显示；-n rn 行号在行号栏最右方显示,且不加0；-n rz 行号在行号栏最右方显示,且加0</td>
-</tr>
-<tr>
-<td>-w</td>
-<td align="center">行号栏占用位数</td>
-</tr>
-<tr>
-<td>-p</td>
-<td align="center">在逻辑定界符处不重新开始计算</td>
-</tr>
-</tbody></table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><ul>
-<li>nl -b a 无论是否为空行，均显示行号<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a demo1.log</span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">     5</span><br><span class="line">     6  test</span><br><span class="line">     7</span><br><span class="line">     8  demo1</span><br><span class="line">     9  demo1</span><br><span class="line">    10  demo</span><br><span class="line">    11  d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -b t 仅对非空行号显示，空白行不标记行号<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b t demo1.log</span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">       </span><br><span class="line">     5  test</span><br><span class="line">       </span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -n ln 行号在行号栏最左方显示<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n ln demo1.log </span><br><span class="line">1       this is demo1.log</span><br><span class="line">2       this is demo1.log</span><br><span class="line">3       test</span><br><span class="line">4       test</span><br><span class="line">       </span><br><span class="line">5       test</span><br><span class="line">       </span><br><span class="line">6       demo1</span><br><span class="line">7       demo1</span><br><span class="line">8       demo</span><br><span class="line">9       d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -n rn 行号在行号栏最右方显示,且不加0<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n rn demo1.log </span><br><span class="line">     1  this is demo1.log</span><br><span class="line">     2  this is demo1.log</span><br><span class="line">     3  test</span><br><span class="line">     4  test</span><br><span class="line">       </span><br><span class="line">     5  test</span><br><span class="line">       </span><br><span class="line">     6  demo1</span><br><span class="line">     7  demo1</span><br><span class="line">     8  demo</span><br><span class="line">     9  d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -n rz 行号在行号栏最右方显示,且加0<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -n rz demo1.log </span><br><span class="line">000001  this is demo1.log</span><br><span class="line">000002  this is demo1.log</span><br><span class="line">000003  test</span><br><span class="line">000004  test</span><br><span class="line">       </span><br><span class="line">000005  test</span><br><span class="line">       </span><br><span class="line">000006  demo1</span><br><span class="line">000007  demo1</span><br><span class="line">000008  demo</span><br><span class="line">000009  d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -b a -n rz <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a -n rz demo1.log </span><br><span class="line">000001  this is demo1.log</span><br><span class="line">000002  this is demo1.log</span><br><span class="line">000003  test</span><br><span class="line">000004  test</span><br><span class="line">000005</span><br><span class="line">000006  test</span><br><span class="line">000007</span><br><span class="line">000008  demo1</span><br><span class="line">000009  demo1</span><br><span class="line">000010  demo</span><br><span class="line">000011  d:</span><br></pre></td></tr></table></figure></li>
-<li>nl -b a -n rz -w 行号显示位数<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 demo1]# nl -b a -n rz -w 3 demo1.log </span><br><span class="line">001     this is demo1.log</span><br><span class="line">002     this is demo1.log</span><br><span class="line">003     test</span><br><span class="line">004     test</span><br><span class="line">005</span><br><span class="line">006     test</span><br><span class="line">007</span><br><span class="line">008     demo1</span><br><span class="line">009     demo1</span><br><span class="line">010     demo</span><br><span class="line">011     d:</span><br></pre></td></tr></table></figure></li>
-</ul>
 ]]></content>
       <categories>
         <category>linux</category>
@@ -1271,6 +1271,35 @@ cookie的读取、写入和删除。</li>
       </tags>
   </entry>
   <entry>
+    <title>JavaScript高级程序设计笔记(8)-函数表达式</title>
+    <url>/2016/11/09/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-8/</url>
+    <content><![CDATA[<p>定义函数有两种方式：函数声明和函数表达式。<br>函数声明：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">functionName</span>(<span class="params">arg0, arg1, ...</span>)&#123;</span><br><span class="line">	<span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>函数声明，一个重要特征是<strong>函数声明提升（function declaration hoisting）</strong>，在执行代码之前会先读取声明。意味着可以把函数声明放在调用它的语句后面。<span id="more"></span></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">sayHi</span>();</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sayHi</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="title function_">alert</span>(<span class="string">&#x27;Hi!&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>函数表达式：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> functionName = <span class="keyword">function</span>(<span class="params"></span>)(<span class="params">arg0, arg1, ...</span>)&#123;</span><br><span class="line">	<span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>形式类似常规的变量赋值语句，即创建一个函数并将它赋值给变量functionName。这种情况下创建的函数叫做匿名函数（anonymous function)，因为function关键字后面灭有标识符。<br>函数表达式与其他表达式一样，在使用前必须先赋值。</p>
+<p>理解函数提升的关键就是理解函数声明与函数表达式之间的区别。</p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">factorial</span>(<span class="params">num</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span>(num &lt; <span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> num * <span class="title function_">factorial</span>(num -<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//解耦</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">factorial</span>(<span class="params">num</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span>(num &lt; <span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> num * <span class="variable language_">arguments</span>.<span class="title function_">callee</span>(num - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用arguments.callee虽然能够解耦，但是在严格模式下，访问这个属性会导致错误。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> factorial = (<span class="keyword">function</span> <span class="title function_">f</span>(<span class="params">num</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span>(num &lt; <span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> num * <span class="title function_">f</span>(num - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>上述代码创建了一个名为f()的命名函数表达式，然后将它赋值给变量factorial。即便把函数赋值给另一个变量，函数的名字f仍然有效，所以递归调用照样能正确完成。</p>
+<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p><strong>闭包，是值有权访问另一个函数作用域中的变量的函数。</strong>创建闭包的常见方式，就是在一个函数内部创建另一个函数。</p>
+<h3 id="闭包与变量"><a href="#闭包与变量" class="headerlink" title="闭包与变量"></a>闭包与变量</h3><p>作用域链的配置机制，会引出一个副作用，即闭包只能取得包含函数中任何变量的最后一个值。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">createFunctions</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> result = <span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)&#123;</span><br><span class="line">		result[i] = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="私有变量"><a href="#私有变量" class="headerlink" title="私有变量"></a>私有变量</h2><p>严格讲，Javascript中没有私有成员概念。但有私有变量的概念。任何定义在函数中的变量，都可以认为是私有变量，因为函数外部不能访问这些变量。</p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript高级程序设计笔记(7)-面向对象的程序设计</title>
     <url>/2016/11/07/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-7/</url>
     <content><![CDATA[<p>ECMA-262定义对象：</p>
@@ -1337,35 +1366,6 @@ cookie的读取、写入和删除。</li>
 <h3 id="原型式继承"><a href="#原型式继承" class="headerlink" title="原型式继承"></a>原型式继承</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">object</span>(<span class="params">o</span>)&#123;</span><br><span class="line">	<span class="keyword">function</span> <span class="title function_">F</span>(<span class="params"></span>)&#123;&#125;;</span><br><span class="line">	F.<span class="property"><span class="keyword">prototype</span></span> = o;</span><br><span class="line">	<span class="keyword">return</span> <span class="keyword">new</span> <span class="title function_">F</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">	<span class="attr">name</span>: <span class="string">&#x27;fe&#x27;</span>,</span><br><span class="line">	<span class="attr">friends</span>: [<span class="string">&#x27;js&#x27;</span>,<span class="string">&#x27;html&#x27;</span>, <span class="string">&#x27;css&#x27;</span>]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> anotherPerson = <span class="title function_">object</span>(person);</span><br><span class="line">anotherPerson.<span class="property">name</span> = <span class="string">&#x27;hello&#x27;</span>;</span><br><span class="line">anotherPerson.<span class="property">friends</span>.<span class="title function_">push</span>(<span class="string">&#x27;java&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> yetAnotherPerson = <span class="title function_">object</span>(person);</span><br><span class="line">yetAnotherPerson.<span class="property">name</span> = <span class="string">&#x27;world&#x27;</span>;</span><br><span class="line">yetAnotherPerson.<span class="property">friends</span>.<span class="title function_">push</span>(<span class="string">&#x27;node&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="title function_">alert</span>(person.<span class="property">friends</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="寄生式继承"><a href="#寄生式继承" class="headerlink" title="寄生式继承"></a>寄生式继承</h3><h3 id="寄生组合式继承"><a href="#寄生组合式继承" class="headerlink" title="寄生组合式继承"></a>寄生组合式继承</h3>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript高级程序设计笔记(8)-函数表达式</title>
-    <url>/2016/11/09/JavaScript%E9%AB%98%E7%BA%A7%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0-8/</url>
-    <content><![CDATA[<p>定义函数有两种方式：函数声明和函数表达式。<br>函数声明：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">functionName</span>(<span class="params">arg0, arg1, ...</span>)&#123;</span><br><span class="line">	<span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>函数声明，一个重要特征是<strong>函数声明提升（function declaration hoisting）</strong>，在执行代码之前会先读取声明。意味着可以把函数声明放在调用它的语句后面。<span id="more"></span></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">sayHi</span>();</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sayHi</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="title function_">alert</span>(<span class="string">&#x27;Hi!&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>函数表达式：</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> functionName = <span class="keyword">function</span>(<span class="params"></span>)(<span class="params">arg0, arg1, ...</span>)&#123;</span><br><span class="line">	<span class="comment">//函数体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>形式类似常规的变量赋值语句，即创建一个函数并将它赋值给变量functionName。这种情况下创建的函数叫做匿名函数（anonymous function)，因为function关键字后面灭有标识符。<br>函数表达式与其他表达式一样，在使用前必须先赋值。</p>
-<p>理解函数提升的关键就是理解函数声明与函数表达式之间的区别。</p>
-<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">factorial</span>(<span class="params">num</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span>(num &lt; <span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> num * <span class="title function_">factorial</span>(num -<span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//解耦</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">factorial</span>(<span class="params">num</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span>(num &lt; <span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> num * <span class="variable language_">arguments</span>.<span class="title function_">callee</span>(num - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>使用arguments.callee虽然能够解耦，但是在严格模式下，访问这个属性会导致错误。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> factorial = (<span class="keyword">function</span> <span class="title function_">f</span>(<span class="params">num</span>)&#123;</span><br><span class="line">	<span class="keyword">if</span>(num &lt; <span class="number">1</span>)&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		<span class="keyword">return</span> num * <span class="title function_">f</span>(num - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>上述代码创建了一个名为f()的命名函数表达式，然后将它赋值给变量factorial。即便把函数赋值给另一个变量，函数的名字f仍然有效，所以递归调用照样能正确完成。</p>
-<h2 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h2><p><strong>闭包，是值有权访问另一个函数作用域中的变量的函数。</strong>创建闭包的常见方式，就是在一个函数内部创建另一个函数。</p>
-<h3 id="闭包与变量"><a href="#闭包与变量" class="headerlink" title="闭包与变量"></a>闭包与变量</h3><p>作用域链的配置机制，会引出一个副作用，即闭包只能取得包含函数中任何变量的最后一个值。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">createFunctions</span>(<span class="params"></span>)&#123;</span><br><span class="line">	<span class="keyword">var</span> result = <span class="keyword">new</span> <span class="title class_">Array</span>();</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++)&#123;</span><br><span class="line">		result[i] = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">			<span class="keyword">return</span> i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="私有变量"><a href="#私有变量" class="headerlink" title="私有变量"></a>私有变量</h2><p>严格讲，Javascript中没有私有成员概念。但有私有变量的概念。任何定义在函数中的变量，都可以认为是私有变量，因为函数外部不能访问这些变量。</p>
-]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -2857,25 +2857,6 @@ MongoDB的一些基本概念：
       </tags>
   </entry>
   <entry>
-    <title>Node.js开发调试工具——node-inspector</title>
-    <url>/2016/10/08/Node-js%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94node-inspector/</url>
-    <content><![CDATA[<p>当前端开发者使用Node.js开发时，是否想如果Node.js能够像Web开发时在浏览器进行js调试，那该有多好啊？node-inspector为你实现了这个功能。下面我们就看下如何应用。<span id="more"></span></p>
-<h2 id="node-inspector"><a href="#node-inspector" class="headerlink" title="node-inspector"></a>node-inspector</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g node-inspector</span><br></pre></td></tr></table></figure>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>先执行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node --debug app.js</span><br></pre></td></tr></table></figure>
-<p>再执行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node-inspector --web-port=&#123;port&#125; //输入端口号</span><br><span class="line">//示例</span><br><span class="line">➜  nodeWeb node-inspector --web-port=3003</span><br><span class="line">Node Inspector v0.12.8</span><br><span class="line">Visit http://127.0.0.1:3003/?port=5858 to start debugging.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>访问 <a href="http://127.0.0.1:3003/?port=5858">http://127.0.0.1:3003/?port=5858</a> ,即可在浏览器调试Node.js代码了。</p>
-<p>现在可以方便愉悦的开发Node.js应用了。</p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>Node.js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Node.js文件基本操作</title>
     <url>/2016/09/18/Node-js%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h1 id="Node-js文件基本操作"><a href="#Node-js文件基本操作" class="headerlink" title="Node.js文件基本操作"></a>Node.js文件基本操作</h1><p>关于Node.js的文件操作，首先我们从利用Node.js实现文件拷贝的例子说起：</p>
@@ -2910,6 +2891,25 @@ MongoDB的一些基本概念：
 </blockquote>
 <h2 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h2><p>在实际应用程序中，一旦打开某个文件，最后就必须关闭它。为此，必须跟踪那些已经打开的文件的描述符，在最后不再需要它们的时候，使用fs.close(fd[,callback])关闭它们。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var fs = require(&#x27;fs&#x27;);</span><br><span class="line">fs.open(&#x27;./info.txt&#x27;,&#x27;a&#x27;, function(err, fd)&#123;</span><br><span class="line">	if(err) throw err;</span><br><span class="line">	function notifyErr(err)&#123;</span><br><span class="line">		fs.close(fd, function()&#123; console.log(&#x27;关闭文档&#x27;)&#125;);</span><br><span class="line">	&#125;</span><br><span class="line">	var writeBuffer = new Buffer(&#x27;测试写入数据&#x27;),</span><br><span class="line">		bufferOffset = 0,</span><br><span class="line">		bufferLength = writeBuffer.length,</span><br><span class="line">		filePosition = null;</span><br><span class="line">	fs.write(fd, writeBuffer, bufferOffset, bufferLength, filePosition, function(err, writeBytes)&#123;</span><br><span class="line">		if(err) return notifyErr(err);</span><br><span class="line">		fs.close(fd, function()&#123; console.log(&#x27;读写完毕，关闭文档&#x27;)&#125;);</span><br><span class="line">		console.log(&#x27;write &#x27; + writeBytes + &#x27; bytes&#x27;);</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>Node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Node.js开发调试工具——node-inspector</title>
+    <url>/2016/10/08/Node-js%E5%BC%80%E5%8F%91%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94node-inspector/</url>
+    <content><![CDATA[<p>当前端开发者使用Node.js开发时，是否想如果Node.js能够像Web开发时在浏览器进行js调试，那该有多好啊？node-inspector为你实现了这个功能。下面我们就看下如何应用。<span id="more"></span></p>
+<h2 id="node-inspector"><a href="#node-inspector" class="headerlink" title="node-inspector"></a>node-inspector</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g node-inspector</span><br></pre></td></tr></table></figure>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>先执行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node --debug app.js</span><br></pre></td></tr></table></figure>
+<p>再执行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">node-inspector --web-port=&#123;port&#125; //输入端口号</span><br><span class="line">//示例</span><br><span class="line">➜  nodeWeb node-inspector --web-port=3003</span><br><span class="line">Node Inspector v0.12.8</span><br><span class="line">Visit http://127.0.0.1:3003/?port=5858 to start debugging.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>访问 <a href="http://127.0.0.1:3003/?port=5858">http://127.0.0.1:3003/?port=5858</a> ,即可在浏览器调试Node.js代码了。</p>
+<p>现在可以方便愉悦的开发Node.js应用了。</p>
+]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -3121,6 +3121,49 @@ MongoDB的一些基本概念：
       </tags>
   </entry>
   <entry>
+    <title>Typescript学习笔记-枚举</title>
+    <url>/2019/11/28/Typescript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9E%9A%E4%B8%BE/</url>
+    <content><![CDATA[<p>使用枚举我们可以定义一些带名字的常量。 使用枚举可以清晰地表达意图或创建一组有区别的用例。 TypeScript支持数字的和基于字符串的枚举。</p>
+<span id="more"></span>
+<h3 id="数字枚举类型"><a href="#数字枚举类型" class="headerlink" title="数字枚举类型"></a>数字枚举类型</h3><p>会自动填充，如果为声明，默认值为0，也可以手动赋值，后续未声明的则自动递增</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ts</span></span><br><span class="line">enum <span class="title class_">Week</span> &#123;</span><br><span class="line">    <span class="title class_">Monday</span>,</span><br><span class="line">    <span class="title class_">Tuesday</span>,</span><br><span class="line">    <span class="title class_">Wednesday</span>,</span><br><span class="line">    <span class="title class_">Thursday</span>,</span><br><span class="line">    <span class="title class_">Friday</span>,</span><br><span class="line">    <span class="title class_">Saturday</span>,</span><br><span class="line">    <span class="title class_">Sunday</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>[<span class="number">0</span>] === <span class="string">&#x27;Monday&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>.<span class="property">Monday</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// javascript</span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">Week</span>;</span><br><span class="line">(<span class="keyword">function</span> (<span class="params">Week</span>) &#123;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Monday&quot;</span>] = <span class="number">0</span>] = <span class="string">&quot;Monday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Tuesday&quot;</span>] = <span class="number">1</span>] = <span class="string">&quot;Tuesday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Wednesday&quot;</span>] = <span class="number">2</span>] = <span class="string">&quot;Wednesday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Thursday&quot;</span>] = <span class="number">3</span>] = <span class="string">&quot;Thursday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Friday&quot;</span>] = <span class="number">4</span>] = <span class="string">&quot;Friday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Saturday&quot;</span>] = <span class="number">5</span>] = <span class="string">&quot;Saturday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Sunday&quot;</span>] = <span class="number">6</span>] = <span class="string">&quot;Sunday&quot;</span>;</span><br><span class="line">&#125;)(<span class="title class_">Week</span> || (<span class="title class_">Week</span> = &#123;&#125;));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>[<span class="number">0</span>] === <span class="string">&#x27;Monday&#x27;</span>); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>.<span class="property">Monday</span>) <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ts</span></span><br><span class="line">enum <span class="title class_">Week</span> &#123;</span><br><span class="line">    <span class="title class_">Monday</span> = <span class="number">1</span>,</span><br><span class="line">    <span class="title class_">Tuesday</span>,</span><br><span class="line">    <span class="title class_">Wednesday</span>,</span><br><span class="line">    <span class="title class_">Thursday</span>,</span><br><span class="line">    <span class="title class_">Friday</span> = <span class="number">8</span>,</span><br><span class="line">    <span class="title class_">Saturday</span>,</span><br><span class="line">    <span class="title class_">Sunday</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>[<span class="number">0</span>] === <span class="string">&#x27;Monday&#x27;</span>)</span><br><span class="line"><span class="comment">// javascript</span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">Week</span>;</span><br><span class="line">(<span class="keyword">function</span> (<span class="params">Week</span>) &#123;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Monday&quot;</span>] = <span class="number">1</span>] = <span class="string">&quot;Monday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Tuesday&quot;</span>] = <span class="number">2</span>] = <span class="string">&quot;Tuesday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Wednesday&quot;</span>] = <span class="number">3</span>] = <span class="string">&quot;Wednesday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Thursday&quot;</span>] = <span class="number">4</span>] = <span class="string">&quot;Thursday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Friday&quot;</span>] = <span class="number">8</span>] = <span class="string">&quot;Friday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Saturday&quot;</span>] = <span class="number">9</span>] = <span class="string">&quot;Saturday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Sunday&quot;</span>] = <span class="number">10</span>] = <span class="string">&quot;Sunday&quot;</span>;</span><br><span class="line">&#125;)(<span class="title class_">Week</span> || (<span class="title class_">Week</span> = &#123;&#125;));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>[<span class="number">0</span>] === <span class="string">&#x27;Monday&#x27;</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="常数项和计算所得项"><a href="#常数项和计算所得项" class="headerlink" title="常数项和计算所得项"></a>常数项和计算所得项</h4><p>枚举项有两种类型：常数项和计算所得项。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">enum <span class="title class_">Color</span> &#123;</span><br><span class="line">    <span class="title class_">Red</span>,</span><br><span class="line">    <span class="title class_">Green</span>,</span><br><span class="line">    <span class="title class_">Blue</span> = <span class="string">&#x27;blue&#x27;</span>.<span class="property">length</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>blue’.length为计算所得项。</p>
+<p>如果紧接着计算所得项继续添加枚举项，会因为无法获得初始值而报错。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">enum <span class="title class_">Color</span> &#123;</span><br><span class="line">    <span class="title class_">Red</span>,</span><br><span class="line">    <span class="title class_">Green</span>,</span><br><span class="line">    <span class="title class_">Blue</span> = <span class="string">&#x27;blue&#x27;</span>.<span class="property">length</span>,</span><br><span class="line">    <span class="title class_">Grey</span> <span class="comment">// Enum member must have initializer.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串枚举"><a href="#字符串枚举" class="headerlink" title="字符串枚举"></a>字符串枚举</h3><p> 在一个字符串枚举里，每个成员都必须用字符串字面量，或另外一个字符串枚举成员进行初始化。<br> 由于字符串枚举没有自增长的行为，字符串枚举可以很好的序列化。<br> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> enum <span class="title class_">Direction</span> &#123;</span><br><span class="line">    <span class="title class_">Up</span> = <span class="string">&quot;UP&quot;</span>,</span><br><span class="line">    <span class="title class_">Down</span> = <span class="string">&quot;DOWN&quot;</span>,</span><br><span class="line">    <span class="title class_">Left</span> = <span class="string">&quot;LEFT&quot;</span>,</span><br><span class="line">    <span class="title class_">Right</span> = <span class="string">&quot;RIGHT&quot;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Typescript学习笔记-类型推论</title>
+    <url>/2019/12/01/Typescript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%B1%BB%E5%9E%8B%E6%8E%A8%E8%AE%BA/</url>
+    <content><![CDATA[<p>在Typescript里，如果没有明确指出类型的地方，类型推论会帮助提供类型。</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+<p>变量x的类型被推断为数字。 这种推断发生在初始化变量和成员，设置默认参数值和决定函数返回值时。</p>
+<h3 id="最佳通用类型"><a href="#最佳通用类型" class="headerlink" title="最佳通用类型"></a>最佳通用类型</h3><p>当需要从几个表达式中推断类型时候，会使用这些表达式的类型来推断出一个最合适的通用类型。</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> x = [<span class="number">0</span>, <span class="number">1</span>, <span class="literal">null</span>];</span><br></pre></td></tr></table></figure>
+
+<p>为了推断x的类型，我们必须考虑所有元素的类型。 这里有两种选择： number和null。 计算通用类型算法会考虑所有的候选类型，并给出一个兼容所有候选类型的类型。</p>
+<p>由于最终的通用类型取自候选类型，有些时候候选类型共享相同的通用类型，但是却没有一个类型能做为所有候选类型的类型。</p>
+<h3 id="上下文类型"><a href="#上下文类型" class="headerlink" title="上下文类型"></a>上下文类型</h3><p>TypeScript类型推论也可能按照相反的方向进行。 这被叫做“按上下文归类”。按上下文归类会发生在表达式的类型与所处的位置相关时。</p>
+]]></content>
+      <categories>
+        <category>js</category>
+      </categories>
+      <tags>
+        <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TypeScript学习笔记-类</title>
     <url>/2018/10/31/TypeScript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%B1%BB/</url>
     <content><![CDATA[<p>传统的JavaScript程序使用函数和基于原型的继承来创建可重用的组件，但对于熟悉使用面向对象方式的程序员来讲就有些棘手，因为他们用的是基于类的继承并且对象是由类构建出来的。 从ECMAScript 2015，也就是ECMAScript 6开始，JavaScript程序员将能够使用基于类的面向对象的方式。<span id="more"></span></p>
@@ -3159,26 +3202,6 @@ MongoDB的一些基本概念：
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">abstract <span class="keyword">class</span> <span class="title class_">Department</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params">public name: string</span>) &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">printName</span>(): <span class="keyword">void</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Department name: &#x27;</span> + <span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    abstract <span class="title function_">printMeeting</span>(): <span class="keyword">void</span>; <span class="comment">// 必须在派生类中实现</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">AccountingDepartment</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Department</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="variable language_">super</span>(<span class="string">&#x27;Accounting and Auditing&#x27;</span>); <span class="comment">// 在派生类的构造函数中必须调用 super()</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">printMeeting</span>(): <span class="keyword">void</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;The Accounting Department meets each Monday at 10am.&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="title function_">generateReports</span>(): <span class="keyword">void</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Generating accounting reports...&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">department</span>: <span class="title class_">Department</span>; <span class="comment">// 允许创建一个对抽象类型的引用</span></span><br><span class="line">department = <span class="keyword">new</span> <span class="title class_">Department</span>(); <span class="comment">// 错误: 不能创建一个抽象类的实例</span></span><br><span class="line">department = <span class="keyword">new</span> <span class="title class_">AccountingDepartment</span>(); <span class="comment">// 允许对一个抽象子类进行实例化和赋值</span></span><br><span class="line">department.<span class="title function_">printName</span>();</span><br><span class="line">department.<span class="title function_">printMeeting</span>();</span><br><span class="line">department.<span class="title function_">generateReports</span>(); <span class="comment">// 错误: 方法在声明的抽象类中不存在</span></span><br></pre></td></tr></table></figure>
 <h2 id="高级技巧"><a href="#高级技巧" class="headerlink" title="高级技巧"></a>高级技巧</h2><h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Greeter</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> standardGreeting = <span class="string">&quot;Hello, there&quot;</span>;</span><br><span class="line">    <span class="attr">greeting</span>: string;</span><br><span class="line">    <span class="title function_">greet</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">greeting</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;Hello, &quot;</span> + <span class="variable language_">this</span>.<span class="property">greeting</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="title class_">Greeter</span>.<span class="property">standardGreeting</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">greeter1</span>: <span class="title class_">Greeter</span>;</span><br><span class="line">greeter1 = <span class="keyword">new</span> <span class="title class_">Greeter</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(greeter1.<span class="title function_">greet</span>());</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">greeterMaker</span>: <span class="keyword">typeof</span> <span class="title class_">Greeter</span> = <span class="title class_">Greeter</span>;</span><br><span class="line">greeterMaker.<span class="property">standardGreeting</span> = <span class="string">&quot;Hey there!&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">greeter2</span>: <span class="title class_">Greeter</span> = <span class="keyword">new</span> <span class="title function_">greeterMaker</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(greeter2.<span class="title function_">greet</span>());</span><br></pre></td></tr></table></figure>
 <h3 id="把类当做接口使用"><a href="#把类当做接口使用" class="headerlink" title="把类当做接口使用"></a>把类当做接口使用</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">    <span class="attr">x</span>: number;</span><br><span class="line">    <span class="attr">y</span>: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface <span class="title class_">Point3</span>d <span class="keyword">extends</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">    <span class="attr">z</span>: number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="attr">point3d</span>: <span class="title class_">Point3</span>d = &#123;<span class="attr">x</span>: <span class="number">1</span>, <span class="attr">y</span>: <span class="number">2</span>, <span class="attr">z</span>: <span class="number">3</span>&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Typescript学习笔记-类型推论</title>
-    <url>/2019/12/01/Typescript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E7%B1%BB%E5%9E%8B%E6%8E%A8%E8%AE%BA/</url>
-    <content><![CDATA[<p>在Typescript里，如果没有明确指出类型的地方，类型推论会帮助提供类型。</p>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> x = <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
-<p>变量x的类型被推断为数字。 这种推断发生在初始化变量和成员，设置默认参数值和决定函数返回值时。</p>
-<h3 id="最佳通用类型"><a href="#最佳通用类型" class="headerlink" title="最佳通用类型"></a>最佳通用类型</h3><p>当需要从几个表达式中推断类型时候，会使用这些表达式的类型来推断出一个最合适的通用类型。</p>
-<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> x = [<span class="number">0</span>, <span class="number">1</span>, <span class="literal">null</span>];</span><br></pre></td></tr></table></figure>
-
-<p>为了推断x的类型，我们必须考虑所有元素的类型。 这里有两种选择： number和null。 计算通用类型算法会考虑所有的候选类型，并给出一个兼容所有候选类型的类型。</p>
-<p>由于最终的通用类型取自候选类型，有些时候候选类型共享相同的通用类型，但是却没有一个类型能做为所有候选类型的类型。</p>
-<h3 id="上下文类型"><a href="#上下文类型" class="headerlink" title="上下文类型"></a>上下文类型</h3><p>TypeScript类型推论也可能按照相反的方向进行。 这被叫做“按上下文归类”。按上下文归类会发生在表达式的类型与所处的位置相关时。</p>
-]]></content>
       <categories>
         <category>js</category>
       </categories>
@@ -3283,29 +3306,6 @@ MongoDB的一些基本概念：
       <tags>
         <tag>ssr</tag>
         <tag>Vue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Typescript学习笔记-枚举</title>
-    <url>/2019/11/28/Typescript%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E6%9E%9A%E4%B8%BE/</url>
-    <content><![CDATA[<p>使用枚举我们可以定义一些带名字的常量。 使用枚举可以清晰地表达意图或创建一组有区别的用例。 TypeScript支持数字的和基于字符串的枚举。</p>
-<span id="more"></span>
-<h3 id="数字枚举类型"><a href="#数字枚举类型" class="headerlink" title="数字枚举类型"></a>数字枚举类型</h3><p>会自动填充，如果为声明，默认值为0，也可以手动赋值，后续未声明的则自动递增</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ts</span></span><br><span class="line">enum <span class="title class_">Week</span> &#123;</span><br><span class="line">    <span class="title class_">Monday</span>,</span><br><span class="line">    <span class="title class_">Tuesday</span>,</span><br><span class="line">    <span class="title class_">Wednesday</span>,</span><br><span class="line">    <span class="title class_">Thursday</span>,</span><br><span class="line">    <span class="title class_">Friday</span>,</span><br><span class="line">    <span class="title class_">Saturday</span>,</span><br><span class="line">    <span class="title class_">Sunday</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>[<span class="number">0</span>] === <span class="string">&#x27;Monday&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>.<span class="property">Monday</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// javascript</span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">Week</span>;</span><br><span class="line">(<span class="keyword">function</span> (<span class="params">Week</span>) &#123;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Monday&quot;</span>] = <span class="number">0</span>] = <span class="string">&quot;Monday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Tuesday&quot;</span>] = <span class="number">1</span>] = <span class="string">&quot;Tuesday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Wednesday&quot;</span>] = <span class="number">2</span>] = <span class="string">&quot;Wednesday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Thursday&quot;</span>] = <span class="number">3</span>] = <span class="string">&quot;Thursday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Friday&quot;</span>] = <span class="number">4</span>] = <span class="string">&quot;Friday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Saturday&quot;</span>] = <span class="number">5</span>] = <span class="string">&quot;Saturday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Sunday&quot;</span>] = <span class="number">6</span>] = <span class="string">&quot;Sunday&quot;</span>;</span><br><span class="line">&#125;)(<span class="title class_">Week</span> || (<span class="title class_">Week</span> = &#123;&#125;));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>[<span class="number">0</span>] === <span class="string">&#x27;Monday&#x27;</span>); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>.<span class="property">Monday</span>) <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// ts</span></span><br><span class="line">enum <span class="title class_">Week</span> &#123;</span><br><span class="line">    <span class="title class_">Monday</span> = <span class="number">1</span>,</span><br><span class="line">    <span class="title class_">Tuesday</span>,</span><br><span class="line">    <span class="title class_">Wednesday</span>,</span><br><span class="line">    <span class="title class_">Thursday</span>,</span><br><span class="line">    <span class="title class_">Friday</span> = <span class="number">8</span>,</span><br><span class="line">    <span class="title class_">Saturday</span>,</span><br><span class="line">    <span class="title class_">Sunday</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>[<span class="number">0</span>] === <span class="string">&#x27;Monday&#x27;</span>)</span><br><span class="line"><span class="comment">// javascript</span></span><br><span class="line"><span class="keyword">var</span> <span class="title class_">Week</span>;</span><br><span class="line">(<span class="keyword">function</span> (<span class="params">Week</span>) &#123;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Monday&quot;</span>] = <span class="number">1</span>] = <span class="string">&quot;Monday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Tuesday&quot;</span>] = <span class="number">2</span>] = <span class="string">&quot;Tuesday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Wednesday&quot;</span>] = <span class="number">3</span>] = <span class="string">&quot;Wednesday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Thursday&quot;</span>] = <span class="number">4</span>] = <span class="string">&quot;Thursday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Friday&quot;</span>] = <span class="number">8</span>] = <span class="string">&quot;Friday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Saturday&quot;</span>] = <span class="number">9</span>] = <span class="string">&quot;Saturday&quot;</span>;</span><br><span class="line">    <span class="title class_">Week</span>[<span class="title class_">Week</span>[<span class="string">&quot;Sunday&quot;</span>] = <span class="number">10</span>] = <span class="string">&quot;Sunday&quot;</span>;</span><br><span class="line">&#125;)(<span class="title class_">Week</span> || (<span class="title class_">Week</span> = &#123;&#125;));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Week</span>[<span class="number">0</span>] === <span class="string">&#x27;Monday&#x27;</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="常数项和计算所得项"><a href="#常数项和计算所得项" class="headerlink" title="常数项和计算所得项"></a>常数项和计算所得项</h4><p>枚举项有两种类型：常数项和计算所得项。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">enum <span class="title class_">Color</span> &#123;</span><br><span class="line">    <span class="title class_">Red</span>,</span><br><span class="line">    <span class="title class_">Green</span>,</span><br><span class="line">    <span class="title class_">Blue</span> = <span class="string">&#x27;blue&#x27;</span>.<span class="property">length</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>blue’.length为计算所得项。</p>
-<p>如果紧接着计算所得项继续添加枚举项，会因为无法获得初始值而报错。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">enum <span class="title class_">Color</span> &#123;</span><br><span class="line">    <span class="title class_">Red</span>,</span><br><span class="line">    <span class="title class_">Green</span>,</span><br><span class="line">    <span class="title class_">Blue</span> = <span class="string">&#x27;blue&#x27;</span>.<span class="property">length</span>,</span><br><span class="line">    <span class="title class_">Grey</span> <span class="comment">// Enum member must have initializer.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="字符串枚举"><a href="#字符串枚举" class="headerlink" title="字符串枚举"></a>字符串枚举</h3><p> 在一个字符串枚举里，每个成员都必须用字符串字面量，或另外一个字符串枚举成员进行初始化。<br> 由于字符串枚举没有自增长的行为，字符串枚举可以很好的序列化。<br> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> enum <span class="title class_">Direction</span> &#123;</span><br><span class="line">    <span class="title class_">Up</span> = <span class="string">&quot;UP&quot;</span>,</span><br><span class="line">    <span class="title class_">Down</span> = <span class="string">&quot;DOWN&quot;</span>,</span><br><span class="line">    <span class="title class_">Left</span> = <span class="string">&quot;LEFT&quot;</span>,</span><br><span class="line">    <span class="title class_">Right</span> = <span class="string">&quot;RIGHT&quot;</span>,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>TypeScript</tag>
       </tags>
   </entry>
   <entry>
@@ -3601,22 +3601,6 @@ MongoDB的一些基本概念：
       </tags>
   </entry>
   <entry>
-    <title>form表单相同文件多次点击上传不了的问题</title>
-    <url>/2017/05/09/form%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%90%8C%E6%96%87%E4%BB%B6%E5%A4%9A%E6%AC%A1%E4%B8%8A%E4%BC%A0%E7%9A%84%E4%B8%8D%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%BC%A0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>利用 form 表单提交文件时，如果第一次上传失败，当你再次选择上次的文件时，发现 onchange 事件不能再次触发了，该如何解决呢？<span id="more"></span></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;test&#x27;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;file&#x27;</span> <span class="attr">id</span>=<span class="string">&#x27;test&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;test&#x27;</span>).<span class="property">onchange</span> = <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(e);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>上述代码，当我们多次都选择同一个文件的时候，会发现不再触发了 onchange 方法，因为只有文件改变才会触发 change 方法。<br>因此你只需在 onchange 方法中，将 input 的 value 值清空即可。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">document.getElementById(&#x27;test&#x27;).onchange = function(e)&#123;</span><br><span class="line">	//此处填写你需要执行的代码</span><br><span class="line"></span><br><span class="line">    this.value = &#x27;&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>js</category>
-      </categories>
-      <tags>
-        <tag>js</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2015/11/25/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
@@ -3641,35 +3625,19 @@ MongoDB的一些基本概念：
       </tags>
   </entry>
   <entry>
-    <title>linux下压缩/解压缩文件-zip</title>
-    <url>/2016/08/30/linux%E4%B8%8B%E5%8E%8B%E7%BC%A9-%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6/</url>
-    <content><![CDATA[<p>在日常工作中，经常用到压缩/解压缩文件，在windows中大家习惯了压缩解压软件，右键即可。在linux系统下，我们也可以利用zip/unzip，tar，rar/unrar等命令，非常方便快捷的对文件进行压缩和解压缩。今天就来看一下zip命令。<span id="more"></span></p>
-<hr>
-<h2 id="zip命令"><a href="#zip命令" class="headerlink" title="zip命令"></a>zip命令</h2><p>zip命令的功：，压缩文件</p>
-<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p><strong>zip 选项 压缩文件.zip  文件</strong></p>
-<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
-<thead>
-<tr>
-<th>参数</th>
-<th align="center">功能</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>-d</td>
-<td align="center">从压缩文件中删除指定文件。</td>
-</tr>
-<tr>
-<td>-D</td>
-<td align="center">压缩文件内不建立文件目录</td>
-</tr>
-</tbody></table>
-<p><strong>未完待续</strong></p>
+    <title>form表单相同文件多次点击上传不了的问题</title>
+    <url>/2017/05/09/form%E8%A1%A8%E5%8D%95%E7%9B%B8%E5%90%8C%E6%96%87%E4%BB%B6%E5%A4%9A%E6%AC%A1%E4%B8%8A%E4%BC%A0%E7%9A%84%E4%B8%8D%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%BC%A0%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>利用 form 表单提交文件时，如果第一次上传失败，当你再次选择上次的文件时，发现 onchange 事件不能再次触发了，该如何解决呢？<span id="more"></span></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&#x27;test&#x27;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;file&#x27;</span> <span class="attr">id</span>=<span class="string">&#x27;test&#x27;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;test&#x27;</span>).<span class="property">onchange</span> = <span class="keyword">function</span>(<span class="params">e</span>)&#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(e);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>上述代码，当我们多次都选择同一个文件的时候，会发现不再触发了 onchange 方法，因为只有文件改变才会触发 change 方法。<br>因此你只需在 onchange 方法中，将 input 的 value 值清空即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">document.getElementById(&#x27;test&#x27;).onchange = function(e)&#123;</span><br><span class="line">	//此处填写你需要执行的代码</span><br><span class="line"></span><br><span class="line">    this.value = &#x27;&#x27;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>linux</category>
+        <category>js</category>
       </categories>
       <tags>
-        <tag>linux</tag>
+        <tag>js</tag>
       </tags>
   </entry>
   <entry>
@@ -3708,6 +3676,38 @@ MongoDB的一些基本概念：
 <h3 id="ls-l"><a href="#ls-l" class="headerlink" title="ls -l"></a>ls -l</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]# <span class="built_in">ls</span> -l</span><br><span class="line">total 120032</span><br><span class="line">-rw-------. 1 root root     1922 Sep  2  2014 anaconda-ks.cfg</span><br><span class="line">-rw-r--r--. 1 root root  8900822 Apr  6 20:03 apache-tomcat-7.0.68.tar.gz</span><br><span class="line">-rw-r--r--. 1 root root    56834 Sep  2  2014 install.log</span><br><span class="line">-rw-r--r--. 1 root root     8912 Sep  2  2014 install.log.syslog</span><br><span class="line">drwxrwxrwx. 9  500 adm      4096 Oct 24  2014 libmcrypt-2.5.8</span><br><span class="line">-rw-r--r--. 1 root root   875425 Oct 24  2014 libmcrypt-2.5.8.tar.bz2</span><br><span class="line">-rw-r--r--. 1 root root 56521914 Mar 28 11:15 mongodb-linux-x86_64-3.2.4.gz</span><br><span class="line">drwxr-xr-x. 6 root root     4096 May  2  2014 node-v0.10.28-linux-x64</span><br><span class="line">-rw-r--r--. 1 root root  5352773 Mar 16 13:50 node-v0.10.28-linux-x64.tar.gz</span><br><span class="line">drwxr-xr-x. 2 1000 1000     4096 Nov 18 17:21 rar</span><br><span class="line">-rw-r--r--. 1 root root  1149037 Mar 17 14:29 rarlinux-x64-5.3.0.tar.gz</span><br><span class="line">drwxr-xr-x. 5 root root     4096 Apr  6 19:33 receiver</span><br><span class="line">-rw-r--r--. 1 root root    75521 Feb 26 18:22 receiver.zip</span><br><span class="line">drwxr-xr-x. 9 root root     4096 Apr  7 11:19 tomcat7</span><br><span class="line">-rw-r--r--. 1 root root 49923690 Sep 16  2015 tomcat7.rar</span><br></pre></td></tr></table></figure>
 
 <h3 id="ls-al"><a href="#ls-al" class="headerlink" title="ls -al"></a>ls -al</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@kvm45072 ~]# <span class="built_in">ls</span> -al</span><br><span class="line">total 120080</span><br><span class="line">dr-xr-x---.  8 root root     4096 Apr  7 11:43 .</span><br><span class="line">dr-xr-xr-x. 25 root root     4096 Mar 28 12:02 ..</span><br><span class="line">-rw-------.  1 root root     1922 Sep  2  2014 anaconda-ks.cfg</span><br><span class="line">-rw-r--r--.  1 root root  8900822 Apr  6 20:03 apache-tomcat-7.0.68.tar.gz</span><br><span class="line">-rw-------.  1 root root     6247 Apr  7 18:47 .bash_history</span><br><span class="line">-rw-r--r--.  1 root root       18 May 20  2009 .bash_logout</span><br><span class="line">-rw-r--r--.  1 root root      176 May 20  2009 .bash_profile</span><br><span class="line">-rw-r--r--.  1 root root      176 Sep 23  2004 .bashrc</span><br><span class="line">-rw-r--r--.  1 root root      100 Sep 23  2004 .cshrc</span><br><span class="line">-rw-r--r--.  1 root root     2206 Apr  5 21:43 .dbshell</span><br><span class="line">-rw-r--r--.  1 root root    56834 Sep  2  2014 install.log</span><br><span class="line">-rw-r--r--.  1 root root     8912 Sep  2  2014 install.log.syslog</span><br><span class="line">drwxrwxrwx.  9  500 adm      4096 Oct 24  2014 libmcrypt-2.5.8</span><br><span class="line">-rw-r--r--.  1 root root   875425 Oct 24  2014 libmcrypt-2.5.8.tar.bz2</span><br><span class="line">-rw-r--r--.  1 root root 56521914 Mar 28 11:15 mongodb-linux-x86_64-3.2.4.gz</span><br><span class="line">-rw-------.  1 root root        0 Mar 28 12:13 .mongorc.js</span><br><span class="line">drwxr-xr-x.  6 root root     4096 May  2  2014 node-v0.10.28-linux-x64</span><br><span class="line">-rw-r--r--.  1 root root  5352773 Mar 16 13:50 node-v0.10.28-linux-x64.tar.gz</span><br><span class="line">drwxr-xr-x.  2 1000 1000     4096 Nov 18 17:21 rar</span><br><span class="line">-rw-r--r--.  1 root root  1149037 Mar 17 14:29 rarlinux-x64-5.3.0.tar.gz</span><br><span class="line">drwxr-xr-x.  5 root root     4096 Apr  6 19:33 receiver</span><br><span class="line">-rw-r--r--.  1 root root    75521 Feb 26 18:22 receiver.zip</span><br><span class="line">drwx------.  2 root root     4096 Dec 18  2014 .ssh</span><br><span class="line">-rw-r--r--.  1 root root      129 Dec  4  2004 .tcshrc</span><br><span class="line">drwxr-xr-x.  9 root root     4096 Apr  7 11:19 tomcat7</span><br><span class="line">-rw-r--r--.  1 root root 49923690 Sep 16  2015 tomcat7.rar</span><br><span class="line">-rw-------.  1 root root      663 Apr  6 19:21 .viminfo</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>linux下压缩/解压缩文件-zip</title>
+    <url>/2016/08/30/linux%E4%B8%8B%E5%8E%8B%E7%BC%A9-%E8%A7%A3%E5%8E%8B%E7%BC%A9%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<p>在日常工作中，经常用到压缩/解压缩文件，在windows中大家习惯了压缩解压软件，右键即可。在linux系统下，我们也可以利用zip/unzip，tar，rar/unrar等命令，非常方便快捷的对文件进行压缩和解压缩。今天就来看一下zip命令。<span id="more"></span></p>
+<hr>
+<h2 id="zip命令"><a href="#zip命令" class="headerlink" title="zip命令"></a>zip命令</h2><p>zip命令的功：，压缩文件</p>
+<h3 id="命令格式"><a href="#命令格式" class="headerlink" title="命令格式"></a>命令格式</h3><p><strong>zip 选项 压缩文件.zip  文件</strong></p>
+<h3 id="常用命令参数"><a href="#常用命令参数" class="headerlink" title="常用命令参数"></a>常用命令参数</h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th align="center">功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-d</td>
+<td align="center">从压缩文件中删除指定文件。</td>
+</tr>
+<tr>
+<td>-D</td>
+<td align="center">压缩文件内不建立文件目录</td>
+</tr>
+</tbody></table>
+<p><strong>未完待续</strong></p>
+]]></content>
       <categories>
         <category>linux</category>
       </categories>
