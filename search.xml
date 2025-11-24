@@ -4172,7 +4172,7 @@ MongoDB的一些基本概念：
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 强制覆盖浏览器的 referer 参数</span></span><br><span class="line"><span class="comment">// 注意：某些浏览器可能会忽略或限制对 Referer 头的修改</span></span><br><span class="line"><span class="keyword">const</span> customReferer = location.<span class="property">origin</span> + location.<span class="property">pathname</span></span><br><span class="line"><span class="comment">// eslint-disable-next-line dot-notation</span></span><br><span class="line">config.<span class="property">headers</span>[<span class="string">&#x27;Referer&#x27;</span>] = customReferer</span><br><span class="line"><span class="comment">// eslint-disable-next-line dot-notation</span></span><br><span class="line">config.<span class="property">headers</span>[<span class="string">&#x27;referer&#x27;</span>] = customReferer</span><br></pre></td></tr></table></figure>
 
 <p>修改后发现，请求是不报错了，但是控制台会有新的提示：</p>
-<p><img src="../images/post/511bf624-7742-48c7-bd4a-b4ed5fe5cc77.png" alt="提示"></p>
+<p><img src="/images/post/511bf624-7742-48c7-bd4a-b4ed5fe5cc77.png" alt="提示"></p>
 <p>Refused to set unsafe header “Referer” 是浏览器的安全限制导致的：根据 HTTP 规范和浏览器的同源策略 / 安全机制，Referer 属于「受保护的请求头」—— 浏览器禁止前端 JavaScript 代码手动修改 / 设置这个头，仅允许浏览器根据当前页面 URL 自动生成，目的是防止恶意脚本伪造来源地址。</p>
 <p>于是再次更换方案，既然报错的原因是由于Referer中携带” * “导致，那就对” * “进行处理，Referer是取值的当前的链接地址，那就在跳转前对参数进行encode。</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="string">`&amp;params=<span class="subst">$&#123;<span class="built_in">encodeURIComponent</span>(<span class="built_in">JSON</span>.stringify(params))&#125;</span>`</span></span><br></pre></td></tr></table></figure>
